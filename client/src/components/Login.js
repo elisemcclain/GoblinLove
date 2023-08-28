@@ -1,16 +1,45 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
-function Login({ newUser, setNewUser }) {
+function Login({ newUser, setNewUser, onAddUser }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [userExists, setUserExists] = useState(true);
 
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setNewUser({ ...newUser, [name]: value });
+  //   function handleChange(e) {
+  //     const { name, value } = e.target;
+  //     setNewUser({ ...newUser, [name]: value });
+  //   }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const formData = {
+      firstName,
+      lastName,
+      email,
+      password,
+    };
+    fetch("/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((user) => {
+          setFirstName("");
+          setLastName("");
+          setEmail("");
+          setPassword("");
+          onAddUser(user);
+        });
+      } else {
+        r.json().then((err) => setErrors(err.errors));
+      }
+    });
   }
 
   return (
