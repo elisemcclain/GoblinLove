@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
 function Login({ newUser, setNewUser, onAddUser }) {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [userExists, setUserExists] = useState(true);
@@ -16,8 +15,7 @@ function Login({ newUser, setNewUser, onAddUser }) {
   function handleSubmit(e) {
     e.preventDefault();
     const formData = {
-      firstName,
-      lastName,
+      username,
       email,
       password,
     };
@@ -30,8 +28,7 @@ function Login({ newUser, setNewUser, onAddUser }) {
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => {
-          setFirstName("");
-          setLastName("");
+          setUsername("");
           setEmail("");
           setPassword("");
           onAddUser(user);
@@ -77,27 +74,15 @@ function Login({ newUser, setNewUser, onAddUser }) {
           </>
         ) : (
           <>
-            <label htmlFor="first_name">first name</label>
+            <label htmlFor="username">username</label>
             <input
               type="text"
-              value={firstName}
-              placeholder="first name"
-              id="first_name"
-              name="user_first_name"
+              value={username}
+              placeholder="username name"
+              id="username"
+              name="username"
               onChange={(e) => {
-                setFirstName(e.target.value);
-                setUserExists(false);
-              }}
-            />
-            <label htmlFor="last_name">last name</label>
-            <input
-              type="text"
-              value={lastName}
-              placeholder="last name"
-              id="last_name"
-              name="user_last_name"
-              onChange={(e) => {
-                setLastName(e.target.value);
+                setUsername(e.target.value);
                 setUserExists(false);
               }}
             />
