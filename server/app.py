@@ -130,4 +130,3 @@ api.add_resource(Outcomes, '/outcomes')
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
-

@@ -17,8 +17,16 @@ function Home({ goblins }) {
 
   return (
     <div>
-      <h1>*Goblin Love*</h1>
-      <button onClick={handleClick}>Click here to begin your journey</button>
+      <div>
+        <img
+          className="gobsmacked"
+          src={"./Gobsmacked.png"}
+          alt="GOBSMACKED"
+        />
+      </div>
+      <div className="enter">
+        <button onClick={handleClick} className="enter_button">Click to begin your journey</button>
+      </div>
       <br />
       {goblins.length > 0 && (
         <div>
@@ -33,3 +41,4 @@ function Home({ goblins }) {
 }
 
 export default Home;
+

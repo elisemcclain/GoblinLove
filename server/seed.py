@@ -171,8 +171,9 @@ if __name__ == '__main__':
             'dialogue10': Dialogue(date_part=3, date_id=date1.id, trait_id=trait10.id, description="You say yes before you even realize you're allergic to Nutmeg Borgle Brine Soup they're making."),
         }
 
+        all_dialogues = list(dialogues_1.values()) + list(dialogues_2.values()) + list(dialogues_3.values())
 
-        db.session.add_all(dialogues_1.values(), dialogues_2.values(), dialogues_3.values())
+        db.session.add_all(all_dialogues)
         db.session.commit()
         dialogues_list = Dialogue.query.all()
         print("Creating traits...")
