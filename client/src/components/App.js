@@ -6,32 +6,29 @@ import Login from "./Login";
 import Home from "./Home";
 
 function App() {
-  // const initialUser = {
-  //   user_first_name: "",
-  //   user_last_name: "",
-  //   user_email: "",
-  //   user_password: "",
-  // };
-  // const [newUser, setNewUser] = useState(initialUser);
-
   const [users, setUsers] = useState([]);
   const [goblins, setGoblins] = useState([]);
 
   useEffect(() => {
-    fetch("/users")
+    fetch("http://localhost:5555/users")
       .then((r) => r.json())
-      .then(setUsers);
+      .then((userArray) => {
+        setUsers(userArray);
+      });
   }, []);
 
   useEffect(() => {
-    fetch("/goblins")
+    fetch("http://localhost:5555/goblins")
       .then((r) => r.json())
-      .then(setGoblins);
+      .then((goblinArray) => {
+        setGoblins(goblinArray);
+      });
   }, []);
 
-  function handleAddUser(newUser) {
-    setUsers((users) => [...users, newUser]);
-  }
+  const handleAddUser = (newUser) => {
+    const updatedUserArray = [...users, newUser];
+    setUsers(updatedUserArray);
+  };
 
   return (
     <BrowserRouter>
@@ -42,7 +39,6 @@ function App() {
           </Route>
           <Route exact path="/login">
             <Login onAddUser={handleAddUser} />
-            {/* {<Login setNewUser={setNewUser} newUser={newUser} />} */}
           </Route>
           <Route exact path="/goblin">
             <Goblin />

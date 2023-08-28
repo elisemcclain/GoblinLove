@@ -15,29 +15,20 @@ function Login({ newUser, setNewUser, onAddUser }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const formData = {
-      username,
-      email,
-      password,
-    };
-    fetch("/users", {
+    fetch("http://localhost:5555/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
-    }).then((r) => {
-      if (r.ok) {
-        r.json().then((user) => {
-          setUsername("");
-          setEmail("");
-          setPassword("");
-          onAddUser(user);
-        });
-      } else {
-        r.json().then((err) => setErrors(err.errors));
-      }
-    });
+      body: JSON.stringify({
+        username: username,
+        email: email,
+        password: password,
+      }),
+    })
+      .then((r) => r.json())
+      .then((newUser) => onAddUser(newUser));
+    console.log("submitted");
   }
 
   return (
@@ -72,6 +63,7 @@ function Login({ newUser, setNewUser, onAddUser }) {
                 setUserExists(true);
               }}
             />
+            <button onClick={handleSubmit}>Log In</button>
           </>
         ) : (
           <>
