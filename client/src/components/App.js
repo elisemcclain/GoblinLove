@@ -39,7 +39,7 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/users">
-            <Login onAddUser={handleAddUser} />
+            <Login onAddUser={handleAddUser} users={setUsers} />
           </Route>
           <Route exact path="/goblin">
             <Goblin />

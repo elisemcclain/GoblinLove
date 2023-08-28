@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
-function Login({ newUser, setNewUser, onAddUser }) {
+function Login({ onAddUser, users }) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,7 +15,6 @@ function Login({ newUser, setNewUser, onAddUser }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-
     fetch(`http://localhost:5555/check-email/${email}`)
       .then((r) => r.json())
       .then((data) => {
