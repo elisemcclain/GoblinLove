@@ -14,6 +14,7 @@ function App() {
       .then((r) => r.json())
       .then((userArray) => {
         setUsers(userArray);
+        console.log({ users, userArray });
       });
   }, []);
 

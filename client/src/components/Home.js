@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react-router";
+import { useEffect, useState } from "react";
 
 function Home({ setUsers }) {
   useEffect(() => {
@@ -21,6 +21,7 @@ function Home({ setUsers }) {
   return (
     <div>
       <h1>*Goblin Love*</h1>
+      <button onClick={handleClick}>Click here to begin your journey</button>
     </div>
   );
 }
