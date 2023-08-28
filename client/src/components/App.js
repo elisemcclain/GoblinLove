@@ -9,31 +9,20 @@ function App() {
   const [users, setUsers] = useState([]);
   const [goblins, setGoblins] = useState([]);
 
-  useEffect(() => {
-    fetch("/login")
-      .then((r) => r.json())
-      .then(setUsers);
-  }, []);
-
-  useEffect(() => {
-    fetch("/goblins")
-      .then((r) => r.json())
-      .then(setGoblins);
-  }, []);
-
-  function handleAddUser(newUser) {
-    setUsers((users) => [...users, newUser]);
-  }
+  const handleAddUser = (newUser) => {
+    const updatedUserArray = [...users, newUser];
+    setUsers(updatedUserArray);
+  };
 
   return (
     <BrowserRouter>
       <main>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home setUsers={setUsers} />
           </Route>
-          <Route exact path="/login">
-            <Login onAddUser={handleAddUser} />
+          <Route exact path="/users">
+            <Login onAddUser={handleAddUser} setUsers={setUsers} />
           </Route>
           <Route exact path="/goblins">
             <Goblin />
