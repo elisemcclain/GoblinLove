@@ -47,7 +47,7 @@ class User(db.Model, SerializerMixin):
             return password
         else:
             raise ValueError('Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.')
-        
+
     # @validates('email')
     # def validate_email(self, key, email):
     #     if User.query.filter_by(email=email).first():
@@ -88,6 +88,8 @@ class Goblin(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True, nullable=False)
     description = db.Column(db.String, nullable=False)
+    img_url = db.Column(db.String, nullable=False)
+    artist = db.Column(db.String, nullable=False)
 
     responses = db.relationship('Response', backref='goblin', lazy='dynamic', cascade='all, delete-orphan')
     outcomes = db.relationship('Outcome', backref='goblin', lazy='dynamic', cascade='all, delete-orphan')
@@ -101,6 +103,9 @@ class Date(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True, nullable=False)
     description = db.Column(db.String, nullable=False)
+    part_1 = db.Column(db.String, nullable=False)
+    part_2 = db.Column(db.String, nullable=False)
+    part_3 = db.Column(db.String, nullable=False)
     
     dialogues = db.relationship('Dialogue', backref='date', lazy='dynamic', cascade='all, delete-orphan')
     outcomes = db.relationship('Outcome', backref='date', lazy='dynamic', cascade='all, delete-orphan')
