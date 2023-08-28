@@ -20,11 +20,11 @@ class User(db.Model, SerializerMixin):
     password = db.Column(db.String(128), nullable=False)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow)
-    grubnub_win = db.Column(db.Integer, nullable=False)
-    sneezle_win = db.Column(db.Integer, nullable=False)
-    blort_win = db.Column(db.Integer, nullable=False)
-    grimble_win = db.Column(db.Integer, nullable=False)
-    zongos_win = db.Column(db.Integer, nullable=False)
+    grubnub_win = db.Column(db.Integer, nullable=False, default=0)
+    sneezle_win = db.Column(db.Integer, nullable=False, default=0)
+    blort_win = db.Column(db.Integer, nullable=False, default=0)
+    grimble_win = db.Column(db.Integer, nullable=False, default=0)
+    zongos_win = db.Column(db.Integer, nullable=False, default=0)
     
     personality_traits = db.relationship('TraitAssociation', backref='user', lazy='dynamic', cascade='all, delete-orphan')
     
@@ -61,20 +61,17 @@ class User(db.Model, SerializerMixin):
         
         
 class Trait(db.Model, SerializerMixin):
-    
+
     __tablename__ = 'traits'
-    
+
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True, nullable=False)
-    created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    updated_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow)
-    
+
     users = db.relationship('TraitAssociation', backref='trait', lazy='dynamic', cascade='all, delete-orphan')
     dialogues = db.relationship('Dialogues', backref='trait', lazy='dynamic', cascade='all, delete-orphan')
 
-    
+
     serialize_rules = ('-TraitAssociation', '-user.traits', '-dialogue.traits',)
-    
 
 class TraitAssociation(db.Model, SerializerMixin):
     
@@ -83,8 +80,6 @@ class TraitAssociation(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     trait_id = db.Column(db.Integer, db.ForeignKey('traits.id'), nullable=False)
-    created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    updated_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow)
     
     serialize_rules = ('-trait.trait_associations', '-user.trait_associations',)
     
@@ -99,7 +94,7 @@ class Goblin(db.Model, SerializerMixin):
     responses = db.relationship('Response', backref='goblin', lazy='dynamic', cascade='all, delete-orphan')
     outcomes = db.relationship('Outcome', backref='goblin', lazy='dynamic', cascade='all, delete-orphan')
     
-    serialize_rules = ('-Response',)
+    serialize_rules = ('-Response', '-outcome.goblins',)
     
 class Date(db.Model, SerializerMixin):
     
