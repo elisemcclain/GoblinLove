@@ -1,55 +1,23 @@
-import React, { useState } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-
+import React, { useEffect, useState } from "react";
+import { Switch, Route } from "react-router-dom";
 import Goblin from "./Goblin";
-import Login from "./Login";
 import Home from "./Home";
 
+// const API = "http://localhost:3000";
+
 function App() {
-  // const initialUser = {
-  //   user_first_name: "",
-  //   user_last_name: "",
-  //   user_email: "",
-  //   user_password: "",
-  // };
-  // const [newUser, setNewUser] = useState(initialUser);
-
-  const [users, setUsers] = useState([]);
-  const [goblins, setGoblins] = useState([]);
-
-  useEffect(() => {
-    fetch("/users")
-      .then((r) => r.json())
-      .then(setUsers);
-  }, []);
-
-  useEffect(() => {
-    fetch("/goblins")
-      .then((r) => r.json())
-      .then(setGoblins);
-  }, []);
-
-  function handleAddUser(newUser) {
-    setUsers((users) => [...users, newUser]);
-  }
-
   return (
-    <BrowserRouter>
-      <main>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/login">
-            <Login onAddUser={handleAddUser} />
-            {/* {<Login setNewUser={setNewUser} newUser={newUser} />} */}
-          </Route>
-          <Route exact path="/goblin">
-            <Goblin />
-          </Route>
-        </Switch>
-      </main>
-    </BrowserRouter>
+    <main>
+      <h1>Phase 4 Project Client</h1>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/goblins/:id">
+          <Goblin />
+        </Route>
+      </Switch>
+    </main>
   );
 }
 

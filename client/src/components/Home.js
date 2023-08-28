@@ -1,13 +1,9 @@
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react-router";
+// import { Link } from "react-router-dom";
 
-function Home() {
+function Home() 
+//     pass
 
-  return (
-    <div>
-      <h1>*Goblin Love*</h1>
-    </div>
-  );
-}
 
-export default Home;
+// return(
+
+// )}
