@@ -4,66 +4,46 @@ import { Formik, FormikConsumer, useFormik } from "formik";
 import { useHistory } from "react-router-dom";
 import * as yup from "yup";
 
-const Login = ({ users, handleAddUser, handleLogin }) => {
-  const [loginType, setLoginType] = useState(false);
-  const history = useHistory();
-  const formShema = yup.object().shape({
-    email: yup.string(),
-    username: yup.string().required("Username is required").max(20),
-    password: yup.string().required("Password is required").max(100),
-  });
+function Login({ newUser, setNewUser, onAddUser }) {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [userExists, setUserExists] = useState(true);
 
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      username: "",
-      password: "",
-    },
-    validationSchema: formShema,
-    onSubmit: async (values) => {
-      const emailExists = users.find(
-        (user) => user.email.toLowerCase() === values.email.toLowerCase()
-      );
-      const usernameExists = users.find(
-        (user) => user.username.toLowerCase() === values.username.toLowerCase()
-      );
-      if (loginType) {
-        if (usernameExists) {
-          alert("Username already exists");
-        } else if (emailExists) {
-          alert("Email already exists");
-        } else {
-          try {
-            const response = await fetch("http://127.0.0.1:5555/users", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-              },
-              body: JSON.stringify(values, null, 2),
-            });
-            if (response.status === 201) {
-              const data = await response.json();
-              console.log("User Created:", data);
-              handleAddUser(data);
-              history.push(`/user/${data.username}`);
-            } else {
-              console.log("Failed to Create User:", response.statusText);
-            }
-          } catch (error) {
-            console.error("Error Posting Users:", error);
-          }
-        }
+  //   function handleChange(e) {
+  //     const { name, value } = e.target;
+  //     setNewUser({ ...newUser, [name]: value });
+  //   }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const formData = {
+      firstName,
+      lastName,
+      email,
+      password,
+    };
+    fetch("/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((user) => {
+          setFirstName("");
+          setLastName("");
+          setEmail("");
+          setPassword("");
+          onAddUser(user);
+        });
       } else {
-        if (usernameExists && usernameExists.password === values.password) {
-          handleLogin(usernameExists);
-          history.push(`/user/${usernameExists.username}`);
-        } else {
-          alert("Invalid Username or Password");
-        }
+        r.json().then((err) => setErrors(err.errors));
       }
-    },
-  });
+    });
+  }
 
   return (
     <div>

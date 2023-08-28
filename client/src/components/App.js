@@ -81,27 +81,11 @@ function App() {
             <Home goblins={goblins} />
           </Route>
           <Route exact path="/login">
-            <Login
-              users={users}
-              handleAddUser={handleAddUser}
-              handleLogin={handleLogin}
-            />
+            <Login onAddUser={handleAddUser} />
+            {/* {<Login setNewUser={setNewUser} newUser={newUser} />} */}
           </Route>
-          <Route exact path="/goblins">
-            {goblins.length > 0 ? (
-              <GoblinContainer goblins={goblins} />
-            ) : (
-              <p>Loading goblins...</p>
-            )}
-          </Route>
-          <Route path = "/goblins/:goblinName">
-            <GoblinDetails goblins = {goblins}/>
-          </Route>
-          <Route exact path = "/user/:username">
-            <UserPage users = {users} currentUser = {currentUser} handleChangeUser = {handleChangeUser} handleDeleteUser = {handleDeleteUser}/>
-          </Route>
-          <Route exact path = "/date">
-            <Game currentUser = {currentUser} goblins = {goblins} handleChangeUser = {handleChangeUser}/>
+          <Route exact path="/goblin">
+            <Goblin />
           </Route>
         </Switch>
       </main>
