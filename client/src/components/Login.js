@@ -78,7 +78,7 @@ function Login({ newUser, setNewUser, onAddUser }) {
           <>
             <label htmlFor="username">username</label>
             <input
-              type="text" // Corrected type to "text"
+              type="text"
               value={username}
               placeholder="username"
               id="username"
@@ -90,7 +90,7 @@ function Login({ newUser, setNewUser, onAddUser }) {
             />
             <label htmlFor="password">password</label>
             <input
-              type="password" // Corrected the type to "password"
+              type="password"
               value={password}
               placeholder="password"
               id="password"
