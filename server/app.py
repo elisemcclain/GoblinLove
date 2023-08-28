@@ -3,14 +3,32 @@
 # Standard library imports
 
 # Remote library imports
-from flask import request, Flask, jsonify, make_response
+from flask import request, Flask, jsonify, make_response, Flask
 from flask_migrate import Migrate
 from flask_restful import Resource, Api
+from flask_cors import CORS
 # Local imports
 from config import app, db, api
 from models import User, Trait, TraitAssociation, Goblin, Date, Dialogue, Response, Outcome
 # Add your model imports
 # Views go here!
+
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+DATABASE = os.environ.get(
+    "DB_URI", f"sqlite:///{os.path.join(BASE_DIR, 'app.db')}")
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.json.compact = False
+
+migrate = Migrate(app, db)
+
+db.init_app(app)
+
+api = Api(app)
+
+cors = CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
 
 @app.route('/')
 def index():
