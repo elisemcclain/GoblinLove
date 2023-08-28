@@ -118,15 +118,11 @@ class Responses(Resource):
         return make_response(jsonify(responses), 200)
 api.add_resource(Responses, '/responses')
 
-class Outcome(Resource):
+class Outcomes(Resource):
     def get(self):
-        # outcome_all = db.session.query(Outcome).all()
-        # outcomes = [outcome.to_dict() for outcome in outcome_all]
-        # return make_response(jsonify(outcomes), 200)
-        outcomes = db.session.query(Outcome.id, Outcome.outcome_description).all()
-        outcome_dicts = [{'id': id, 'outcome_description': outcome_description} for id, outcome_description in outcomes]
+        outcome_dicts = [outcome.to_dict() for outcome in Outcome.query.all()]
         return make_response(jsonify(outcome_dicts), 200)
-api.add_resource(Outcome, '/outcomes')
+api.add_resource(Outcomes, '/outcomes')
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)

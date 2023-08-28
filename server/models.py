@@ -151,7 +151,7 @@ class Outcome(db.Model, SerializerMixin):
     goblin_id = db.Column(db.Integer, db.ForeignKey('goblins.id'), nullable=False)
     outcome_description = db.Column(db.String, nullable=False)
     
-    # serialize_rules = ('-goblin.outcomes', '-date.outcomes',)
+    serialize_rules = ('-goblin', '-date',)
     
     
     
