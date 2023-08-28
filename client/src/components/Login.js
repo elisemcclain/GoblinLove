@@ -6,6 +6,7 @@ function Login({ newUser, setNewUser, onAddUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [userExists, setUserExists] = useState(true);
+  const [errors, setErrors] = useState([]);
 
   //   function handleChange(e) {
   //     const { name, value } = e.target;
