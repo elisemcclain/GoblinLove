@@ -137,16 +137,56 @@ if __name__ == '__main__':
         db.session.commit()
         
         print("Creating dialogues...")
-        dialogue1 = Dialogue(date_part= 1, date_id=date1.id, trait_id=trait1.id, description="You decide it could be pretty funny to sabotage their game by giving them a bone with a giant crack down its center.")
-        dialogue2 = Dialogue(date_part= 1, date_id=date1.id, trait_id=trait2.id, description="You find the best bone in the pile and take it for yourself. No way they are beating you. Matter of fact, you think you'll take this bone home. No one else should even have access to it.")
-        dialogue3 = Dialogue(date_part= 1, date_id=date1.id, trait_id=trait3.id, description="You find a decent bones and wrap a band of leather around each. This will surely help with grip stability.")
-        dialogue4 = Dialogue(date_part= 1, date_id=date1.id, trait_id=trait4.id, description="You try to pick out the most normal, none threatening bones from the pile for both you and your partner. Better safe than sorry.")
-        dialogue5 = Dialogue(date_part= 1, date_id=date1.id, trait_id=trait5.id, description="You figure that the best way to play is to be honest. This will be fun either way, and you let your partner pick out their own bone and you just grab whatever's nearby.")
-        dialogue6 = Dialogue(date_part= 1, date_id=date1.id, trait_id=trait6.id, description="You think that it could be good fun to mix up the game a bit. You decide you should both wear blindfolds!")
-        dialogue7 = Dialogue(date_part= 1, date_id=date1.id, trait_id=trait7.id, description="You let your partner know that they aren't going to play by their own rules. They're going to play by yours. This isn't going their way.")
-        dialogue8 = Dialogue(date_part= 1, date_id=date1.id, trait_id=trait8.id, description="You are shocked that you almost forgot to do your pregame ritual! There is only one true way to be safe, and it involves candles, incense and interpretation of the clouds.")
-        dialogue9 = Dialogue(date_part= 1, date_id=date1.id, trait_id=trait9.id, description="You can't help but wonder what your partner is going to do. You decide to let them take the lead on how the game should be played.")
-        dialogue10 = Dialogue(date_part= 1, date_id=date1.id, trait_id=trait10.id, description="You decide its a horrible idea to play here. It should be over by the riverbank. The lighting is better and it could be more exciting.")
+        dialogue1 = Dialogue(
+            date_part= 1, 
+            date_id=date1.id, 
+            trait_id=trait1.id, 
+            description="You decide it could be pretty funny to sabotage their game by giving them a bone with a giant crack down its center.")
+        dialogue2 = Dialogue(
+            date_part= 1, 
+            date_id=date1.id, 
+            trait_id=trait2.id, 
+            description="You find the best bone in the pile and take it for yourself. No way they are beating you. Matter of fact, you think you'll take this bone home. No one else should even have access to it.")
+        dialogue3 = Dialogue(
+            date_part= 1, 
+            date_id=date1.id, 
+            trait_id=trait3.id, 
+            description="You find a decent bones and wrap a band of leather around each. This will surely help with grip stability.")
+        dialogue4 = Dialogue(
+            date_part= 1, 
+            date_id=date1.id, 
+            trait_id=trait4.id, 
+            description="You try to pick out the most normal, none threatening bones from the pile for both you and your partner. Better safe than sorry.")
+        dialogue5 = Dialogue(
+            date_part= 1, 
+            date_id=date1.id, 
+            trait_id=trait5.id, 
+            description="You figure that the best way to play is to be honest. This will be fun either way, and you let your partner pick out their own bone and you just grab whatever's nearby.")
+        dialogue6 = Dialogue(
+            date_part= 1, 
+            date_id=date1.id, 
+            trait_id=trait6.id, 
+            description="You think that it could be good fun to mix up the game a bit. You decide you should both wear blindfolds!")
+        dialogue7 = Dialogue(
+            date_part= 1, 
+            date_id=date1.id, 
+            trait_id=trait7.id, 
+            description="You let your partner know that they aren't going to play by their own rules. They're going to play by yours. This isn't going their way.")
+        dialogue8 = Dialogue(
+            date_part= 1, 
+            date_id=date1.id, 
+            trait_id=trait8.id, 
+            description="You are shocked that you almost forgot to do your pregame ritual! There is only one true way to be safe, and it involves candles, incense and interpretation of the clouds.")
+        dialogue9 = Dialogue(
+            date_part= 1, 
+            date_id=date1.id, 
+            trait_id=trait9.id, 
+            description="You can't help but wonder what your partner is going to do. You decide to let them take the lead on how the game should be played.")
+        dialogue10 = Dialogue(
+            date_part= 1, 
+            date_id=date1.id, 
+            trait_id=trait10.id, 
+            description="You decide its a horrible idea to play here. It should be over by the riverbank. The lighting is better and it could be more exciting.")
         
         
         dialogues = [dialogue1, dialogue2, dialogue3, dialogue4, dialogue5,dialogue6,dialogue7,dialogue8,dialogue9,dialogue10]
@@ -154,7 +194,7 @@ if __name__ == '__main__':
         db.session.commit()
         
         print("Creating responses...")
-        response1 = Response(dialogue_id=dialogue1.id, goblin_id=grubnub.id, response="Test_Response_1", outcome=True)
+        response1 = Response(dialogue_id=dialogue1.id, goblin_id=grubnub.id, response="", outcome=True)
         response2 = Response(dialogue_id=dialogue2.id, goblin_id=grubnub.id, response="Test_Response_2", outcome=False)
         response3 = Response(dialogue_id=dialogue3.id, goblin_id=grubnub.id, response="Test_Response_3", outcome=False)
         response4 = Response(dialogue_id=dialogue4.id, goblin_id=grubnub.id, response="Test_Response_1", outcome=True)
@@ -184,6 +224,26 @@ if __name__ == '__main__':
         response28 = Response(dialogue_id=dialogue8.id, goblin_id=blort.id, response="Test_Response_3", outcome=False)
         response29 = Response(dialogue_id=dialogue9.id, goblin_id=blort.id, response="Test_Response_3", outcome=False)
         response30 = Response(dialogue_id=dialogue10.id, goblin_id=blort.id, response="Test_Response_3", outcome=False)
+        response31 = Response(dialogue_id=dialogue1.id, goblin_id=grimble.id, response="Test_Response_3", outcome=False)
+        response32 = Response(dialogue_id=dialogue2.id, goblin_id=grimble.id, response="Test_Response_3", outcome=False)
+        response33 = Response(dialogue_id=dialogue3.id, goblin_id=grimble.id, response="Test_Response_3", outcome=False)
+        response34 = Response(dialogue_id=dialogue4.id, goblin_id=grimble.id, response="Test_Response_3", outcome=False)
+        response35 = Response(dialogue_id=dialogue5.id, goblin_id=grimble.id, response="Test_Response_3", outcome=False)
+        response36 = Response(dialogue_id=dialogue6.id, goblin_id=grimble.id, response="Test_Response_3", outcome=False)
+        response37 = Response(dialogue_id=dialogue7.id, goblin_id=grimble.id, response="Test_Response_3", outcome=False)
+        response38 = Response(dialogue_id=dialogue8.id, goblin_id=grimble.id, response="Test_Response_3", outcome=False)
+        response39 = Response(dialogue_id=dialogue9.id, goblin_id=grimble.id, response="Test_Response_3", outcome=False)
+        response40 = Response(dialogue_id=dialogue10.id, goblin_id=grimble.id, response="Test_Response_3", outcome=False)
+        response41 = Response(dialogue_id=dialogue1.id, goblin_id=zongo.id, response="Test_Response_3", outcome=False)
+        response42 = Response(dialogue_id=dialogue2.id, goblin_id=zongo.id, response="Test_Response_3", outcome=False)
+        response43 = Response(dialogue_id=dialogue3.id, goblin_id=zongo.id, response="Test_Response_3", outcome=False)
+        response44 = Response(dialogue_id=dialogue4.id, goblin_id=zongo.id, response="Test_Response_3", outcome=False)
+        response45 = Response(dialogue_id=dialogue5.id, goblin_id=zongo.id, response="Test_Response_3", outcome=False)
+        response46 = Response(dialogue_id=dialogue6.id, goblin_id=zongo.id, response="Test_Response_3", outcome=False)
+        response47 = Response(dialogue_id=dialogue7.id, goblin_id=zongo.id, response="Test_Response_3", outcome=False)
+        response48 = Response(dialogue_id=dialogue8.id, goblin_id=zongo.id, response="Test_Response_3", outcome=False)
+        response49 = Response(dialogue_id=dialogue9.id, goblin_id=zongo.id, response="Test_Response_3", outcome=False)
+        response50 = Response(dialogue_id=dialogue10.id, goblin_id=zongo.id, response="Test_Response_3", outcome=False)
         
         responses = [response1, response2, response3]
         db.session.add_all(responses)
