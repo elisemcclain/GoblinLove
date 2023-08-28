@@ -8,33 +8,42 @@ function Login({ newUser, setNewUser, onAddUser }) {
   const [userExists, setUserExists] = useState(true);
   const [errors, setErrors] = useState([]);
 
-  //   function handleChange(e) {
-  //     const { name, value } = e.target;
-  //     setNewUser({ ...newUser, [name]: value });
-  //   }
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setNewUser({ ...newUser, [name]: value });
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost:5555/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username: username,
-        email: email,
-        password: password,
-      }),
-    })
+
+    fetch(`http://localhost:5555/check-email/${email}`)
       .then((r) => r.json())
-      .then((newUser) => onAddUser(newUser));
-    console.log("submitted");
+      .then((data) => {
+        if (data.isTaken) {
+          setUserExists(true);
+        } else {
+          fetch("http://localhost:5555/users", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              username: username,
+              email: email,
+              password: password,
+            }),
+          })
+            .then((r) => r.json())
+            .then((newUser) => onAddUser(newUser));
+        }
+      });
   }
 
   return (
     <div>
       <div>
-        <h1>*Welcome! Enter your email to log in or create an account*</h1>
+        <h1>Welcome</h1>
+        <h3>Enter your email to log in or create an account</h3>
       </div>
       <form>
         <label htmlFor="email">email</label>
@@ -53,14 +62,14 @@ function Login({ newUser, setNewUser, onAddUser }) {
           <>
             <label htmlFor="password">password</label>
             <input
-              type="email"
+              type="password"
               value={password}
               placeholder="password"
               id="password"
               name="password"
               onChange={(e) => {
                 setPassword(e.target.value);
-                setUserExists(true);
+                // setUserExists(true);
               }}
             />
             <button onClick={handleSubmit}>Log In</button>
@@ -69,31 +78,32 @@ function Login({ newUser, setNewUser, onAddUser }) {
           <>
             <label htmlFor="username">username</label>
             <input
-              type="text"
+              type="text" // Corrected type to "text"
               value={username}
-              placeholder="username name"
+              placeholder="username"
               id="username"
               name="username"
               onChange={(e) => {
                 setUsername(e.target.value);
-                setUserExists(false);
+                // setUserExists(false);
               }}
             />
             <label htmlFor="password">password</label>
             <input
-              type="email"
+              type="password" // Corrected the type to "password"
               value={password}
               placeholder="password"
               id="password"
               name="password"
               onChange={(e) => {
                 setPassword(e.target.value);
-                setUserExists(false);
               }}
             />
+            <button onClick={handleSubmit}>
+              {userExists ? "Log In" : "Create Account"}
+            </button>
           </>
         )}
-        <button>Log In</button>
       </form>
     </div>
   );

@@ -38,7 +38,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/login">
+          <Route exact path="/users">
             <Login onAddUser={handleAddUser} />
           </Route>
           <Route exact path="/goblin">

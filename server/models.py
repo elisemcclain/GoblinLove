@@ -48,14 +48,14 @@ class User(db.Model, SerializerMixin):
         else:
             raise ValueError('Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.')
         
-    # @validates('email')
-    # def validate_email(self, key, email):
-    #     if User.query.filter_by(email=email).first():
-    #         raise ValueError('That email is taken.')
-    #     if validate_email(email):
-    #         return email
-    #     else:
-    #         raise ValueError('Please enter a valid email address.')
+    @validates('email')
+    def validate_email(self, key, email):
+        if User.query.filter_by(email=email).first():
+            raise ValueError('That email is taken.')
+        if validate_email(email):
+            return email
+        else:
+            raise ValueError('Please enter a valid email address.')
         
         
 class Trait(db.Model, SerializerMixin):
