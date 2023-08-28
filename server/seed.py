@@ -27,9 +27,9 @@ if __name__ == '__main__':
         print("deleted all data")
         
         print("Creating users...")
-        user1 = User(username="user1", password="Password#1", email="Fake@email.com")
-        user2 = User(username="user2", password="Password#2", email="Fake@email.com")
-        user3 = User(username="user3", password="Password#3", email="Fake@email.com")
+        user1 = User(username="user1", password="Password#1", email="grantbruemmer@gmail.com")
+        user2 = User(username="user2", password="Password#2", email="fakeuser@gmail.com")
+        user3 = User(username="user3", password="Password#3", email="fakeuser2@gmail.com")
         users = [user1, user2, user3]
         db.session.add_all(users)
         db.session.commit()
@@ -84,8 +84,8 @@ if __name__ == '__main__':
         
         print("Creating responses...")
         response1 = Response(dialogue_id=dialogue1.id, goblin_id=grubnub.id, response="Test_Response_1", outcome=True)
-        response2 = Response(dialogue_id=dialogue2.id, goblin_id=sneezle.id, response1="Test_Response_2", outcome=False)
-        response3 = Response(dialogue_id=dialogue3.id, goblin_id=blort.id, response2="Test_Response_3", outcome=False)
+        response2 = Response(dialogue_id=dialogue2.id, goblin_id=sneezle.id, response="Test_Response_2", outcome=False)
+        response3 = Response(dialogue_id=dialogue3.id, goblin_id=blort.id, response="Test_Response_3", outcome=False)
         
         responses = [response1, response2, response3]
         db.session.add_all(responses)

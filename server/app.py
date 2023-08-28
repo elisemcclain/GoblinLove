@@ -6,9 +6,9 @@
 from flask import request, Flask, jsonify, make_response
 from flask_migrate import Migrate
 from flask_restful import Resource, Api
-from models import User, Trait, TraitAssociation, Goblin, Date, Dialogue, Response, Outcome
 # Local imports
 from config import app, db, api
+from models import User, Trait, TraitAssociation, Goblin, Date, Dialogue, Response, Outcome
 # Add your model imports
 # Views go here!
 
@@ -19,7 +19,7 @@ def index():
 class Users(Resource):
     
     def get(self):
-        users = [user.to_dict(rules=('-traits',)) for user in User.query.all()]
+        users = [user.to_dict(rules=('-traits','-trait_associations')) for user in User.query.all()]
         return make_response(jsonify(users), 200)
     
     def post(self):
@@ -90,7 +90,7 @@ class TraitAssociations(Resource):
         
         except ValueError as e:
             return make_response(jsonify({'error': str(e)}), 400)
-        
+api.add_resource(TraitAssociations, '/trait_associations')
 
 class Goblins(Resource):
     
@@ -108,19 +108,26 @@ api.add_resource(Dates, '/dates')
 
 class Dialogues(Resource):
     def get(self):
-        dialogues = [dialogue.to_dict(rules=('-dates', '-traits', '-responses')) for dialogue in Dialogue.query.all()]
+        dialogues = [dialogue.to_dict() for dialogue in Dialogue.query.all()]
         return make_response(jsonify(dialogues), 200)
-    
+api.add_resource(Dialogues, '/dialogues')
+
 class Responses(Resource):
     def get(self):
         responses = [response.to_dict(rules=('-outcomes',)) for response in Response.query.all()]
         return make_response(jsonify(responses), 200)
+api.add_resource(Responses, '/responses')
 
 class Outcome(Resource):
     def get(self):
-        outcomes = [outcome.to_dict(rules=('-responses',)) for outcome in Outcome.query.all()]
-        return make_response(jsonify(outcomes), 200)
-    
+        # outcome_all = db.session.query(Outcome).all()
+        # outcomes = [outcome.to_dict() for outcome in outcome_all]
+        # return make_response(jsonify(outcomes), 200)
+        outcomes = db.session.query(Outcome.id, Outcome.outcome_description).all()
+        outcome_dicts = [{'id': id, 'outcome_description': outcome_description} for id, outcome_description in outcomes]
+        return make_response(jsonify(outcome_dicts), 200)
+api.add_resource(Outcome, '/outcomes')
+
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
 
