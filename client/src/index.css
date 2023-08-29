@@ -6,6 +6,7 @@
   width: 30px;
   height: 20px;
   cursor: pointer;
+  position: 0;
 }
 
 .bar {
@@ -18,11 +19,6 @@
   display: none; 
 }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-  /* ... (other styles) */
-
   .menu.active {
-      display: block; /* Show the menu when active */
+      display: block; 
   }
-}

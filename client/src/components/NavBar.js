@@ -16,24 +16,27 @@ export default function NavBar() {
                     <Hamburger />
                 </div>
                 <div className={`menu ${hamburgerOpen ? "active" : ""}`}>
-                    <ul>
-                        <li>
-                            <Link to="/login">Login</Link>
-                        </li>
-                        <li>
-                            <Link to="/goblin">Goblin Dates</Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://www.cosmopolitan.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Tips & Tricks
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <ul>
+                    <li>
+                        <Link to="/login">Login</Link>
+                    </li>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/goblin">Goblin Dates</Link>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.cosmopolitan.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Tips & Tricks
+                        </a>
+                    </li>
+                </ul>
+            </div>
             </div>
         </div>
     );
