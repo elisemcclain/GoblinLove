@@ -15,7 +15,7 @@ function Home({ setUsers }) {
   }, []);
 
   function handleClick() {
-    console.log("ive been clicked - create account");
+    window.location.href = "http://localhost:3000/login"
   }
 
   return (

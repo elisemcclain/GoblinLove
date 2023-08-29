@@ -42,7 +42,7 @@ export const Login = ({ users, setUsers }) => {
             // account created
             console.log("account made");
             setRefreshPage(!refreshPage);
-            setUserExists(true);
+            setUserExists(false);
           }
         })
         .catch((error) => {
