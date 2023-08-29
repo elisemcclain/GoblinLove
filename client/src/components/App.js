@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import GoblinContainer from "./Goblins/GoblinContainer";
 import Login from "./Login";
 import Home from "./Home";
+import NavBar from "./NavBar";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -44,6 +45,9 @@ function App() {
 
   return (
     <BrowserRouter>
+    <div>
+      <NavBar />
+    </div>
       <main>
         <Switch>
           <Route exact path="/">
