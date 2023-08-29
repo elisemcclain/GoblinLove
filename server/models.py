@@ -1,8 +1,14 @@
 from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy_serializer import SerializerMixin
 from sqlalchemy.orm import validates
 from sqlalchemy import MetaData
+from sqlalchemy.orm import validates
+from sqlalchemy import MetaData
 from sqlalchemy.ext.associationproxy import association_proxy
+from validate_email import validate_email  
+import re
+from datetime import datetime
 from validate_email import validate_email  
 import re
 from datetime import datetime
