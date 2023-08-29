@@ -4,7 +4,7 @@ import { Formik, FormikConsumer, useFormik } from "formik";
 import * as yup from "yup";
 
 
-const Login = ({users, handleAddUsers, handleLogin}) => {
+const Login = ({users, handleAddUser, handleLogin}) => {
     const [loginType, setLoginType] = useState(false)
 
     const formShema = yup.object().shape({
@@ -42,7 +42,7 @@ const Login = ({users, handleAddUsers, handleLogin}) => {
                         if (response.status === 201) {
                             const data = await response.json()
                             console.log("User Created:", data)
-                            handleAddUsers(data)
+                            handleAddUser(data)
                         } else {
                             console.log("Failed to Create User:", response.statusText)
                         }

@@ -4,10 +4,13 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import GoblinContainer from "./Goblins/GoblinContainer";
 // import Login from "./Login";
 import Home from "./Home";
+import Login from "./Login";
 
 function App() {
   const [users, setUsers] = useState([]);
   const [goblins, setGoblins] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:5555/users")
@@ -29,18 +32,20 @@ function App() {
       }
     }
     fetchGoblins();
-    // fetchGoblins();
-    // fetch("http://127.0.0.1:5555/goblins")
-    //   .then((r) => r.json())
-    //   .then((goblinArray) => {
-    //     setGoblins(goblinArray);
-    //   });
   }, []);
-
   const handleAddUser = (newUser) => {
     const updatedUserArray = [...users, newUser];
     setUsers(updatedUserArray);
+    setCurrentUser(newUser);
+    setLoggedIn(true);
   };
+
+  const handleLogin = (user) => {
+    console.log(user)
+    setCurrentUser(user);
+    setLoggedIn(true);
+  }
+  
 
   return (
     <BrowserRouter>
@@ -49,8 +54,8 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/users">
-            {/* <Login onAddUser={handleAddUser} users={setUsers} /> */}
+          <Route exact path="/login">
+          <Login users = {users} handleAddUser = {handleAddUser} handleLogin = {handleLogin}/>
           </Route>
           <Route exact path="/goblin">
             {goblins.length > 0 ? (
@@ -66,3 +71,5 @@ function App() {
 }
 
 export default App;
+
+
