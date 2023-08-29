@@ -155,10 +155,24 @@ if __name__ == '__main__':
             'dialogue7': Dialogue(date_part=2, date_id=date1.id, trait_id=trait7.id, description="You love Muk, but you DON'T like being told what to do. You begrudingly agree, but it'll be the last time that happens."),
             'dialogue8': Dialogue(date_part=2, date_id=date1.id, trait_id=trait8.id, description="You are stoked for this date, but you can ONLY wear the color orange, no matching socks, and we must bring a worm to sacrifice to the Muk Lord."),
             'dialogue9': Dialogue(date_part=2, date_id=date1.id, trait_id=trait9.id, description="You haven't been to this local saloon yet, so you're intrigued. It'll be your first time trying Muk!"),
-            'dialogue10': Dialogue(date_part=2, date_id=date1.id, trait_id=trait10.id, description="You say yes before you check your calendar. Shoot, you are supposesd to go on a date with Poorg. Oh well!"),
+            'dialogue10': Dialogue(date_part=2, date_id=date1.id, trait_id=trait10.id, description="You say yes before you check your calendar. Shoot, you are supposesd to go on a date with Poorg. Oh well! (Poor Poorg)"),
         }
 
-        db.session.add_all(dialogues_1.values(), dialogues_1.values())
+        dialogues_3 = {
+            'dialogue1': Dialogue(date_part=3, date_id=date1.id, trait_id=trait1.id, description="You love the idea of going to their grotto for a home cooked meal. You can raid their bedroom for secrets and red flags while they aren't looking."),
+            'dialogue2': Dialogue(date_part=3, date_id=date1.id, trait_id=trait2.id, description="You would of course expect nothing less than a gourmet home cooked meal. They can cook absolutely everything, and you can enjoy being served delicious hors d'oeuvres. You won't even lift a hairy finger"),
+            'dialogue3': Dialogue(date_part=3, date_id=date1.id, trait_id=trait3.id, description="You realize this would be the perfect time to try out the smoked Org Liver Stew recipe you've had your eye on. The recipe was passed down from your great grandgoblinma BawkBawk"),
+            'dialogue4': Dialogue(date_part=3, date_id=date1.id, trait_id=trait4.id, description="You try to sway them to get takeout noodles from Olive Gooben, put they insist on cooking. You agree, but bring a snack just in case it's horrendous tasting."),
+            'dialogue5': Dialogue(date_part=3, date_id=date1.id, trait_id=trait5.id, description="You are about to loose your marbles you're so fired up with excitement. You just KNOW that a home cooked bowl of warm Beetle Beans is the way to your hungry heart."),
+            'dialogue6': Dialogue(date_part=3, date_id=date1.id, trait_id=trait6.id, description="You hope gravy is on the menu because you can't wait to start a grueling food fight in the kitchen. The messier, the better!"),
+            'dialogue7': Dialogue(date_part=3, date_id=date1.id, trait_id=trait7.id, description="You are happy to share a home cooked meal, but if it's not half as good as your own Slop Glop Sammy recipe, it's a NO from you, dawg."),
+            'dialogue8': Dialogue(date_part=3, date_id=date1.id, trait_id=trait8.id, description="You wager that a home cooked meal is acceptable, but only if it's muggy and the maggots living in your back swamp have no shadow."),
+            'dialogue9': Dialogue(date_part=3, date_id=date1.id, trait_id=trait9.id, description="You are anxious to try something new! You are growing so bored of drinking Muk every date. You don't know how much more Muk you can take."),
+            'dialogue10': Dialogue(date_part=3, date_id=date1.id, trait_id=trait10.id, description="You say yes before you even realize you're allergic to Nutmeg Borgle Brine Soup they're making."),
+        }
+
+
+        db.session.add_all(dialogues_1.values(), dialogues_2.values(), dialogues_3.values())
         db.session.commit()
         dialogues_list = Dialogue.query.all()
         print("Creating traits...")
