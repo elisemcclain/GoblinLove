@@ -1,13 +1,21 @@
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react-router";
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 
 function GoblinCard({goblin}) {
     console.log(goblin)
+
+    const history = useHistory();
+
+    const navigate = () => {
+        const path = `/goblins/${goblin.name}`
+        history.push(path)
+    }
     return (
         <div>
-            <img src = {goblin.img_url}  alt = {goblin.name}/>
-            
+            <h2>{goblin.name}</h2>
+            <img src = {goblin.img_url}  alt = {goblin.name} onClick = {navigate}/>
+            <p>Click Image to see more!</p>
         </div>
     )
 }

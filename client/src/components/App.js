@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import GoblinContainer from "./Goblins/GoblinContainer";
-// import Login from "./Login";
+import GoblinDetails from "./Goblins/GoblinDetails";
 import Home from "./Home";
 import Login from "./Login";
 
@@ -52,17 +52,20 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home goblins = {goblins}/>
           </Route>
           <Route exact path="/login">
           <Login users = {users} handleAddUser = {handleAddUser} handleLogin = {handleLogin}/>
           </Route>
-          <Route exact path="/goblin">
+          <Route exact path="/goblins">
             {goblins.length > 0 ? (
               <GoblinContainer goblins = {goblins}/>
               ) : (
                 <p>Loading goblins...</p>
                 )}
+          </Route>
+          <Route path = "/goblins/:goblinName">
+            <GoblinDetails goblins = {goblins}/>
           </Route>
         </Switch>
       </main>
