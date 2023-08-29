@@ -2,23 +2,23 @@ import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
-export const Login = () => {
-  const [users, setUsers] = useState([{}]);
+export const Login = ({ users, setUsers }) => {
   const [refreshPage, setRefreshPage] = useState(false);
+  const [userExists, setUserExists] = useState(false);
 
   useEffect(() => {
     console.log("fetched");
-    fetch("/login")
+    fetch("http://127.0.0.1:5555/users")
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
-        console.log(data);
+        console.log({ data });
       });
   }, [refreshPage]);
 
   const formSchema = yup.object().shape({
     email: yup.string().email("Invalid email").required("Must enter email"),
-    name: yup.string().required("Must enter a username").max(15),
+    username: yup.string().required("Must enter a username").max(20),
     password: yup.string().required("Must enter a password").max(20),
   });
 
@@ -30,25 +30,35 @@ export const Login = () => {
     },
     validationSchema: formSchema,
     onSubmit: (values) => {
-      fetch("users", {
+      fetch("http://127.0.0.1:5555/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(values, null, 2),
-      }).then((res) => {
-        if (res.status == 200) {
-          setRefreshPage(!refreshPage);
-        }
-      });
+      })
+        .then((res) => {
+          if (res.status == 201) {
+            // account created
+            console.log("account made");
+            setRefreshPage(!refreshPage);
+            setUserExists(true);
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     },
   });
 
   return (
     <div>
+      <h1>Welcome</h1>
+      <p>Enter your email to login or create an account</p>
       <form onSubmit={formik.handleSubmit}>
         <label htmlFor="email">Email</label>
         <br />
+
         <input
           id="email"
           name="email"
@@ -59,48 +69,33 @@ export const Login = () => {
         <label htmlFor="username">Username</label>
         <br />
 
-        <input
-          id="username"
-          name="username"
-          onChange={formik.handleChange}
-          value={formik.values.username}
-        />
-        <p> {formik.errors.name}</p>
+        {userExists ? (
+          <>
+            <label htmlFor="password">Password</label>
+            <br />
 
-        <label htmlFor="password">Password</label>
-        <br />
-
-        <input
-          id="password"
-          name="password"
-          onChange={formik.handleChange}
-          value={formik.values.password}
-        />
-        <p> {formik.errors.password}</p>
-        <button type="submit">Submit</button>
+            <input
+              id="password"
+              name="password"
+              onChange={formik.handleChange}
+              value={formik.values.password}
+            />
+            <p> {formik.errors.password}</p>
+            <button type="submit">Submit</button>
+          </>
+        ) : (
+          <>
+            <input
+              id="username"
+              username="username"
+              onChange={formik.handleChange}
+              value={formik.values.username}
+            />
+            <p> {formik.errors.username}</p>
+            <button type="submit">Create Account</button>
+          </>
+        )}
       </form>
-      <table style={{ padding: "15px" }}>
-        <tbody>
-          <tr>
-            <th>username</th>
-            <th>email</th>
-            <th>password</th>
-          </tr>
-          {users === "undefined" ? (
-            <p>Loading</p>
-          ) : (
-            users.map((user, i) => (
-              <>
-                <tr key={i}>
-                  <td>{user.username}</td>
-                  <td>{user.email}</td>
-                  <td>{user.password}</td>
-                </tr>
-              </>
-            ))
-          )}
-        </tbody>
-      </table>
     </div>
   );
 };
