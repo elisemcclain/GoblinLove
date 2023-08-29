@@ -10,7 +10,7 @@ function App() {
   const [goblins, setGoblins] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5555/users")
+    fetch("http://localhost:5555/login")
       .then((r) => r.json())
       .then((userArray) => {
         setUsers(userArray);
@@ -38,7 +38,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/users">
+          <Route exact path="/login">
             <Login onAddUser={handleAddUser} users={setUsers} />
           </Route>
           <Route exact path="/goblin">

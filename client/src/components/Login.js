@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
-export const SignupForm = () => {
+export const Login = () => {
   const [users, setUsers] = useState([{}]);
   const [refreshPage, setRefreshPage] = useState(false);
 
   useEffect(() => {
     console.log("fetched");
-    fetch("/users")
+    fetch("/login")
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
