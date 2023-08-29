@@ -1,28 +1,57 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Hamburger from "./Hamburger";
 
-const NavBar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+export default function NavBar() {
+    const [hamburgerOpen, setHamburgerOpen] = useState(false)
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+    const toggleHamburger = () => {
+        setHamburgerOpen(!hamburgerOpen)
+    }
 
-  return (
-    <div className="nav-bar">
-      <div className={`menu-toggle ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-      </div>
-      <div className={`menu ${menuOpen ? "open" : ""}`}>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
+    return (
+        <div>
+            <div className="navigationr">
+                <ul>
+                    <li>
+                        <Link to="/login">Login</Link>
+                    </li>
+                    <li>
+                        <Link to="/goblin">Goblin Dates</Link>
+                    </li>
+                    <li>
+                        <a href="https://www.cosmopolitan.com/" target="_blank" rel="noopener noreferrer">Tips & Tricks
+                    </a>
+                    </li>
 
-export default NavBar;
+                </ul>
+                    <div className="hamburger">
+                        <Hamburger />
+                    </div>
+            </div>
+        </div>
+  )
+}
+
+
+
+
+//<nav>
+//         <div className="nav-bar">
+//             <ul>
+//                 <li>
+//                     <Link to="/login">Login</Link>
+//                 </li>
+//                 <li>
+//                 <Link to="/goblin">Goblin Dates</Link>
+//                 </li>
+//                 <li>
+//                 <a href="https://www.cosmopolitan.com/" target="_blank" rel="noopener noreferrer">
+//                     Tips & Tricks
+//                 </a>
+//                 </li>
+//             </ul>
+//         </div>
+//     </nav>
+//   );
+// }

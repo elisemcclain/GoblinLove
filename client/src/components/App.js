@@ -45,17 +45,15 @@ function App() {
 
   return (
     <BrowserRouter>
-    <div>
-      <NavBar />
-    </div>
       <main>
+        <NavBar />
         <Switch>
           <Route exact path="/">
             <Home setUsers={setUsers} />
           </Route>
           <Route exact path="/login">
             <Login
-              onAddUser={handleAddUser}
+              handleAddUser={handleAddUser}
               users={users}
               setUsers={setUsers}
             />
