@@ -1,11 +1,9 @@
-export default function Hamburger() {
+export default function Hamburger({ onClick }) {
     return(
-        <>
-            <div className="hamburger">
-                <div className="burger1" />
-                <div className="burger2" />
-                <div className="burger3" />
-            </div>
-        </>
+        <div className="hamburger-icon" onClick={onClick}>
+            <div className="bar" />
+            <div className="bar" />
+            <div className="bar" />
+        </div>
     )
 }

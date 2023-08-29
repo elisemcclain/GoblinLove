@@ -1,5 +1,28 @@
-.nav-bar {
-  position: right;
-  background-color: blueviolet;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+}
+
+.menu {
+  display: none; 
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  /* ... (other styles) */
+
+  .menu.active {
+      display: block; /* Show the menu when active */
+  }
 }
