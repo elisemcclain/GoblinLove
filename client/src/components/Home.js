@@ -28,7 +28,7 @@ function Home({ setUsers }) {
         />
       </div>
       <div className="enter">
-        <button onClick={handleClick}>Click here to begin your journey</button>
+        <button onClick={handleClick} className="enter_button">Click here to begin your journey</button>
       </div>
     </div>
   );

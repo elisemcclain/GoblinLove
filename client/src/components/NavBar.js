@@ -17,11 +17,11 @@ export default function NavBar() {
                 </div>
                 <div className={`menu ${hamburgerOpen ? "active" : ""}`}>
                 <ul>
-                    <li>
-                        <Link to="/login">Login</Link>
+                    <li className="links">
+                        <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/login">Login</Link>
                     </li>
                     <li>
                         <Link to="/goblin">Goblin Dates</Link>
