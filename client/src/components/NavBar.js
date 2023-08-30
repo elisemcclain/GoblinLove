@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Hamburger from "./Hamburger";
 
 function NavBar({currentUser}) {
+function NavBar({currentUser}) {
     const [hamburgerOpen, setHamburgerOpen] = useState(false)
+    const [loggedIn, setLoggedIn] = useState(false)
     const [loggedIn, setLoggedIn] = useState(false)
 
     useEffect(() => {
@@ -11,7 +14,13 @@ function NavBar({currentUser}) {
             setLoggedIn(true)
         }
     }, [currentUser])
+    useEffect(() => {
+        if(currentUser) {
+            setLoggedIn(true)
+        }
+    }, [currentUser])
     const toggleHamburger = () => {
+        console.log(currentUser, "current user in NavBar")
         console.log(currentUser, "current user in NavBar")
         setHamburgerOpen(!hamburgerOpen)
     }

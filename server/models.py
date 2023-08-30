@@ -165,5 +165,3 @@ class Outcome(db.Model, SerializerMixin):
     outcome_description = db.Column(db.String, nullable=False)
     
     serialize_rules = ('-goblin', '-date',)
-    
-
