@@ -143,9 +143,12 @@ function UserPage({ users, currentUser, handleChangeUser, handleDeleteUser }) {
       <div>
         <img
           className="gob-head-user"
-          src={"client/public/GoblinHead.png"}
-          alt="GOBSMACKED"
+          src={"/GoblinHead.png"}
+          alt="GOBLINHEAD"
         />
+        <div>
+          <h1 className="account">ACCOUNT</h1>
+        </div>
       </div>
       <div className="bar-user"></div>
       {currentUser ? (
