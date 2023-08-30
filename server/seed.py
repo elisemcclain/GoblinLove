@@ -595,6 +595,7 @@ if __name__ == '__main__':
         db.session.commit()
 
         print("Creating outcomes...")
+
         outcomes = {
             "outcome1": Outcome(date_id = date1.id, goblin_id=grubnub.id, outcome_description="Test_Outcome_1", result = False),
             "outcome2": Outcome(date_id = date1.id, goblin_id=grubnub.id, outcome_description="Test_Outcome_2", result = True),

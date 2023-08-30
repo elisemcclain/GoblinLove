@@ -44,7 +44,7 @@ const Login = ({users, handleAddUser, handleLogin}) => {
                             const data = await response.json()
                             console.log("User Created:", data)
                             handleAddUser(data)
-                            history.push("/user")
+                            history.push(`/user/${usernameExists.username}`)
                         } else {
                             console.log("Failed to Create User:", response.statusText)
                         }
@@ -55,7 +55,7 @@ const Login = ({users, handleAddUser, handleLogin}) => {
             } else {
                 if (usernameExists && usernameExists.password === values.password) {
                     handleLogin(usernameExists)
-                    history.push("/user")
+                    history.push(`/user/${usernameExists.username}`)
                 } else {
                     alert("Invalid Username or Password")
                 }

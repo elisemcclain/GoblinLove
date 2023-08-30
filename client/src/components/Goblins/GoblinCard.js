@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 
 
 function GoblinCard({goblin}) {
-    console.log(goblin)
 
     const history = useHistory();
 

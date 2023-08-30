@@ -6,12 +6,12 @@ import GoblinDetails from "./Goblins/GoblinDetails";
 import Home from "./Home";
 import Login from "./Login";
 import UserPage from "./UserPage"
+import NavBar from "./NavBar"
 
 function App() {
   const [users, setUsers] = useState([]);
   const [goblins, setGoblins] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
-  const [loggedIn, setLoggedIn] = useState(false);
 
 
   useEffect(() => {
@@ -39,45 +39,16 @@ function App() {
     const updatedUserArray = [...users, newUser];
     setUsers(updatedUserArray);
     setCurrentUser(newUser);
-    setLoggedIn(true);;
   };
 
   const handleLogin = (user) => {
     console.log(user)
     setCurrentUser(user);
-    setLoggedIn(true);
   }
-  
+
   const handleChangeUser = async (user) => {
-    const oldUserIndex = users.findIndex((u) => u.username === user.username);
-    if (oldUserIndex !== -1) {
-      try {
-        const response = await fetch(`http://localhost:5555/users/${user.id}`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify(user),
-        });
-        if (response.status === 200) {
-          const updatedUserData = await response.json();
-          const updatedUsers = [
-            ...users.slice(0, oldUserIndex),
-            ...users.slice(oldUserIndex + 1),
-          ]
-          const addNewUser = [...updatedUsers, updatedUserData];
-          setUsers(addNewUser);
-          setCurrentUser(updatedUserData);
-        } else {
-          console.log("Error updating user:", response.status);
-        }
-      } catch (error) {
-        console.error("Error updating user:", error)
-      }
-    } else {
-      console.log("User not found");
-    }
+          setUsers([...users, user]);
+          setCurrentUser(user);
   }
 
   const handleDeleteUser = async (user) => {
@@ -105,7 +76,7 @@ function App() {
   return (
     <BrowserRouter>
       <main>
-        <NavBar />
+        <NavBar currentUser = {currentUser}/>
         <Switch>
           <Route exact path="/">
             <Home goblins = {goblins}/>
@@ -123,8 +94,8 @@ function App() {
           <Route path = "/goblins/:goblinName">
             <GoblinDetails goblins = {goblins}/>
           </Route>
-          <Route exact path = "/user">
-            <UserPage key={1} users = {users} currentUser = {currentUser} handleChangeUser = {handleChangeUser} handleDeleteUser = {handleDeleteUser}/>
+          <Route exact path = "/user/:username">
+            <UserPage users = {users} currentUser = {currentUser} handleChangeUser = {handleChangeUser} handleDeleteUser = {handleDeleteUser}/>
           </Route>
         </Switch>
       </main>
