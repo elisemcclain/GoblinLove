@@ -72,11 +72,13 @@ const Login = ({ users, handleAddUser, handleLogin }) => {
         <h1 className="welcome">WELCOME</h1>
       </div>
       <div className="greet">
-        Enter your email to log in or create an account
+        Enter your username to log in or create an account
       </div>
-      <button onClick={() => setLoginType(!loginType)} className="signup">
-        {loginType ? "Click to Login" : "Click to Sign Up"}
-      </button>
+      <div className="signup-move">
+        <button onClick={() => setLoginType(!loginType)} className="signup">
+          {loginType ? "Click to Login" : "Click to Create Account"}
+        </button>
+      </div>
       <form onSubmit={formik.handleSubmit}>
         <br />
         {loginType && (
@@ -85,6 +87,7 @@ const Login = ({ users, handleAddUser, handleLogin }) => {
               Email:{" "}
             </label>
             <input
+              className="email-color"
               id="email"
               name="email"
               onChange={formik.handleChange}
@@ -97,7 +100,7 @@ const Login = ({ users, handleAddUser, handleLogin }) => {
           Username:{" "}
         </label>
         <input
-          className="username"
+          className="username-color"
           id="username"
           name="username"
           onChange={formik.handleChange}
@@ -108,7 +111,7 @@ const Login = ({ users, handleAddUser, handleLogin }) => {
           Password:{" "}
         </label>
         <input
-          className="password"
+          className="password-color"
           id="password"
           name="password"
           onChange={formik.handleChange}
