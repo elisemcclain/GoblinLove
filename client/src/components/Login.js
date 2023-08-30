@@ -68,6 +68,9 @@ const Login = ({ users, handleAddUser, handleLogin }) => {
   return (
     <div>
       <h1 className="welcome">WELCOME</h1>
+      <div className="greet">
+        Enter your email to log in or create an account
+      </div>
       <button onClick={() => setLoginType(!loginType)} className="signup">
         {loginType ? "Click to Login" : "Click to Sign Up"}
       </button>
@@ -75,32 +78,40 @@ const Login = ({ users, handleAddUser, handleLogin }) => {
         <br />
         {loginType && (
           <div>
-            <label htmlFor="email">Email: </label>
+            <label className="email" htmlFor="email">
+              Email:{" "}
+            </label>
             <input
               id="email"
               name="email"
               onChange={formik.handleChange}
               value={formik.values.email}
             />
-            <p> {formik.errors.email}</p>
+            <p className="error-message"> {formik.errors.email}</p>
           </div>
         )}
-        <label htmlFor="username">Username: </label>
+        <label className="username" htmlFor="username">
+          Username:{" "}
+        </label>
         <input
+          className="username"
           id="username"
           name="username"
           onChange={formik.handleChange}
           value={formik.values.username}
         />
-        <p> {formik.errors.username}</p>
-        <label htmlFor="password">Password: </label>
+        <p className="error-message-1"> {formik.errors.username}</p>
+        <label className="password" htmlFor="password">
+          Password:{" "}
+        </label>
         <input
+          className="password"
           id="password"
           name="password"
           onChange={formik.handleChange}
           value={formik.values.password}
         />
-        <p> {formik.errors.password}</p>
+        <p className="error-message-2"> {formik.errors.password}</p>
         <br />
         <button className="login" type="submit">
           {loginType ? "Sign-Up" : "Login"}
