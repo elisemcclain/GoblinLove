@@ -76,7 +76,7 @@ const Login = ({ users, handleAddUser, handleLogin }) => {
       </div>
       <div className="signup-move">
         <button onClick={() => setLoginType(!loginType)} className="signup">
-          {loginType ? "Click to Login" : "Click to Create Account"}
+          {loginType ? "Back to Login" : "Click to Create Account"}
         </button>
       </div>
       <form onSubmit={formik.handleSubmit}>
@@ -120,7 +120,7 @@ const Login = ({ users, handleAddUser, handleLogin }) => {
         <p className="error-message-2"> {formik.errors.password}</p>
         <br />
         <button className="login" type="submit">
-          {loginType ? "Sign-Up" : "Login"}
+          {loginType ? "Create Account" : "Login"}
         </button>
       </form>
     </div>

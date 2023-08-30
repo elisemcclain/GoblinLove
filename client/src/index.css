@@ -94,9 +94,9 @@ body {
 .email {
   display: flex;
   justify-content: left;
-  color: white;
+  color: #06be00;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 50px;
+  margin-left: 90px;
   flex-direction: column;
   margin-top: -60px;
   font-size: 17px;
@@ -107,19 +107,20 @@ body {
   display: flex;
   justify-content: left;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 50px;
+  margin-left: 70px;
+  border-radius: 20px;
+  height: 30px;
+  width: 300px;
+  margin-bottom: 30px;
 }
 
 .username {
   display: flex;
   justify-content: left;
-  color: white;
+  color: #06be00;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 50px;
+  margin-left: 90px;
   font-size: 17px;
-
-  /* flex-direction: column;
-  margin-top: -60px; */
 }
 
 .username-color {
@@ -127,15 +128,18 @@ body {
   display: flex;
   justify-content: left;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 50px;
+  margin-left: 70px;
+  border-radius: 20px;
+  height: 30px;
+  width: 300px;
 }
 
 .password {
   display: flex;
   justify-content: left;
-  color: white;
+  color: #06be00;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 50px;
+  margin-left: 90px;
   font-size: 17px;
 }
 
@@ -144,7 +148,10 @@ body {
   display: flex;
   justify-content: left;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 50px;
+  margin-left: 70px;
+  border-radius: 20px;
+  height: 30px;
+  width: 300px;
 }
 
 .error-message-1 {
@@ -152,7 +159,8 @@ body {
   font-size: 14px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: inline-block;
-  padding-left: 10px;
+  margin-left: 90px;
+  margin-top: 7px;
 }
 
 .error-message-2 {
@@ -160,7 +168,8 @@ body {
   font-size: 14px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: inline-block;
-  padding-left: 10px;
+  margin-left: 90px;
+  margin-top: 7px;
 }
 
 .form {
@@ -209,10 +218,10 @@ body {
   border-radius: 20px;
   border: none;
   color: white;
-  margin-top: 10px;
-  margin-left: 50px;
+  margin-top: 30px;
+  margin-left: 70px;
   padding: 10px;
-  width: 130px;
+  width: 140px;
   justify-content: center;
   /* align-items: center; */
   display: flex;
@@ -256,6 +265,13 @@ body {
 .menu.active {
   display: block;
   color: #0bcd04;
+}
+
+.nav-link {
+  color: #fdfb3d;
+  text-decoration: none;
+  margin-left: -10px;
+  margin-top: 2px;
 }
 
 .gob-name {
