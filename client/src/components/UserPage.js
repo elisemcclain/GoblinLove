@@ -140,8 +140,12 @@ function UserPage({ users, currentUser, handleChangeUser, handleDeleteUser }) {
 
   return (
     <div>
-      <img className="gob-head" src={"./GoblinHead.png"} alt="GOBSMACKED" />
-      <div className="green-bar"></div>
+      <img
+        className="gob-head-user"
+        src={"client/public/GoblinHead.png"}
+        alt="GOBSMACKED"
+      />
+      <div className="bar-user"></div>
       {currentUser ? (
         <div>
           <button type="button" onClick={EditProfile}>
