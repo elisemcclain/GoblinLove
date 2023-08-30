@@ -105,6 +105,7 @@ function App() {
   return (
     <BrowserRouter>
       <main>
+        <NavBar />
         <Switch>
           <Route exact path="/">
             <Home goblins = {goblins}/>

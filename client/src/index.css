@@ -1,7 +1,100 @@
-:root {
-  --bg: #282c34;
-  --header: #fff;
-  --link: #61dafb;
-  --text: hsla(0, 0%, 100%, 0.88);
+body {
+  background-color: #132815;
 }
 
+.gobsmacked {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.enter {
+  background-color: rgb(235, 37, 96);
+  justify-content: center;
+  margin: 0 auto;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 80px;
+  width: 250px;
+}
+
+.enter_button {
+  background: none;
+  border: none;
+  margin: 0 auto;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.welcome {
+  color: #06be00;
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.email {
+  display: flex;
+  justify-content: left;
+  color: #06be00;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form {
+  display: flex;
+  justify-content: left;
+  color: #06be00;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gob-boys {
+  display: flex;
+  justify-content: left;
+  color: #06be00;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  position: 0;
+  /* border-radius: 50px; */
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #06be00;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.navigation {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu {
+  display: none;
+}
+
+  .menu.active {
+      display: block; 
+      color:#0bcd04;
+  }
