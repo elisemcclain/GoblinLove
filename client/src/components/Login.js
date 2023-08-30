@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { Formik, FormikConsumer, useFormik } from "formik";
+import { useHistory } from "react-router-dom";
 import * as yup from "yup";
 
 
 const Login = ({users, handleAddUser, handleLogin}) => {
     const [loginType, setLoginType] = useState(false)
-
+    const history = useHistory()
     const formShema = yup.object().shape({
         email: yup.string(),
         username: yup.string().required("Username is required").max(20),
-        password: yup.string().required("<PASSWORD>").max(20),
+        password: yup.string().required("Password is required").max(100),
     })
 
     const formik = useFormik({
@@ -43,6 +44,7 @@ const Login = ({users, handleAddUser, handleLogin}) => {
                             const data = await response.json()
                             console.log("User Created:", data)
                             handleAddUser(data)
+                            history.push(`/user/${usernameExists.username}`)
                         } else {
                             console.log("Failed to Create User:", response.statusText)
                         }
@@ -53,6 +55,7 @@ const Login = ({users, handleAddUser, handleLogin}) => {
             } else {
                 if (usernameExists && usernameExists.password === values.password) {
                     handleLogin(usernameExists)
+                    history.push(`/user/${usernameExists.username}`)
                 } else {
                     alert("Invalid Username or Password")
                 }
@@ -94,112 +97,3 @@ const Login = ({users, handleAddUser, handleLogin}) => {
 }
 
 export default Login;
-
-//   function Login({ onAddUser, users }) {
-//     const [username, setUsername] = useState("");
-//     const [email, setEmail] = useState("");
-//     const [password, setPassword] = useState("");
-//     const [userExists, setUserExists] = useState(true);
-//     const [errors, setErrors] = useState([]);
-
-//     function handleChange(e) {
-//       const { name, value } = e.target;
-//       setNewUser({ ...newUser, [name]: value });
-//     }
-
-//   function handleSubmit(e) {
-//     e.preventDefault();
-//     fetch(`http://localhost:5555/check-email/${email}`)
-//       .then((r) => r.json())
-//       .then((data) => {
-//         if (data.isTaken) {
-//           setUserExists(true);
-//         } else {
-//           fetch("http://localhost:5555/users", {
-//             method: "POST",
-//             headers: {
-//               "Content-Type": "application/json",
-//             },
-//             body: JSON.stringify({
-//               username: username,
-//               email: email,
-//               password: password,
-//             }),
-//           })
-//             .then((r) => r.json())
-//             .then((newUser) => onAddUser(newUser));
-//         }
-//       });
-//   }
-
-//   return (
-//     <div>
-//       <div>
-//         <h1>Welcome</h1>
-//         <h3>Enter your email to log in or create an account</h3>
-//       </div>
-//       <form>
-//         <label htmlFor="email">email</label>
-//         <input
-//           type="email"
-//           value={email}
-//           placeholder="email"
-//           id="email"
-//           name="email"
-//           onChange={(e) => {
-//             setEmail(e.target.value);
-//             setUserExists(true);
-//           }}
-//         />
-//         {userExists ? (
-//           <>
-//             <label htmlFor="password">password</label>
-//             <input
-//               type="password"
-//               value={password}
-//               placeholder="password"
-//               id="password"
-//               name="password"
-//               onChange={(e) => {
-//                 setPassword(e.target.value);
-//                 // setUserExists(true);
-//               }}
-//             />
-//             <button onClick={handleSubmit}>Log In</button>
-//           </>
-//         ) : (
-//           <>
-//             <label htmlFor="username">username</label>
-//             <input
-//               type="text"
-//               value={username}
-//               placeholder="username"
-//               id="username"
-//               name="username"
-//               onChange={(e) => {
-//                 setUsername(e.target.value);
-//                 // setUserExists(false);
-//               }}
-//             />
-//             <label htmlFor="password">password</label>
-//             <input
-//               type="password"
-//               value={password}
-//               placeholder="password"
-//               id="password"
-//               name="password"
-//               onChange={(e) => {
-//                 setPassword(e.target.value);
-//               }}
-//             />
-//             <button onClick={handleSubmit}>
-//               {userExists ? "Log In" : "Create Account"}
-//             </button>
-//           </>
-//         )}
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default Login;

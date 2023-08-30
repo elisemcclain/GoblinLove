@@ -1,21 +1,18 @@
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-function Home({ setUsers }) {
-  useEffect(() => {
-    fetch("/", {
-      methods: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((r) => r.json())
-      .then((r) => setUsers(r))
-      .catch((error) => console.log(error));
-  }, []);
+function Home({ goblins }) {
+
+  const history = useHistory();
 
   function handleClick() {
-    window.location.href = "http://localhost:3000/login"
+    const path = "/login";
+    history.push(path);
+  }
+
+  const handleGoblinClick = (goblin) => {
+    const path = `/goblins/${goblin.name}`
+    history.push(path);
   }
 
   return (
@@ -30,8 +27,18 @@ function Home({ setUsers }) {
       <div className="enter">
         <button onClick={handleClick} className="enter_button">Click to begin your journey</button>
       </div>
+      <br />
+      {goblins.length > 0 && (
+        <div>
+          {goblins.map((goblin) => {
+          return <img src={goblin.img_url} alt = {goblin.name} onClick = {() => handleGoblinClick(goblin)}/>;
+        })},
+        </div>
+      )
+      }
     </div>
   );
 }
 
 export default Home;
+
