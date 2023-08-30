@@ -69,7 +69,6 @@ class UsersById(Resource):
 api.add_resource(UsersById, '/users/<int:id>')        
 
 class Traits(Resource):
-    
     def get(self):
         traits = [trait.to_dict(rules=('-users', '-dialogues', '-trait_associations')) for trait in Trait.query.all()]
         return make_response(jsonify(traits), 200)
@@ -77,8 +76,13 @@ api.add_resource(Traits, '/traits')
     
 class TraitAssociations(Resource):
     def get(self):
-        trait_associations = [trait_association.to_dict(rules=('-users', '-traits')) for trait_association in TraitAssociation.query.all()]
-        return make_response(jsonify(trait_associations), 200)
+        user_id = request.args.get('user_id')
+        if user_id:
+            trait_associations = [trait_association.to_dict(rules=('-users', '-traits')) for trait_association in TraitAssociation.query.filter_by(user_id=user_id).all()]
+            return make_response(jsonify(trait_associations), 200)
+        else:
+            trait_associations = [trait_association.to_dict(rules=('-users', '-traits')) for trait_association in TraitAssociation.query.all()]
+            return make_response(jsonify(trait_associations), 200)
     def post(self):
         data = request.get_json(force=True)
         try:
@@ -126,4 +130,3 @@ api.add_resource(Outcomes, '/outcomes')
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
-
