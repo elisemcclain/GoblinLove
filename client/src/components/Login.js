@@ -67,9 +67,9 @@ const Login = ({ users, handleAddUser, handleLogin }) => {
 
   return (
     <div>
-      <h1 className="welcome">💗 WELCOME 💗</h1>
+      <img className="gob-head" src={"./GoblinHead.png"} alt="GOBSMACKED" />
       <div>
-        <img className="gob-head" src={"./GoblinHead.png"} alt="GOBSMACKED" />
+        <h1 className="welcome">WELCOME</h1>
       </div>
       <div className="greet">
         Enter your email to log in or create an account

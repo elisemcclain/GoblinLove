@@ -5,10 +5,10 @@ body {
 .gobsmacked {
   display: flex;
   justify-content: center;
-  width: 60%;
+  width: 80%;
   align-items: center;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .enter {
@@ -48,6 +48,14 @@ body {
   margin: 0 10px; /* Adds a bit of spacing between images */
 }
 
+.gob-head {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  align-items: center;
+  margin: 0 auto;
+}
+
 .welcome {
   color: white;
   display: flex;
@@ -55,6 +63,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: green;
   padding: 20px;
+  margin-top: 0px;
 }
 
 .greet {
@@ -219,4 +228,13 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: green;
   padding: 20px;
+  margin-top: 0px;
 }
+
+/* color: white;
+display: flex;
+justify-content: center;
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+background-color: green;
+padding: 20px;
+margin-top: 0px; */

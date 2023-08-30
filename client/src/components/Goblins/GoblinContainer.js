@@ -21,7 +21,8 @@ function Goblin() {
 
   return (
     <div>
-      <h1 className="gob-title">💗 GOBLIN BOYS 💗</h1>
+      <img className="gob-head" src={"./GoblinHead.png"} alt="GOBSMACKED" />
+      <h1 className="gob-title">GOBLIN BOYS</h1>
       {goblins.length > 0 ? (
         <GoblinList goblins={goblins} />
       ) : (
