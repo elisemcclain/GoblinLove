@@ -5,7 +5,8 @@ body {
 .gobsmacked {
   display: flex;
   justify-content: center;
-  width: 80%;
+  width: 600px;
+  max-width: 600px;
   align-items: center;
   margin: 0 auto;
   margin-top: 10px;
@@ -20,7 +21,7 @@ body {
   padding: 10px;
   border-radius: 20px;
   cursor: pointer;
-  margin-top: 80px;
+  /* margin-top: 2px; */
   width: 250px;
 }
 
@@ -36,16 +37,21 @@ body {
 }
 
 .gob-imgs {
-  /* display: flex; */
   justify-content: center;
   align-items: center;
-  width: 20%;
+  height: 180px;
   cursor: pointer;
+  padding: 5px;
 }
 
 .gob-imgs img {
-  width: 20%; /* You can adjust this width value based on your preference */
-  margin: 0 10px; /* Adds a bit of spacing between images */
+  justify-content: center;
+  padding: 30px;
+}
+
+.center-imgs {
+  display: flex;
+  justify-content: center;
 }
 
 .gob-head {

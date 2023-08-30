@@ -26,7 +26,7 @@ function Home({ goblins }) {
       </div>
       <br />
       {goblins.length > 0 && (
-        <div>
+        <div className="center-imgs">
           {goblins.map((goblin) => {
             return (
               <img

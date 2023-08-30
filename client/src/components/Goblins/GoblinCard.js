@@ -23,3 +23,19 @@ function GoblinCard({ goblin }) {
 }
 
 export default GoblinCard;
+
+// {goblins.length > 0 && (
+//   <div>
+//     {goblins.map((goblin) => {
+//       return (
+//         <img
+//           className="gob-imgs"
+//           src={goblin.img_url}
+//           alt={goblin.name}
+//           onClick={() => handleGoblinClick(goblin)}
+//         />
+//       );
+//     })}
+//     ,
+//   </div>
+// )}
