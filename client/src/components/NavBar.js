@@ -32,7 +32,7 @@ function NavBar({ currentUser }) {
           <ul>
             <li className="links">
               <Link to="/" className="nav-link">
-                Home
+                HOME
               </Link>
             </li>
             {loggedIn ? (
@@ -50,14 +50,14 @@ function NavBar({ currentUser }) {
               <>
                 <li>
                   <Link to="/login" className="nav-link">
-                    Login
+                    LOGIN
                   </Link>
                 </li>
               </>
             )}
             <li>
               <Link to="/goblins" className="nav-link">
-                Goblin Dates
+                GOBLIN DATES
               </Link>
             </li>
             <li>
@@ -67,7 +67,7 @@ function NavBar({ currentUser }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Tips & Tricks
+                TIPS & TRICKS
               </a>
             </li>
           </ul>

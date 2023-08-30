@@ -94,7 +94,7 @@ body {
 .email {
   display: flex;
   justify-content: left;
-  color: #06be00;
+  color: #89c445;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 90px;
   flex-direction: column;
@@ -117,7 +117,7 @@ body {
 .username {
   display: flex;
   justify-content: left;
-  color: #06be00;
+  color: #89c445;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 90px;
   font-size: 17px;
@@ -137,7 +137,7 @@ body {
 .password {
   display: flex;
   justify-content: left;
-  color: #06be00;
+  color: #89c445;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 90px;
   font-size: 17px;
@@ -175,7 +175,7 @@ body {
 .form {
   display: flex;
   justify-content: left;
-  color: #06be00;
+  color: #89c445;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 20px;
 }
@@ -183,7 +183,7 @@ body {
 .gob-boys {
   display: flex;
   justify-content: left;
-  color: #06be00;
+  color: #89c445;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -208,7 +208,7 @@ body {
   display: flex;
   margin-right: 90px;
   justify-content: right;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 .login {
@@ -246,7 +246,7 @@ body {
   display: block;
   width: 47px;
   height: 6px;
-  background-color: #06be00;
+  background-color: #89c445;
   border-radius: 20px;
 }
 
@@ -264,7 +264,7 @@ body {
 
 .menu.active {
   display: block;
-  color: #0bcd04;
+  color: #89c445;
 }
 
 .nav-link {
