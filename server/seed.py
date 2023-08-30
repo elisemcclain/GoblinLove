@@ -145,7 +145,6 @@ if __name__ == '__main__':
             'dialogue10': Dialogue(date_part=1, date_id=date1.id, trait_id=trait10.id, description="You decide it's a horrible idea to play here. It should be over by the riverbank. The lighting is better, and it could be more exciting."),
         }
 
-
         db.session.add_all(dialogues_1.values())
         db.session.commit()
         dialogues_list = Dialogue.query.all()

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Switch, Route, useHistory } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import GoblinContainer from "./Goblins/GoblinContainer";
 import GoblinDetails from "./Goblins/GoblinDetails";
@@ -12,6 +12,7 @@ function App() {
   const [goblins, setGoblins] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
   const [loggedIn, setLoggedIn] = useState(false);
+
 
   useEffect(() => {
     fetch("http://localhost:5555/users")
@@ -36,18 +37,15 @@ function App() {
   }, []);
   const handleAddUser = (newUser) => {
     const updatedUserArray = [...users, newUser];
-    const history = useHistory();
     setUsers(updatedUserArray);
     setCurrentUser(newUser);
-    setLoggedIn(true);
-    history.push(`/${newUser.username}`);
+    setLoggedIn(true);;
   };
 
   const handleLogin = (user) => {
-    const history = useHistory();
+    console.log(user)
     setCurrentUser(user);
     setLoggedIn(true);
-    history.push(`/${user.username}`);
   }
   
   const handleChangeUser = async (user) => {
@@ -104,7 +102,6 @@ function App() {
 
   }
 
-
   return (
     <BrowserRouter>
       <main>
@@ -113,7 +110,7 @@ function App() {
             <Home goblins = {goblins}/>
           </Route>
           <Route exact path="/login">
-          <Login users = {users} handleAddUser = {handleAddUser} handleLogin = {handleLogin}/>
+            <Login users = {users} handleAddUser = {handleAddUser} handleLogin = {handleLogin}/>
           </Route>
           <Route exact path="/goblins">
             {goblins.length > 0 ? (
@@ -125,8 +122,8 @@ function App() {
           <Route path = "/goblins/:goblinName">
             <GoblinDetails goblins = {goblins}/>
           </Route>
-          <Route path = "/:userUsername">
-            <UserPage users = {users} currentUser = {currentUser} handleChangeUser = {handleChangeUser} handleDeleteUser = {handleDeleteUser}/>
+          <Route exact path = "/user">
+            <UserPage key={1} users = {users} currentUser = {currentUser} handleChangeUser = {handleChangeUser} handleDeleteUser = {handleDeleteUser}/>
           </Route>
         </Switch>
       </main>

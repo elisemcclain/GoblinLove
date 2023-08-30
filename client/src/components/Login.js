@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { Formik, FormikConsumer, useFormik } from "formik";
+import { useHistory } from "react-router-dom";
 import * as yup from "yup";
 
 
 const Login = ({users, handleAddUser, handleLogin}) => {
     const [loginType, setLoginType] = useState(false)
-
+    const history = useHistory()
     const formShema = yup.object().shape({
         email: yup.string(),
         username: yup.string().required("Username is required").max(20),
-        password: yup.string().required("<PASSWORD>").max(20),
+        password: yup.string().required("Password is required").max(100),
     })
 
     const formik = useFormik({
@@ -43,6 +44,7 @@ const Login = ({users, handleAddUser, handleLogin}) => {
                             const data = await response.json()
                             console.log("User Created:", data)
                             handleAddUser(data)
+                            history.push("/user")
                         } else {
                             console.log("Failed to Create User:", response.statusText)
                         }
@@ -53,6 +55,7 @@ const Login = ({users, handleAddUser, handleLogin}) => {
             } else {
                 if (usernameExists && usernameExists.password === values.password) {
                     handleLogin(usernameExists)
+                    history.push("/user")
                 } else {
                     alert("Invalid Username or Password")
                 }
