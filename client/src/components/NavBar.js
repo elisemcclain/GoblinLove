@@ -44,6 +44,9 @@ function NavBar({currentUser}) {
                         <Link to="/goblins">Goblin Dates</Link>
                     </li>
                     <li>
+                        <Link to="/date">Go On A Date</Link>
+                    </li>
+                    <li>
                         <a
                             href="https://www.cosmopolitan.com/"
                             target="_blank"

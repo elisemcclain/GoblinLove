@@ -7,6 +7,7 @@ import Home from "./Home";
 import Login from "./Login";
 import UserPage from "./UserPage"
 import NavBar from "./NavBar"
+import Game from "./Game";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -96,6 +97,9 @@ function App() {
           </Route>
           <Route exact path = "/user/:username">
             <UserPage users = {users} currentUser = {currentUser} handleChangeUser = {handleChangeUser} handleDeleteUser = {handleDeleteUser}/>
+          </Route>
+          <Route exact path = "/date">
+            <Game currentUser = {currentUser} goblins = {goblins}/>
           </Route>
         </Switch>
       </main>

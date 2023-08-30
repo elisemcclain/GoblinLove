@@ -25,7 +25,6 @@ function UserPage({users, currentUser, handleChangeUser, handleDeleteUser}) {
                     const response = await fetch(`http://127.0.0.1:5555/trait_associations?user_id=${currentUser.id}`);
                     const data = await response.json();
                     setTraitAssociations(data)
-                    console.log(data)
                 } catch (error) {
                     console.log('Error fetching trait associations:', error)
                 }
@@ -36,7 +35,6 @@ function UserPage({users, currentUser, handleChangeUser, handleDeleteUser}) {
                     const response = await fetch(`http://127.0.0.1:5555/traits`);
                     const data = await response.json();
                     setTraits(data)
-                    console.log(data)
                 } catch (error) {
                     console.log('Error fetching traits:', error)
                 }
