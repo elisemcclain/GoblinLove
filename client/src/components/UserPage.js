@@ -10,6 +10,7 @@ function UserPage({users, currentUser, handleChangeUser, handleDeleteUser}) {
     const { username } = useParams()
     const [userMatch, setUserMatch] = useState(false)
     const [traitAssociations, setTraitAssociations] = useState([])
+    const [traits, setTraits] = useState([])
     const history = useHistory()
     const formShema = Yup.object().shape({
         email: Yup.string(),
@@ -30,6 +31,17 @@ function UserPage({users, currentUser, handleChangeUser, handleDeleteUser}) {
                 }
             }
             fetchTraitAssociations()
+            async function fetchTraits() {
+                try {
+                    const response = await fetch(`http://127.0.0.1:5555/traits`);
+                    const data = await response.json();
+                    setTraits(data)
+                    console.log(data)
+                } catch (error) {
+                    console.log('Error fetching traits:', error)
+                }
+            }
+            fetchTraits()
             setUserMatch(true);
         }
     }, [currentUser])
@@ -40,10 +52,16 @@ function UserPage({users, currentUser, handleChangeUser, handleDeleteUser}) {
             email: currentUser.email || '',
             username: currentUser.username || '',
             password: '',
+            traits: {},
         },
         validationSchema: formShema,
         onSubmit: async (values) => {
-
+            const updateData = {
+                id: values.id,
+                email: values.email,
+                username:values.username,
+                password: values.password
+            }
             try {
                 const response = await fetch(`http://127.0.0.1:5555/users/${currentUser.id}`, {
                     method: 'PATCH',
@@ -51,7 +69,7 @@ function UserPage({users, currentUser, handleChangeUser, handleDeleteUser}) {
                         'Content-Type': 'application/json',
                         Accept: 'application/json',
                     },
-                    body: JSON.stringify(values),
+                    body: JSON.stringify(updateData),
                 });
                 if (response.status === 200) {
                     const updatedUserData = await response.json();
@@ -67,11 +85,40 @@ function UserPage({users, currentUser, handleChangeUser, handleDeleteUser}) {
         },
     })
 
-    const EditProfile = () => {
+    const EditProfile = async () => {
         if (edit) {
-            formik.handleSubmit()
+            await formik.handleSubmit()
+            const existingTraitIds = traitAssociations.map((association) => association.trait_id)
+            const selectedTraits = Object.entries(formik.values.traits)
+            .filter(([traitId, isChecked]) => isChecked && !existingTraitIds.includes(Number(traitId)))
+            .map(([traitId]) => Number(traitId))
+            try {
+                for (const traitId of selectedTraits) { 
+                    const response = await fetch(`http://127.0.0.1:5555/trait_associations`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            Accept: 'application/json',
+                        },
+                        body: JSON.stringify(
+                            {
+                                user_id: currentUser.id,
+                                trait_id: traitId,
+                            }
+                        )
+                    });
+                    if (response.status === 201) {
+                        const data = await response.json();
+                        setTraitAssociations((prevAssociations) => [...prevAssociations, data])
+                        console.log('Trait associations created successfully!')
+                    } else {
+                        console.error('Error creating trait associations:', response.status)
+                    }
+                }
+            } catch (error) {
+                console.error('Error creating trait associations:', error)
+            }
         } else {
-
             setEdit(!edit)
         }
     }
@@ -120,6 +167,21 @@ function UserPage({users, currentUser, handleChangeUser, handleDeleteUser}) {
                                 </div>
                                 <br />
                             </form>
+                            <div>
+                                <label>Personality Traits</label>
+                                {traits.map(trait => (
+                                    <div key={trait.id}>
+                                    <input 
+                                    type='checkbox'
+                                    id = {`trait-${trait.id}`}
+                                    onChange = {() => {formik.setFieldValue(`traits.${trait.id}.checked`,!formik.values.traits[trait.id])}}
+                                    onBlur = {formik.handleBlur}
+                                    checked = {formik.values.traits[trait.id]}
+                                    />
+                                    <label htmlFor={`trait-${trait.id}`}>{trait.name}</label>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     ) : (
                         <div>
@@ -145,7 +207,7 @@ function UserPage({users, currentUser, handleChangeUser, handleDeleteUser}) {
                                 Successful Dates with Grimble: {currentUser.grimble_win}
                             </h4>
                             <h4>
-                                Successful Dates with Zongo: {currentUser.zongo_win}
+                                Successful Dates with Zongo: {currentUser.zongos_win}
                             </h4>
                             <br />
                             <h3>Personality Traits: </h3>

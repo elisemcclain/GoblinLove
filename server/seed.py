@@ -569,7 +569,7 @@ if __name__ == '__main__':
             'response48': Response(
                 dialogue_id=dialogues_list[7].id, 
                 goblin_id=zongo.id, 
-                response="Zongo's eyebrows shot up in surprise as you revealed your pregame ritual.\n\n"
+                response="Zongo's expression narrowed inquisitively as you revealed your pregame ritual.\n\n"
                 "'A ritual for safety, how quaintly superstitious,' he commented not unkindly. He examined the candles and incense.\n\n"
                 "With a wave of his hand, Zongo conjured a playful illusion of clouds forming intricate patterns. 'Ah, the interpretation of clouds. I used to spend hours lost in them.'\n\n"
                 "After a long moment, he picked up a bone and smiled softly. 'Let's see if your shamanic incantations and cloud-based divinations will sway the cosmic forces in your favor.'",
@@ -578,9 +578,9 @@ if __name__ == '__main__':
                 dialogue_id=dialogues_list[8].id, 
                 goblin_id=zongo.id, 
                 response="Zongo's eyebrow arched with a mixture of surprise and smug satisfaction as you granted him the authority to lead the game. He smirked, clearly pleased.\n\n"
-                "'Ah, finally recognizing my unparalleled genius,' he quipped with an air of self-importance. He looked at the bones with new confidence.\n\n"
-                "With a flourish of his hand, Zongo conjured a layer of frost around his chosen bones, making them shine with crystaline brilliance. 'Behold, a game molded by my cold heart!'\n\n"
-                "He picked up a bone with a triumphant smile. 'Let the masterpiece begin as I orchestrate an unparalleled symphony. Mind the frostbite, darling.'", 
+                "'Ah, finally recognizing my unparalleled genius,' he quipped. He looked at the bones with new confidence.\n\n"
+                "With a flourish of his hand, Zongo conjured a layer of frost around the pile of bones, making them shine with crystaline brilliance. 'Behold, a game molded by my cold heart!'\n\n"
+                "He picked up a bone with a triumphant smile. 'Let the masterpiece begin as I orchestrate our symphony. Mind the frostbite, darling.'", 
                 outcome=True),
             'response50': Response(
                 dialogue_id=dialogues_list[9].id, 
