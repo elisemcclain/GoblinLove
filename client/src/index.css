@@ -1,3 +1,49 @@
+body {
+  background-color: #01366c;
+}
+
+.gob-love {
+  color: rgb(76, 150, 2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+}
+
+.enter {
+  display: flex;
+  justify-content: center;
+}
+
+.welcome {
+  color: #0bcd04;
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.email {
+  display: flex;
+  justify-content: left;
+  color: #0bcd04;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form {
+  display: flex;
+  justify-content: left;
+  color: #0bcd04;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gob-boys {
+  display: flex;
+  justify-content: left;
+  color: #0bcd04;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 
 .hamburger-icon {
   display: flex;
@@ -12,7 +58,7 @@
 .bar {
   width: 30px;
   height: 4px;
-  background-color: #333;
+  background-color: #0bcd04;
 }
 
 .menu {
@@ -21,4 +67,5 @@
 
   .menu.active {
       display: block; 
+      color:#0bcd04;
   }

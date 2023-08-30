@@ -62,12 +62,12 @@ const Login = ({users, handleAddUser, handleLogin}) => {
 
     return (
         <div>
-            <h1>Welcome</h1>
+            <h1 className="welcome">WELCOME</h1>
             <button onClick={() => setLoginType(!loginType)}>{loginType ? "Click to Login" : "Click to Sign Up"}</button>
             <form onSubmit={formik.handleSubmit}>
                 <br />
             {loginType && (
-                <div>
+                <div className="email">
                     <label htmlFor="email">Email: </label>
                     <input
                         id="email"
@@ -78,14 +78,16 @@ const Login = ({users, handleAddUser, handleLogin}) => {
                     <p> {formik.errors.email}</p>
                 </div>
             )}
-                <label htmlFor="username">Username: </label>
-                <input id="username" name="username" onChange={formik.handleChange} value={formik.values.username} />
-                <p> {formik.errors.username}</p>
-                <label htmlFor="password">Password: </label>
-                <input id="password" name="password" onChange={formik.handleChange} value={formik.values.password} />
-                <p> {formik.errors.password}</p>
-                <br />
-                <button type="submit">{loginType ? "Sign-Up" : "Login"}</button>
+                <div className="form">
+                  <label htmlFor="username">Username: </label>
+                  <input id="username" name="username" onChange={formik.handleChange} value={formik.values.username} />
+                  <p> {formik.errors.username}</p>
+                  <label htmlFor="password">Password: </label>
+                  <input id="password" name="password" onChange={formik.handleChange} value={formik.values.password} />
+                  <p> {formik.errors.password}</p>
+                  <br />
+                  <button type="submit">{loginType ? "Sign-Up" : "Login"}</button>
+                </div>
             </form>
         </div>
     )

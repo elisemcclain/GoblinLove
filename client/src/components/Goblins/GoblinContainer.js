@@ -28,7 +28,7 @@ function Goblin() {
 
   return (
     <div>
-      <h1>GOBLIN BOYS</h1>
+      <h1 className="gob-boys">GOBLIN BOYS</h1>
       {goblins.length > 0 ? (
               <GoblinList goblins = {goblins}/>
               ) : (

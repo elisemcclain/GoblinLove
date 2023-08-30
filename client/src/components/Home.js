@@ -20,8 +20,12 @@ function Home({ setUsers }) {
 
   return (
     <div>
-      <h1>*Goblin Love*</h1>
-      <button onClick={handleClick}>Click here to begin your journey</button>
+      <div className="gob-love">
+        <h1>GOBLIN LOVE</h1>
+      </div>
+      <div className="enter">
+        <button onClick={handleClick}>Click here to begin your journey</button>
+      </div>
     </div>
   );
 }
