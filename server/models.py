@@ -1,8 +1,14 @@
 from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy_serializer import SerializerMixin
 from sqlalchemy.orm import validates
 from sqlalchemy import MetaData
+from sqlalchemy.orm import validates
+from sqlalchemy import MetaData
 from sqlalchemy.ext.associationproxy import association_proxy
+from validate_email import validate_email  
+import re
+from datetime import datetime
 from validate_email import validate_email  
 import re
 from datetime import datetime
@@ -13,6 +19,7 @@ from config import db
 class User(db.Model, SerializerMixin):
     
     __tablename__ = 'users'
+    # __table_args__ = {'extend_existing': True}
     
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
@@ -47,15 +54,15 @@ class User(db.Model, SerializerMixin):
             return password
         else:
             raise ValueError('Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.')
-        
-    @validates('email')
-    def validate_email(self, key, email):
-        if User.query.filter_by(email=email).first():
-            raise ValueError('That email is taken.')
-        if validate_email(email):
-            return email
-        else:
-            raise ValueError('Please enter a valid email address.')
+
+    # @validates('email')
+    # def validate_email(self, key, email):
+    #     if User.query.filter_by(email=email).first():
+    #         raise ValueError('That email is taken.')
+    #     if validate_email(email):
+    #         return email
+    #     else:
+    #         raise ValueError('Please enter a valid email address.')
         
         
 class Trait(db.Model, SerializerMixin):
@@ -88,6 +95,8 @@ class Goblin(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True, nullable=False)
     description = db.Column(db.String, nullable=False)
+    img_url = db.Column(db.String, nullable=False)
+    artist = db.Column(db.String, nullable=False)
 
     responses = db.relationship('Response', backref='goblin', lazy='dynamic', cascade='all, delete-orphan')
     outcomes = db.relationship('Outcome', backref='goblin', lazy='dynamic', cascade='all, delete-orphan')
@@ -101,6 +110,9 @@ class Date(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True, nullable=False)
     description = db.Column(db.String, nullable=False)
+    part_1 = db.Column(db.String, nullable=False)
+    part_2 = db.Column(db.String, nullable=False)
+    part_3 = db.Column(db.String, nullable=False)
     
     dialogues = db.relationship('Dialogue', backref='date', lazy='dynamic', cascade='all, delete-orphan')
     outcomes = db.relationship('Outcome', backref='date', lazy='dynamic', cascade='all, delete-orphan')
@@ -149,9 +161,9 @@ class Outcome(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     date_id = db.Column(db.Integer, db.ForeignKey('dates.id'), nullable=False)
     goblin_id = db.Column(db.Integer, db.ForeignKey('goblins.id'), nullable=False)
+    result = db.Column(db.Boolean, nullable=False, default=False)
     outcome_description = db.Column(db.String, nullable=False)
     
     serialize_rules = ('-goblin', '-date',)
     
-    
-    
+

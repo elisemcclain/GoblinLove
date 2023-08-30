@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Hamburger from "./Hamburger";
 
-export default function NavBar() {
+function NavBar({currentUser}) {
     const [hamburgerOpen, setHamburgerOpen] = useState(false)
+    const [loggedIn, setLoggedIn] = useState(false)
 
+    useEffect(() => {
+        if(currentUser) {
+            setLoggedIn(true)
+        }
+    }, [currentUser])
     const toggleHamburger = () => {
+        console.log(currentUser, "current user in NavBar")
         setHamburgerOpen(!hamburgerOpen)
     }
 
@@ -20,11 +27,21 @@ export default function NavBar() {
                     <li className="links">
                         <Link to="/">Home</Link>
                     </li>
+                    {loggedIn ? (
+                        <>
+                        <li>
+                            <Link to={`/user/${currentUser.username}`}>Profile</Link>
+                        </li>
+                        </>
+                    ) : (
+                        <>
+                        <li>
+                            <Link to="/login">Login</Link>
+                        </li>
+                        </>
+                    )}
                     <li>
-                        <Link to="/login">Login</Link>
-                    </li>
-                    <li>
-                        <Link to="/goblin">Goblin Dates</Link>
+                        <Link to="/goblins">Goblin Dates</Link>
                     </li>
                     <li>
                         <a
@@ -41,3 +58,5 @@ export default function NavBar() {
         </div>
     );
 }
+
+export default NavBar;

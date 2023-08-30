@@ -1,8 +1,8 @@
-"""test
+"""Added Columns
 
-Revision ID: 503c96ec3437
+Revision ID: 6db9a3d6eb7e
 Revises: 
-Create Date: 2023-08-28 10:11:13.514874
+Create Date: 2023-08-28 20:53:43.587931
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '503c96ec3437'
+revision = '6db9a3d6eb7e'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -22,6 +22,9 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('name', sa.String(length=80), nullable=False),
     sa.Column('description', sa.String(), nullable=False),
+    sa.Column('part_1', sa.String(), nullable=False),
+    sa.Column('part_2', sa.String(), nullable=False),
+    sa.Column('part_3', sa.String(), nullable=False),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('name')
     )
@@ -29,6 +32,8 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('name', sa.String(length=80), nullable=False),
     sa.Column('description', sa.String(), nullable=False),
+    sa.Column('img_url', sa.String(), nullable=False),
+    sa.Column('artist', sa.String(), nullable=False),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('name')
     )
@@ -68,6 +73,7 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('date_id', sa.Integer(), nullable=False),
     sa.Column('goblin_id', sa.Integer(), nullable=False),
+    sa.Column('result', sa.Boolean(), nullable=False),
     sa.Column('outcome_description', sa.String(), nullable=False),
     sa.ForeignKeyConstraint(['date_id'], ['dates.id'], name=op.f('fk_outcomes_date_id_dates')),
     sa.ForeignKeyConstraint(['goblin_id'], ['goblins.id'], name=op.f('fk_outcomes_goblin_id_goblins')),

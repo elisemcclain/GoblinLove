@@ -17,18 +17,12 @@ function Goblin() {
       }
     }
     fetchGoblins();
-    // fetchGoblins();
-    // fetch("http://127.0.0.1:5555/goblins")
-    //   .then((r) => r.json())
-    //   .then((goblinArray) => {
-    //     setGoblins(goblinArray);
-    //   });
   }, []);
 
 
   return (
     <div>
-      <h1 className="gob-boys">GOBLIN BOYS</h1>
+      <h1>GOBLIN BOYS</h1>
       {goblins.length > 0 ? (
               <GoblinList goblins = {goblins}/>
               ) : (

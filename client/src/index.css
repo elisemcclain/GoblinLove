@@ -32,54 +32,101 @@ body {
   justify-content: center;
   align-items: center;
   display: flex;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gob-imgs {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  cursor: pointer;
+}
+
+.gob-imgs img {
+  width: 20%; /* You can adjust this width value based on your preference */
+  margin: 0 10px; /* Adds a bit of spacing between images */
 }
 
 .welcome {
   color: #06be00;
   display: flex;
   justify-content: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .email {
   display: flex;
   justify-content: left;
   color: #06be00;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .form {
   display: flex;
   justify-content: left;
   color: #06be00;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .gob-boys {
   display: flex;
   justify-content: left;
   color: #06be00;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.signup {
+  color: purple;
+  background-color: rgb(247, 3, 117);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  margin-top: 60px;
+  padding: 7px;
+  width: 130px;
+  justify-content: center;
+  cursor: pointer;
+  /* align-items: center; */
+  display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login {
+  color: purple;
+  background-color: rgb(247, 3, 117);
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  margin-top: 60px;
+  padding: 7px;
+  width: 130px;
+  justify-content: center;
+  /* align-items: center; */
+  display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .hamburger-icon {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 20px;
+  border-radius: 20px;
+  /* width: 100px; */
+  margin-top: 25px;
+  margin-left: 10px;
+  height: 35px;
   cursor: pointer;
-  position: 0;
+  /* position: 0; */
   /* border-radius: 50px; */
 }
 
 .bar {
-  width: 30px;
-  height: 4px;
+  width: 47px;
+  height: 6px;
   background-color: #06be00;
+  border-radius: 20px;
 }
 
 .menu ul {
@@ -87,14 +134,14 @@ body {
 }
 
 .navigation {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .menu {
   display: none;
 }
 
-  .menu.active {
-      display: block; 
-      color:#0bcd04;
-  }
+.menu.active {
+  display: block;
+  color: #0bcd04;
+}
