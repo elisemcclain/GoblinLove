@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { Formik, FormikConsumer, useFormik } from "formik";
 import { useHistory } from "react-router-dom";
-import { useHistory } from "react-router-dom";
 import * as yup from "yup";
 
 const Login = ({ users, handleAddUser, handleLogin }) => {
