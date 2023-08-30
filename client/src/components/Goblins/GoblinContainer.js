@@ -13,21 +13,20 @@ function Goblin() {
         setGoblins(goblinArray);
         // console.log(goblinArray)
       } catch (error) {
-        console.error("Error fetching goblin data:", error)
+        console.error("Error fetching goblin data:", error);
       }
     }
     fetchGoblins();
   }, []);
 
-
   return (
     <div>
-      <h1>GOBLIN BOYS</h1>
+      <h1 className="gob-title">💗 GOBLIN BOYS 💗</h1>
       {goblins.length > 0 ? (
-              <GoblinList goblins = {goblins}/>
-              ) : (
-                <p>Loading goblins...</p>
-                )}
+        <GoblinList goblins={goblins} />
+      ) : (
+        <p>Loading goblins...</p>
+      )}
       {/* <GoblinList goblins = {goblins}/> */}
     </div>
   );
