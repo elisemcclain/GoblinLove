@@ -20,8 +20,12 @@ function Home({ setUsers }) {
 
   return (
     <div>
-      <div className="gob-love">
-        <h1>GOBLIN LOVE</h1>
+      <div>
+        <img
+          className="gobsmacked"
+          src={"./Gobsmacked.png"}
+          alt="GOBSMACKED"
+        />
       </div>
       <div className="enter">
         <button onClick={handleClick}>Click here to begin your journey</button>
