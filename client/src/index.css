@@ -296,25 +296,27 @@ body {
   /* border: 3px rgb(235, 37, 96); */
   border-radius: 20px;
   color: white;
-  margin-left: 30px;
-  padding: 10px;
-  width: 400px;
+  /* margin-top: 30px; */
+  padding: 20px;
+  width: 700px;
   justify-content: center;
+  margin: 0 auto;
   display: flex;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 200px;
 }
+/* user info ^^ */
 
 .custom-edit-button {
   background-color: rgb(247, 3, 117);
   border-radius: 20px;
   border: none;
   color: white;
-  margin-top: 60px;
+  margin-top: 40px;
   margin: 0 auto;
   /* margin-right: 500px; */
   padding: 10px;
-  width: 270px;
+  width: 700px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -325,7 +327,8 @@ body {
 
 .custom-edit-button-move {
   display: flex;
-  margin-right: -500px;
-  justify-content: right;
-  margin-top: 50px;
+  /* margin-right: -500px; */
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
