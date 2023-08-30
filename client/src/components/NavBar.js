@@ -22,47 +22,47 @@ function NavBar({ currentUser }) {
     setHamburgerOpen(!hamburgerOpen);
   };
 
-  return (
-    <div>
-      <div className="navigation">
-        <div className="hamburger" onClick={toggleHamburger}>
-          <Hamburger />
+    return (
+        <div>
+            <div className="navigation">
+                <div className="hamburger" onClick={toggleHamburger}>
+                    <Hamburger />
+                </div>
+                <div className={`menu ${hamburgerOpen ? "active" : ""}`}>
+                <ul>
+                    <li className="links">
+                        <Link to="/">Home</Link>
+                    </li>
+                    {loggedIn ? (
+                        <>
+                        <li>
+                            <Link to={`/user/${currentUser.username}`}>Profile</Link>
+                        </li>
+                        </>
+                    ) : (
+                        <>
+                        <li>
+                            <Link to="/login">Login</Link>
+                        </li>
+                        </>
+                    )}
+                    <li>
+                        <Link to="/goblins">Goblin Dates</Link>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.cosmopolitan.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Tips & Tricks
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
         </div>
-        <div className={`menu ${hamburgerOpen ? "active" : ""}`}>
-          <ul>
-            <li className="links">
-              <Link to="/">Home</Link>
-            </li>
-            {loggedIn ? (
-              <>
-                <li>
-                  <Link to={`/user/${currentUser.username}`}>Profile</Link>
-                </li>
-              </>
-            ) : (
-              <>
-                <li>
-                  <Link to="/login">Login</Link>
-                </li>
-              </>
-            )}
-            <li>
-              <Link to="/goblins">Goblin Dates</Link>
-            </li>
-            <li>
-              <a
-                href="https://www.cosmopolitan.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Tips & Tricks
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default NavBar;
