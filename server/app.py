@@ -86,7 +86,6 @@ class TraitAssociations(Resource):
     def post(self):
         data = request.get_json(force=True)
         try:
-            
             new_trait_association = TraitAssociation(**data)
             db.session.add(new_trait_association)
             db.session.commit()

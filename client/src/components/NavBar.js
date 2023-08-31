@@ -61,6 +61,11 @@ function NavBar({ currentUser }) {
               </Link>
             </li>
             <li>
+              <Link to="/date" className="nav-link">
+                GO ON A DATE
+              </Link>
+            </li>
+            <li>
               <a
                 className="nav-link"
                 href="https://www.cosmopolitan.com/"

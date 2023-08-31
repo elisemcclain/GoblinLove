@@ -143,33 +143,96 @@ if __name__ == '__main__':
             'dialogue8': Dialogue(date_part=1, date_id=date1.id, trait_id=trait8.id, description="You are shocked that you almost forgot to do your pregame ritual! There is only one true way to be safe, and it involves candles, incense, and interpretation of the clouds."),
             'dialogue9': Dialogue(date_part=1, date_id=date1.id, trait_id=trait9.id, description="You can't help but wonder what your partner is going to do. You decide to let them take the lead on how the game should be played."),
             'dialogue10': Dialogue(date_part=1, date_id=date1.id, trait_id=trait10.id, description="You decide it's a horrible idea to play here. It should be over by the riverbank. The lighting is better, and it could be more exciting."),
+            'dialogue11': Dialogue(date_part=2, date_id=date1.id, trait_id=trait1.id, description="Mischievious Option"),
+            'dialogue12': Dialogue(date_part=2, date_id=date1.id, trait_id=trait2.id, description="Greedy Option"),
+            'dialogue13': Dialogue(date_part=2, date_id=date1.id, trait_id=trait3.id, description="Crafty Option"),
+            'dialogue14': Dialogue(date_part=2, date_id=date1.id, trait_id=trait4.id, description="Cautious Option"),
+            'dialogue15': Dialogue(date_part=2, date_id=date1.id, trait_id=trait5.id, description="Optimistic Option"),
+            'dialogue16': Dialogue(date_part=2, date_id=date1.id, trait_id=trait6.id, description="Playful Option"),
+            'dialogue17': Dialogue(date_part=2, date_id=date1.id, trait_id=trait7.id, description="Stubborn"),
+            'dialogue18': Dialogue(date_part=2, date_id=date1.id, trait_id=trait8.id, description="Superstitious Option"),
+            'dialogue19': Dialogue(date_part=2, date_id=date1.id, trait_id=trait9.id, description="Curious Option"),
+            'dialogue20': Dialogue(date_part=2, date_id=date1.id, trait_id=trait10.id, description="Impulsive Option"),
+            'dialogue21': Dialogue(date_part=3, date_id=date1.id, trait_id=trait1.id, description="Mischievious Option"),
+            'dialogue22': Dialogue(date_part=3, date_id=date1.id, trait_id=trait2.id, description="Greedy Option"),
+            'dialogue23': Dialogue(date_part=3, date_id=date1.id, trait_id=trait3.id, description="Crafty Option"),
+            'dialogue24': Dialogue(date_part=3, date_id=date1.id, trait_id=trait4.id, description="Cautious Option"),
+            'dialogue25': Dialogue(date_part=3, date_id=date1.id, trait_id=trait5.id, description="Optimistic Option"),
+            'dialogue26': Dialogue(date_part=3, date_id=date1.id, trait_id=trait6.id, description="Playful Option"),
+            'dialogue27': Dialogue(date_part=3, date_id=date1.id, trait_id=trait7.id, description="Stubborn"),
+            'dialogue28': Dialogue(date_part=3, date_id=date1.id, trait_id=trait8.id, description="Superstitious Option"),
+            'dialogue29': Dialogue(date_part=3, date_id=date1.id, trait_id=trait9.id, description="Curious Option"),
+            'dialogue30': Dialogue(date_part=3, date_id=date1.id, trait_id=trait10.id, description="Impulsive Option"),
         }
 
         dialogues_2 = {
-            'dialogue1': Dialogue(date_part=2, date_id=date1.id, trait_id=trait1.id, description="You realize that after a couple mugs of Muk, you might convince them to join your plan to overthrow the goblin government."),
-            'dialogue2': Dialogue(date_part=2, date_id=date1.id, trait_id=trait2.id, description="You agree, but only on the condition that they pay for all your Muk. They must also present you with a goblin made tiara because you deserve it, but mostly to show everyone at the Rotten Elder Tree Saloon that you're better than them."),
-            'dialogue3': Dialogue(date_part=2, date_id=date1.id, trait_id=trait3.id, description="You debate if it's worth it, but decide if you go, you might could spark jealousy amongst the other goblin boys so they all fight over your love."),
-            'dialogue4': Dialogue(date_part=2, date_id=date1.id, trait_id=trait4.id, description="You waffle back and forth for 7 hours before agreeing, but you refuse to drink the provided Muk in case it has been poisoned. Instead, you bring your own Muk from home."),
-            'dialogue5': Dialogue(date_part=2, date_id=date1.id, trait_id=trait5.id, description="You can't say yes quick enough. You just know in your goblin heart that this goblin is the one. The Muk is just lubricant for your heart."),
-            'dialogue6': Dialogue(date_part=2, date_id=date1.id, trait_id=trait6.id, description="You let him wait for a response so he can squirm a bit, but you're already planning out what great jokes you'll tell your partner over a good mug of Muk."),
-            'dialogue7': Dialogue(date_part=2, date_id=date1.id, trait_id=trait7.id, description="You love Muk, but you DON'T like being told what to do. You begrudingly agree, but it'll be the last time that happens."),
-            'dialogue8': Dialogue(date_part=2, date_id=date1.id, trait_id=trait8.id, description="You are stoked for this date, but you can ONLY wear the color orange, no matching socks, and we must bring a worm to sacrifice to the Muk Lord."),
-            'dialogue9': Dialogue(date_part=2, date_id=date1.id, trait_id=trait9.id, description="You haven't been to this local saloon yet, so you're intrigued. It'll be your first time trying Muk!"),
-            'dialogue10': Dialogue(date_part=2, date_id=date1.id, trait_id=trait10.id, description="You say yes before you check your calendar. Shoot, you are supposesd to go on a date with Poorg. Oh well! (Poor Poorg)"),
+            'dialogue31': Dialogue(date_part=1, date_id=date2.id, trait_id=trait1.id, description="You realize that after a couple mugs of Muk, you might convince them to join your plan to overthrow the goblin government."),
+            'dialogue32': Dialogue(date_part=1, date_id=date2.id, trait_id=trait2.id, description="You agree, but only on the condition that they pay for all your Muk. They must also present you with a goblin made tiara because you deserve it, but mostly to show everyone at the Rotten Elder Tree Saloon that you're better than them."),
+            'dialogue33': Dialogue(date_part=1, date_id=date2.id, trait_id=trait3.id, description="You debate if it's worth it, but decide if you go, you might could spark jealousy amongst the other goblin boys so they all fight over your love."),
+            'dialogue34': Dialogue(date_part=1, date_id=date2.id, trait_id=trait4.id, description="You waffle back and forth for 7 hours before agreeing, but you refuse to drink the provided Muk in case it has been poisoned. Instead, you bring your own Muk from home."),
+            'dialogue35': Dialogue(date_part=1, date_id=date2.id, trait_id=trait5.id, description="You can't say yes quick enough. You just know in your goblin heart that this goblin is the one. The Muk is just lubricant for your heart."),
+            'dialogue36': Dialogue(date_part=1, date_id=date2.id, trait_id=trait6.id, description="You let him wait for a response so he can squirm a bit, but you're already planning out what great jokes you'll tell your partner over a good mug of Muk."),
+            'dialogue37': Dialogue(date_part=1, date_id=date2.id, trait_id=trait7.id, description="You love Muk, but you DON'T like being told what to do. You begrudingly agree, but it'll be the last time that happens."),
+            'dialogue38': Dialogue(date_part=1, date_id=date2.id, trait_id=trait8.id, description="You are stoked for this date, but you can ONLY wear the color orange, no matching socks, and we must bring a worm to sacrifice to the Muk Lord."),
+            'dialogue39': Dialogue(date_part=1, date_id=date2.id, trait_id=trait9.id, description="You haven't been to this local saloon yet, so you're intrigued. It'll be your first time trying Muk!"),
+            'dialogue40': Dialogue(date_part=1, date_id=date2.id, trait_id=trait10.id, description="You say yes before you check your calendar. Shoot, you are supposesd to go on a date with Poorg. Oh well! (Poor Poorg)"),
+            'dialogue41': Dialogue(date_part=2, date_id=date2.id, trait_id=trait1.id, description="Mischievious Option"),
+            'dialogue42': Dialogue(date_part=2, date_id=date2.id, trait_id=trait2.id, description="Greedy Option"),
+            'dialogue43': Dialogue(date_part=2, date_id=date2.id, trait_id=trait3.id, description="Crafty Option"),
+            'dialogue44': Dialogue(date_part=2, date_id=date2.id, trait_id=trait4.id, description="Cautious Option"),
+            'dialogue45': Dialogue(date_part=2, date_id=date2.id, trait_id=trait5.id, description="Optimistic Option"),
+            'dialogue46': Dialogue(date_part=2, date_id=date2.id, trait_id=trait6.id, description="Playful Option"),
+            'dialogue47': Dialogue(date_part=2, date_id=date2.id, trait_id=trait7.id, description="Stubborn"),
+            'dialogue48': Dialogue(date_part=2, date_id=date2.id, trait_id=trait8.id, description="Superstitious Option"),
+            'dialogue49': Dialogue(date_part=2, date_id=date2.id, trait_id=trait9.id, description="Curious Option"),
+            'dialogue50': Dialogue(date_part=2, date_id=date2.id, trait_id=trait10.id, description="Impulsive Option"),
+            'dialogue51': Dialogue(date_part=3, date_id=date2.id, trait_id=trait1.id, description="Mischievious Option"),
+            'dialogue52': Dialogue(date_part=3, date_id=date2.id, trait_id=trait2.id, description="Greedy Option"),
+            'dialogue53': Dialogue(date_part=3, date_id=date2.id, trait_id=trait3.id, description="Crafty Option"),
+            'dialogue54': Dialogue(date_part=3, date_id=date2.id, trait_id=trait4.id, description="Cautious Option"),
+            'dialogue55': Dialogue(date_part=3, date_id=date2.id, trait_id=trait5.id, description="Optimistic Option"),
+            'dialogue56': Dialogue(date_part=3, date_id=date2.id, trait_id=trait6.id, description="Playful Option"),
+            'dialogue57': Dialogue(date_part=3, date_id=date2.id, trait_id=trait7.id, description="Stubborn"),
+            'dialogue58': Dialogue(date_part=3, date_id=date2.id, trait_id=trait8.id, description="Superstitious Option"),
+            'dialogue59': Dialogue(date_part=3, date_id=date2.id, trait_id=trait9.id, description="Curious Option"),
+            'dialogue60': Dialogue(date_part=3, date_id=date2.id, trait_id=trait10.id, description="Impulsive Option"),
         }
 
         dialogues_3 = {
-            'dialogue1': Dialogue(date_part=3, date_id=date1.id, trait_id=trait1.id, description="You love the idea of going to their grotto for a home cooked meal. You can raid their bedroom for secrets and red flags while they aren't looking."),
-            'dialogue2': Dialogue(date_part=3, date_id=date1.id, trait_id=trait2.id, description="You would of course expect nothing less than a gourmet home cooked meal. They can cook absolutely everything, and you can enjoy being served delicious hors d'oeuvres. You won't even lift a hairy finger"),
-            'dialogue3': Dialogue(date_part=3, date_id=date1.id, trait_id=trait3.id, description="You realize this would be the perfect time to try out the smoked Org Liver Stew recipe you've had your eye on. The recipe was passed down from your great grandgoblinma BawkBawk"),
-            'dialogue4': Dialogue(date_part=3, date_id=date1.id, trait_id=trait4.id, description="You try to sway them to get takeout noodles from Olive Gooben, put they insist on cooking. You agree, but bring a snack just in case it's horrendous tasting."),
-            'dialogue5': Dialogue(date_part=3, date_id=date1.id, trait_id=trait5.id, description="You are about to loose your marbles you're so fired up with excitement. You just KNOW that a home cooked bowl of warm Beetle Beans is the way to your hungry heart."),
-            'dialogue6': Dialogue(date_part=3, date_id=date1.id, trait_id=trait6.id, description="You hope gravy is on the menu because you can't wait to start a grueling food fight in the kitchen. The messier, the better!"),
-            'dialogue7': Dialogue(date_part=3, date_id=date1.id, trait_id=trait7.id, description="You are happy to share a home cooked meal, but if it's not half as good as your own Slop Glop Sammy recipe, it's a NO from you, dawg."),
-            'dialogue8': Dialogue(date_part=3, date_id=date1.id, trait_id=trait8.id, description="You wager that a home cooked meal is acceptable, but only if it's muggy and the maggots living in your back swamp have no shadow."),
-            'dialogue9': Dialogue(date_part=3, date_id=date1.id, trait_id=trait9.id, description="You are anxious to try something new! You are growing so bored of drinking Muk every date. You don't know how much more Muk you can take."),
-            'dialogue10': Dialogue(date_part=3, date_id=date1.id, trait_id=trait10.id, description="You say yes before you even realize you're allergic to Nutmeg Borgle Brine Soup they're making."),
+            'dialogue61': Dialogue(date_part=1, date_id=date3.id, trait_id=trait1.id, description="You love the idea of going to their grotto for a home cooked meal. You can raid their bedroom for secrets and red flags while they aren't looking."),
+            'dialogue62': Dialogue(date_part=1, date_id=date3.id, trait_id=trait2.id, description="You would of course expect nothing less than a gourmet home cooked meal. They can cook absolutely everything, and you can enjoy being served delicious hors d'oeuvres. You won't even lift a hairy finger"),
+            'dialogue63': Dialogue(date_part=1, date_id=date3.id, trait_id=trait3.id, description="You realize this would be the perfect time to try out the smoked Org Liver Stew recipe you've had your eye on. The recipe was passed down from your great grandgoblinma BawkBawk"),
+            'dialogue64': Dialogue(date_part=1, date_id=date3.id, trait_id=trait4.id, description="You try to sway them to get takeout noodles from Olive Gooben, put they insist on cooking. You agree, but bring a snack just in case it's horrendous tasting."),
+            'dialogue65': Dialogue(date_part=1, date_id=date3.id, trait_id=trait5.id, description="You are about to loose your marbles you're so fired up with excitement. You just KNOW that a home cooked bowl of warm Beetle Beans is the way to your hungry heart."),
+            'dialogue66': Dialogue(date_part=1, date_id=date3.id, trait_id=trait6.id, description="You hope gravy is on the menu because you can't wait to start a grueling food fight in the kitchen. The messier, the better!"),
+            'dialogue67': Dialogue(date_part=1, date_id=date3.id, trait_id=trait7.id, description="You are happy to share a home cooked meal, but if it's not half as good as your own Slop Glop Sammy recipe, it's a NO from you, dawg."),
+            'dialogue68': Dialogue(date_part=1, date_id=date3.id, trait_id=trait8.id, description="You wager that a home cooked meal is acceptable, but only if it's muggy and the maggots living in your back swamp have no shadow."),
+            'dialogue69': Dialogue(date_part=1, date_id=date3.id, trait_id=trait9.id, description="You are anxious to try something new! You are growing so bored of drinking Muk every date. You don't know how much more Muk you can take."),
+            'dialogue70': Dialogue(date_part=1, date_id=date3.id, trait_id=trait10.id, description="You say yes before you even realize you're allergic to Nutmeg Borgle Brine Soup they're making."),
+            'dialogue71': Dialogue(date_part=2, date_id=date3.id, trait_id=trait1.id, description="Mischievious Option"),
+            'dialogue72': Dialogue(date_part=2, date_id=date3.id, trait_id=trait2.id, description="Greedy Option"),
+            'dialogue73': Dialogue(date_part=2, date_id=date3.id, trait_id=trait3.id, description="Crafty Option"),
+            'dialogue74': Dialogue(date_part=2, date_id=date3.id, trait_id=trait4.id, description="Cautious Option"),
+            'dialogue75': Dialogue(date_part=2, date_id=date3.id, trait_id=trait5.id, description="Optimistic Option"),
+            'dialogue76': Dialogue(date_part=2, date_id=date3.id, trait_id=trait6.id, description="Playful Option"),
+            'dialogue77': Dialogue(date_part=2, date_id=date3.id, trait_id=trait7.id, description="Stubborn"),
+            'dialogue78': Dialogue(date_part=2, date_id=date3.id, trait_id=trait8.id, description="Superstitious Option"),
+            'dialogue79': Dialogue(date_part=2, date_id=date3.id, trait_id=trait9.id, description="Curious Option"),
+            'dialogue80': Dialogue(date_part=2, date_id=date3.id, trait_id=trait10.id, description="Impulsive Option"),
+            'dialogue81': Dialogue(date_part=3, date_id=date3.id, trait_id=trait1.id, description="Mischievious Option"),
+            'dialogue82': Dialogue(date_part=3, date_id=date3.id, trait_id=trait2.id, description="Greedy Option"),
+            'dialogue83': Dialogue(date_part=3, date_id=date3.id, trait_id=trait3.id, description="Crafty Option"),
+            'dialogue84': Dialogue(date_part=3, date_id=date3.id, trait_id=trait4.id, description="Cautious Option"),
+            'dialogue85': Dialogue(date_part=3, date_id=date3.id, trait_id=trait5.id, description="Optimistic Option"),
+            'dialogue86': Dialogue(date_part=3, date_id=date3.id, trait_id=trait6.id, description="Playful Option"),
+            'dialogue87': Dialogue(date_part=3, date_id=date3.id, trait_id=trait7.id, description="Stubborn"),
+            'dialogue88': Dialogue(date_part=3, date_id=date3.id, trait_id=trait8.id, description="Superstitious Option"),
+            'dialogue89': Dialogue(date_part=3, date_id=date3.id, trait_id=trait9.id, description="Curious Option"),
+            'dialogue90': Dialogue(date_part=3, date_id=date3.id, trait_id=trait10.id, description="Impulsive Option"),
         }
+        
+
+        
 
         all_dialogues = list(dialogues_1.values()) + list(dialogues_2.values()) + list(dialogues_3.values())
         db.session.add_all(all_dialogues)
@@ -568,7 +631,7 @@ if __name__ == '__main__':
             'response48': Response(
                 dialogue_id=dialogues_list[7].id, 
                 goblin_id=zongo.id, 
-                response="Zongo's eyebrows shot up in surprise as you revealed your pregame ritual.\n\n"
+                response="Zongo's expression narrowed inquisitively as you revealed your pregame ritual.\n\n"
                 "'A ritual for safety, how quaintly superstitious,' he commented not unkindly. He examined the candles and incense.\n\n"
                 "With a wave of his hand, Zongo conjured a playful illusion of clouds forming intricate patterns. 'Ah, the interpretation of clouds. I used to spend hours lost in them.'\n\n"
                 "After a long moment, he picked up a bone and smiled softly. 'Let's see if your shamanic incantations and cloud-based divinations will sway the cosmic forces in your favor.'",
@@ -577,9 +640,9 @@ if __name__ == '__main__':
                 dialogue_id=dialogues_list[8].id, 
                 goblin_id=zongo.id, 
                 response="Zongo's eyebrow arched with a mixture of surprise and smug satisfaction as you granted him the authority to lead the game. He smirked, clearly pleased.\n\n"
-                "'Ah, finally recognizing my unparalleled genius,' he quipped with an air of self-importance. He looked at the bones with new confidence.\n\n"
-                "With a flourish of his hand, Zongo conjured a layer of frost around his chosen bones, making them shine with crystaline brilliance. 'Behold, a game molded by my cold heart!'\n\n"
-                "He picked up a bone with a triumphant smile. 'Let the masterpiece begin as I orchestrate an unparalleled symphony. Mind the frostbite, darling.'", 
+                "'Ah, finally recognizing my unparalleled genius,' he quipped. He looked at the bones with new confidence.\n\n"
+                "With a flourish of his hand, Zongo conjured a layer of frost around the pile of bones, making them shine with crystaline brilliance. 'Behold, a game molded by my cold heart!'\n\n"
+                "He picked up a bone with a triumphant smile. 'Let the masterpiece begin as I orchestrate our symphony. Mind the frostbite, darling.'", 
                 outcome=True),
             'response50': Response(
                 dialogue_id=dialogues_list[9].id, 
@@ -590,23 +653,708 @@ if __name__ == '__main__':
                 "He picked up a bone with a hint of annoyance. 'Let's hope your uninspiring suggestion doesn't taint the grandeur of our bone-bashing spectacle.'", 
                 outcome=False),
         }
-
-        db.session.add_all(responses_1.values())
+        responses_2 = {
+            'response51': Response(
+                dialogue_id=dialogues_list[10].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response52': Response(
+                dialogue_id=dialogues_list[11].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response53': Response(
+                dialogue_id=dialogues_list[12].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+            ),
+            'response54': Response(
+                dialogue_id=dialogues_list[13].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response55': Response(
+                dialogue_id=dialogues_list[14].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response56': Response(
+                dialogue_id=dialogues_list[15].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response57': Response(
+                dialogue_id=dialogues_list[16].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response58': Response(
+                dialogue_id=dialogues_list[17].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+            ),
+            'response59': Response(
+                dialogue_id=dialogues_list[18].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response60': Response(
+                dialogue_id=dialogues_list[19].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response61': Response(
+                dialogue_id=dialogues_list[10].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",  
+                outcome=False
+            ),
+            'response62': Response(
+                dialogue_id=dialogues_list[11].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response63': Response(
+                dialogue_id=dialogues_list[12].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+            ),
+            'response64': Response(
+                dialogue_id=dialogues_list[13].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response65': Response(
+                dialogue_id=dialogues_list[14].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response66': Response(
+                dialogue_id=dialogues_list[15].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response67': Response(
+                dialogue_id=dialogues_list[16].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response68': Response(
+                dialogue_id=dialogues_list[17].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+            ),
+            'response69': Response(
+                dialogue_id=dialogues_list[18].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response70': Response(
+                dialogue_id=dialogues_list[19].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response71': Response(
+                dialogue_id=dialogues_list[10].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response72': Response(
+                dialogue_id=dialogues_list[11].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response73': Response(
+                dialogue_id=dialogues_list[12].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+            ),
+            'response74': Response(
+                dialogue_id=dialogues_list[13].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response75': Response(
+                dialogue_id=dialogues_list[14].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response76': Response(
+                dialogue_id=dialogues_list[15].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response77': Response(
+                dialogue_id=dialogues_list[16].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response78': Response(
+                dialogue_id=dialogues_list[17].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+            ),
+            'response79': Response(
+                dialogue_id=dialogues_list[18].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response80': Response(
+                dialogue_id=dialogues_list[19].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response81': Response(
+                dialogue_id=dialogues_list[10].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",  
+                outcome=False
+            ),
+            'response82': Response(
+                dialogue_id=dialogues_list[11].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response83': Response(
+                dialogue_id=dialogues_list[12].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+            ),
+            'response84': Response(
+                dialogue_id=dialogues_list[13].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response85': Response(
+                dialogue_id=dialogues_list[14].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response86': Response(
+                dialogue_id=dialogues_list[15].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response87': Response(
+                dialogue_id=dialogues_list[16].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response88': Response(
+                dialogue_id=dialogues_list[17].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+            ),
+            'response89': Response(
+                dialogue_id=dialogues_list[18].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response90': Response(
+                dialogue_id=dialogues_list[19].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response91': Response(
+                dialogue_id=dialogues_list[10].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",  
+                outcome=False
+            ),
+            'response92': Response(
+                dialogue_id=dialogues_list[11].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response93': Response(
+                dialogue_id=dialogues_list[12].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+            ),
+            'response94': Response(
+                dialogue_id=dialogues_list[13].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response95': Response(
+                dialogue_id=dialogues_list[14].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response96': Response(
+                dialogue_id=dialogues_list[15].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response97': Response(
+                dialogue_id=dialogues_list[16].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response98': Response(
+                dialogue_id=dialogues_list[17].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+            ),
+            'response99': Response(
+                dialogue_id=dialogues_list[18].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response100': Response(
+                dialogue_id=dialogues_list[19].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+        }
+        responses_3 = {
+            'response101': Response(
+                dialogue_id=dialogues_list[20].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response102': Response(
+                dialogue_id=dialogues_list[21].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response103': Response(
+                dialogue_id=dialogues_list[22].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+            ),
+            'response104': Response(
+                dialogue_id=dialogues_list[23].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response105': Response(
+                dialogue_id=dialogues_list[24].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response106': Response(
+                dialogue_id=dialogues_list[25].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response107': Response(
+                dialogue_id=dialogues_list[26].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response108': Response(
+                dialogue_id=dialogues_list[27].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+            ),
+            'response109': Response(
+                dialogue_id=dialogues_list[28].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response110': Response(
+                dialogue_id=dialogues_list[29].id, 
+                goblin_id=grubnub.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response111': Response(
+                dialogue_id=dialogues_list[20].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",  
+                outcome=False
+            ),
+            'response112': Response(
+                dialogue_id=dialogues_list[21].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response113': Response(
+                dialogue_id=dialogues_list[22].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+            ),
+            'response114': Response(
+                dialogue_id=dialogues_list[23].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response115': Response(
+                dialogue_id=dialogues_list[24].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response116': Response(
+                dialogue_id=dialogues_list[25].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response117': Response(
+                dialogue_id=dialogues_list[26].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response118': Response(
+                dialogue_id=dialogues_list[27].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+            ),
+            'response119': Response(
+                dialogue_id=dialogues_list[28].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response120': Response(
+                dialogue_id=dialogues_list[29].id, 
+                goblin_id=sneezle.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response121': Response(
+                dialogue_id=dialogues_list[20].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response122': Response(
+                dialogue_id=dialogues_list[21].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response123': Response(
+                dialogue_id=dialogues_list[22].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+            ),
+            'response124': Response(
+                dialogue_id=dialogues_list[23].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response125': Response(
+                dialogue_id=dialogues_list[24].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response126': Response(
+                dialogue_id=dialogues_list[25].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response127': Response(
+                dialogue_id=dialogues_list[26].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response128': Response(
+                dialogue_id=dialogues_list[27].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+            ),
+            'response129': Response(
+                dialogue_id=dialogues_list[28].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response130': Response(
+                dialogue_id=dialogues_list[29].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response131': Response(
+                dialogue_id=dialogues_list[20].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",  
+                outcome=False
+            ),
+            'response132': Response(
+                dialogue_id=dialogues_list[21].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response133': Response(
+                dialogue_id=dialogues_list[22].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+            ),
+            'response134': Response(
+                dialogue_id=dialogues_list[23].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response135': Response(
+                dialogue_id=dialogues_list[24].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response136': Response(
+                dialogue_id=dialogues_list[25].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response137': Response(
+                dialogue_id=dialogues_list[26].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response138': Response(
+                dialogue_id=dialogues_list[27].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+            ),
+            'response139': Response(
+                dialogue_id=dialogues_list[28].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response140': Response(
+                dialogue_id=dialogues_list[29].id, 
+                goblin_id=blort.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response141': Response(
+                dialogue_id=dialogues_list[20].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",  
+                outcome=False
+            ),
+            'response142': Response(
+                dialogue_id=dialogues_list[21].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response143': Response(
+                dialogue_id=dialogues_list[22].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+            ),
+            'response144': Response(
+                dialogue_id=dialogues_list[23].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response145': Response(
+                dialogue_id=dialogues_list[24].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response146': Response(
+                dialogue_id=dialogues_list[25].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response147': Response(
+                dialogue_id=dialogues_list[26].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response148': Response(
+                dialogue_id=dialogues_list[27].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+            ),
+            'response149': Response(
+                dialogue_id=dialogues_list[28].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+            'response150': Response(
+                dialogue_id=dialogues_list[29].id, 
+                goblin_id=zongo.id, 
+                response=
+                "Testing",
+                outcome=False
+            ),
+        }
+        
+        all_responses = list(responses_1.values()) + list(responses_2.values()) + list(responses_3.values()) 
+        db.session.add_all(all_responses)
         db.session.commit()
 
         print("Creating outcomes...")
 
         outcomes = {
-            "outcome1": Outcome(date_id = date1.id, goblin_id=grubnub.id, outcome_description="Test_Outcome_1", result = False),
-            "outcome2": Outcome(date_id = date1.id, goblin_id=grubnub.id, outcome_description="Test_Outcome_2", result = True),
-            "outcome3": Outcome(date_id = date1.id, goblin_id=sneezle.id, outcome_description="Test_Outcome_3", result = False),
-            "outcome4": Outcome(date_id = date1.id, goblin_id=sneezle.id, outcome_description="Test_Outcome_4", result = True),
-            "outcome5": Outcome(date_id = date1.id, goblin_id=blort.id, outcome_description="Test_Outcome_5", result = False),
-            "outcome6": Outcome(date_id = date1.id, goblin_id=blort.id, outcome_description="Test_Outcome_6", result = True),
-            "outcome7": Outcome(date_id = date1.id, goblin_id=grimble.id, outcome_description="Test_Outcome_7", result =False),
-            "outcome8": Outcome(date_id = date1.id, goblin_id=grimble.id, outcome_description="Test_Outcome_8", result = True),
-            "outcome9": Outcome(date_id = date1.id, goblin_id=zongo.id, outcome_description="Test_Outcome_9", result = False),
-            "outcome10": Outcome(date_id = date1.id, goblin_id=zongo.id, outcome_description="Test_Outcome_10", result = True),
+            "outcome1": Outcome(date_id = date1.id, goblin_id=grubnub.id, outcome_description="Test_Outcome_Grubnub_Good", result = False),
+            "outcome2": Outcome(date_id = date1.id, goblin_id=grubnub.id, outcome_description="Test_Outcome_Grubnub_Bad", result = True),
+            "outcome3": Outcome(date_id = date1.id, goblin_id=sneezle.id, outcome_description="Test_Outcome_Sneezle_Good", result = False),
+            "outcome4": Outcome(date_id = date1.id, goblin_id=sneezle.id, outcome_description="Test_Outcome_Sneezle_Bad", result = True),
+            "outcome5": Outcome(date_id = date1.id, goblin_id=blort.id, outcome_description="Test_Outcome_Blort_Good", result = False),
+            "outcome6": Outcome(date_id = date1.id, goblin_id=blort.id, outcome_description="Test_Outcome_Blort_Bad", result = True),
+            "outcome7": Outcome(date_id = date1.id, goblin_id=grimble.id, outcome_description="Test_Outcome_Grimble_Good", result =False),
+            "outcome8": Outcome(date_id = date1.id, goblin_id=grimble.id, outcome_description="Test_Outcome_Grimble_Bad", result = True),
+            "outcome9": Outcome(date_id = date1.id, goblin_id=zongo.id, outcome_description="Test_Outcome_Zongo_Good", result = False),
+            "outcome10": Outcome(date_id = date1.id, goblin_id=zongo.id, outcome_description="Test_Outcome_Zongo_Bad", result = True),
         }
 
         db.session.add_all(outcomes.values())

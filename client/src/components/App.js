@@ -5,8 +5,8 @@ import GoblinContainer from "./Goblins/GoblinContainer";
 import GoblinDetails from "./Goblins/GoblinDetails";
 import Home from "./Home";
 import Login from "./Login";
-import UserPage from "./UserPage";
-import NavBar from "./NavBar";
+import UserPage from "./UserPage"
+import NavBar from "./NavBar"
 import Game from "./Game";
 
 function App() {
@@ -94,19 +94,14 @@ function App() {
               <p>Loading goblins...</p>
             )}
           </Route>
-          <Route path="/goblins/:goblinName">
-            <GoblinDetails goblins={goblins} />
+          <Route path = "/goblins/:goblinName">
+            <GoblinDetails goblins = {goblins}/>
           </Route>
-          <Route exact path="/user/:username">
-            <UserPage
-              users={users}
-              currentUser={currentUser}
-              handleChangeUser={handleChangeUser}
-              handleDeleteUser={handleDeleteUser}
-            />
+          <Route exact path = "/user/:username">
+            <UserPage users = {users} currentUser = {currentUser} handleChangeUser = {handleChangeUser} handleDeleteUser = {handleDeleteUser}/>
           </Route>
-          <Route exact path="/date">
-            <Game currentUser={currentUser} goblins={goblins} />
+          <Route exact path = "/date">
+            <Game currentUser = {currentUser} goblins = {goblins}/>
           </Route>
         </Switch>
       </main>
