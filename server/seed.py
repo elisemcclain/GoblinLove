@@ -1035,7 +1035,7 @@ if __name__ == '__main__':
             ),
             'response81': Response(
                 dialogue_id=dialogues_list[10].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "With a mischievous glint in your eye, you decide to have a little fun with Grimble. You run up to the child and pretend to be their parent, putting on an exaggerated and humorous performance for comedic effect."
 "\n\nGrimble raises an eyebrow in surprise, clearly caught off guard by your unexpected action. 'Well, I certainly didn't expect you to be a parent!'"
@@ -1047,7 +1047,7 @@ if __name__ == '__main__':
             ),
             'response82': Response(
                 dialogue_id=dialogues_list[11].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "In a shocking and disturbing choice, you decide to take advantage of the situation. Ignoring Grimble's surprised expression, you approach the child and begin pilfering through their possessions."
 "\n\nGrimble's eyes widen in disbelief and concern, his normally boisterous demeanor replaced with a serious and disapproving expression. 'Hey, wait, what exactly do you think you are doing?'"
@@ -1059,7 +1059,7 @@ if __name__ == '__main__':
             ),
             'response83': Response(
                 dialogue_id=dialogues_list[12].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "With a quick and clever instinct, you decide to help the child by grabbing a thin strip of bark and coiling it into an improvised cone. Holding it to your mouth, you emit a series of high-pitched calls, hoping to attract the attention of their parents."
 "\n\nGrimble observes your actions with a nod of approval, recognizing your resourcefulness. 'Good thinking.'"
@@ -1071,7 +1071,7 @@ if __name__ == '__main__':
             ),
             'response84': Response(
                 dialogue_id=dialogues_list[13].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Feeling a sense of unease, you decide to take cautious action. Ignoring the child's cries, you quietly and discreetly move away, choosing to distance yourself from the situation."
 "\n\nGrimble observes your retreat with a raised eyebrow, his curiosity piqued by your unexpected behavior. 'Everything alright?'"
@@ -1083,7 +1083,7 @@ if __name__ == '__main__':
             ),
             'response85': Response(
                 dialogue_id=dialogues_list[14].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "With a reassuring and optimistic demeanor, you take charge of the situation. Kneeling down beside the child, you offer a comforting smile and gently assure them, 'Don't worry, little one. We're here to help you find your parents. They're probably looking for you too.'"
 "\n\nGrimble watches your approach with a nod of approval, recognizing your caring and confident nature. 'That's the spirit.'"
@@ -1095,7 +1095,7 @@ if __name__ == '__main__':
             ),
             'response86': Response(
                 dialogue_id=dialogues_list[15].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Empathy guiding your actions, you decide to lift the child's spirits. Extending a kind smile, you offer them a bone you've found nearby and ask in a friendly tone, 'Hey there, how about a little game while we wait for your parents? We can pass the time together.'"
 "\n\nGrimble's eyes shine with approval, his genuine kindness echoing your gesture. 'That's a lovely idea.'"
@@ -1107,7 +1107,7 @@ if __name__ == '__main__':
             ),
             'response87': Response(
                 dialogue_id=dialogues_list[16].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "In an unexpected turn, you choose to ignore the child's distress and focus solely on the baseball game, determined not to let anything disrupt your enjoyment."
 "\n\nGrimble raises an eyebrow in surprise, his concern evident as he speaks up. 'Hey, I get wanting to enjoy the game, but we can't just ignore a child in need.'"
@@ -1120,7 +1120,7 @@ if __name__ == '__main__':
             ),
             'response88': Response(
                 dialogue_id=dialogues_list[17].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "In a moment of seriousness, you find yourself unusually superstitious. Turning to Grimble with a grave expression, you share your concern, 'Grimble, call it a hunch, but I can't shake this feeling. Something about this child... it's like a dark cloud hanging over us. We should find their parents quickly, or who knows what might happen.'"
 "\n\nGrimble's eyes widen in surprise, his typically carefree demeanor momentarily giving way to contemplation. 'Of course. We should help this child and put your mind at ease.'"
@@ -1132,7 +1132,7 @@ if __name__ == '__main__':
             ),
             'response89': Response(
                 dialogue_id=dialogues_list[18].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Driven by curiosity, you decide to dive into conversation with the child. Gently crouching down beside them, you adopt a warm and compassionate tone, 'Hey there, little wanderer. What's the story behind this grand adventure? How did you end up separated from your folks?'"
 "\n\nGrimble watches your approach with a grin of approval, his eyes reflecting an appreciative nod. 'I see where you're going with this.'"
@@ -1144,7 +1144,7 @@ if __name__ == '__main__':
             ),
             'response90': Response(
                 dialogue_id=dialogues_list[19].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "With a burst of determination, you choose to take immediate action. Scooping up the child under your arm, you start sprinting across the area, your voice ringing out in urgent shouts as you call for their parents."
 "\n\nGrimble's eyes widen in surprise and amusement, his initial shock quickly turning into a hearty chuckle. 'Well, I guess we're running now.'"
@@ -1491,140 +1491,214 @@ if __name__ == '__main__':
                 dialogue_id=dialogues_list[20].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
+                "With a mischievous glint in your eye, you lean in towards Blort, your lips inches away from his. The anticipation hangs in the air for a moment, and just as he starts to close his eyes, you shift your focus to his waistband. In one swift motion, you tug down on his pants, revealing his undergarments."
+"\n\nBlort's eyes widen in surprise, his cheeks flushing with embarrassment as he stumbles back in shock. His hands move instinctively to his pants, hurriedly pulling them back up to cover himself. He looks at you with a mix of confusion and mild annoyance, his shyness momentarily overshadowed by the unexpected turn of events."
+"\n\n'Oh my!' Blort stammers, his voice a mixture of surprise and mild indignation. 'I... I would prefer you not tease me so!' He shifts uncomfortably on his feet, his cheeks still tinged with pink."
+"\n\nThe atmosphere between you takes on a slightly awkward tone, the playful prank having caught Blort off guard. As you both recover from the unexpected twist, you can't help but notice the obvious humiliation on his face.",
                 outcome=False
             ),
             'response122': Response(
                 dialogue_id=dialogues_list[21].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
+                "A smug grin spreads across your face as you declare yourself the winner of your little game, your tone carrying a hint of superiority. 'Well, well, it seems I've managed to entertain you quite thoroughly,' you announce, raising an eyebrow for emphasis. 'As the victor, it's only fair that you compensate me for the delightful time I've provided.'"
+"\n\nBlort's expression shifts from surprise to a mixture of confusion and disappointment. His eyes widen slightly, his soft features contorting into a pained expression. 'Oh, I... I wasn't aware there was a competition,' he mumbles, his voice tinged with a touch of sadness."
+"\n\nYou can see the discomfort in Blort's demeanor, his shoulders slumping slightly as if deflated. He glances down at his feet, his shyness magnified by your demanding request. 'I suppose I must pay you,' he stammers softly. You notice his eyes begin to swell, threatening tears."
+"\n\nThe atmosphere takes a somber turn, the playful mood having dissipated. Blort's reaction serves as a reminder that your actions can hurt others, and you find yourself regretting your avarice.",
                 outcome=False
             ),
             'response123': Response(
                 dialogue_id=dialogues_list[22].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
+                "With a determined smile, you reach out and gently take Blort by the hip, guiding him into a dip. He blinks in surprise, clearly not expecting this playful gesture. Your arms wrap around his form, holding him close as you lean in as if going for a kiss."
+"\n\nBut as you lean closer, your focus shifts to a small piece of grass stuck to his cheek. You pluck it off gently, a soft chuckle escaping you. You wink at him, your eyes meeting briefly in an awkward exchange."
+"\n\nBlort's reaction is a mix of confusion and mild embarrassment. He shifts on his feet, his cheeks tinted with a light blush. 'Oh, uh, thank you,' he stammers, clearly unsure of the situation. 'I didn't realize... I mean, there was something on my face?'"
+"\n\nThe moment is marked by an endearing awkwardness, the unexpected closeness leaving both of you momentarily unsure. As the tension eases, you share a nervous laugh.",
                 outcome=False,
             ),
             'response124': Response(
                 dialogue_id=dialogues_list[23].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
-                outcome=False
+                "You step closer to Blort, offering a warm smile as you congratulate him on the game. His face lights up, clearly pleased by your kind words. 'Oh, thanks!' he responds, his voice carrying a mix of surprise and gratitude. 'I'm glad you had fun.'"
+"\n\nHis genuine smile and appreciative demeanor create a friendly atmosphere between you. Blort seems genuinely happy with your company, and the casual conversation allows for a sense of ease to settle in."
+"\n\nThis may not have been the most romantic of endings, but at least you will leave knowing you have a friend.",
+                outcome=True
             ),
             'response125': Response(
                 dialogue_id=dialogues_list[24].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
+                "Feeling a sense of connection and the excitement of the moment, you decide to take the lead. Closing the gap between you and Blort, you lean in with confidence, aiming for a kiss. His wide eyes and stunned expression catch you off guard, and you can practically see the gears turning in his head."
+"\n\nHowever, your advance seems to be a bit too bold for Blort, who takes a step back, clearly flustered. 'Uh, wait! I, uh...' he stammers, his cheeks flushing with embarrassment. 'I wasn't expecting...'"
+"\n\nIt's clear that Blort's shy nature and unexpected reaction have created an awkward moment between you. While you were confident in your move, his response suggests that he might need more time to process the situation.",
                 outcome=False
             ),
             'response126': Response(
                 dialogue_id=dialogues_list[25].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
+                "With a wink and a mischievous giggle, you decide to kick things up a notch. Playfully, you start running away from Blort, fully expecting him to chase after you. Your heart races as you hear his footsteps behind you, and the thrill of the chase adds a sense of excitement to the moment."
+"\n\nHowever, as you glance back, you notice that Blort is still standing in place, a puzzled expression on his face. He seems to be taking the situation quite literally, his confusion evident in his furrowed brow. 'Wait, are we playing tag now?' he calls out, his tone a mix of uncertainty and amusement."
+"\n\nIt appears that Blort has interpreted your playful gesture in an unexpectedly literal way. His response wasn't quite what you anticipated, so you decide to end the farse and reconvene with him."
+"\n\n'Sorry I didn't play tag with you, I'm just a bit tired now,' Blort gives you a sorroy expression, and the two of you end your date awkwardly.",
                 outcome=False
             ),
             'response127': Response(
                 dialogue_id=dialogues_list[26].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
+                "You decide to take a step back and let Blort make the next move. After all, you invited him here, so it's only fair to give him the opportunity to show his interest. You wait expectantly, hoping that he'll take the initiative and make a move."
+"\n\nBlort's response is a mix of surprise and slight unease. He shifts his weight from one foot to the other, his gaze momentarily downcast. 'Oh, um, I guess that's it huh?' he stammers, his shy nature coming through. 'I hope you had fun!'"
+"\n\nIt's clear that Blort is a bit caught off guard by your lack of action. Perhaps he didn't consider the dynamics of the situation in the same way you did.",
                 outcome=False
             ),
             'response128': Response(
                 dialogue_id=dialogues_list[27].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
-                outcome=False
+                "As the date comes to an end, you find yourself hesitating. You remember the superstition that says it's bad luck to kiss on the first date, and you decide to err on the side of caution. With a friendly smile, you opt for a warm hug instead, hoping to convey your appreciation and enjoyment of the day."
+"\n\nBlort's eyes light up with a mixture of understanding and relief. He reciprocates the hug with a genuine, albeit slightly bashful, smile. 'I'm glad you invited me today,' he says softly. 'Hugging is so nice. I hug my pets all the time!'"
+"\n\nIt's clear that Blort values the connection you've established and appreciated the hug. The moment might not have been charged with raw intimacy, but the bond between you continues to grow.",
+                outcome=True
             ),
             'response129': Response(
                 dialogue_id=dialogues_list[28].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Curiosity gets the best of you as you contemplate a spontaneous action. Without overthinking it, you make your move. Swiftly, you close the distance between you and gently take Blort's hand in yours. To your pleasant surprise, he doesn't resist or react awkwardly. Instead, he meets your gaze with a soft smile, his fingers intertwining with yours."
+"\n\nAs you walk back together, fingers still intertwined, the atmosphere becomes charged with an understated intimacy. The silence between you is comfortable, punctuated by shared glances and the occasional chuckle."
+"\n\nBlort's presence feels warm and reassuring, a reminder of the genuine connection you've established throughout the day. It's a simple gesture, but in its simplicity, it speaks volumes about the potential for something more.",
+                outcome=True
             ),
             'response130': Response(
                 dialogue_id=dialogues_list[29].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
-                outcome=False
+                "A surge of boldness propels you forward as you bridge the gap between you and Blort, closing the distance in a swift movement. Your arms wrap around him, drawing him close. In the space of a heartbeat, his surprised expression gives way to a mixture of uncertainty and intrigue."
+"\n\nThe shared moment hangs suspended in time, a charged atmosphere enveloping both of you. You can feel the rapid beating of Blort's heart against your chest, a testament to the emotions running beneath the surface. A shiver of anticipation courses through you."
+"\n\nBlort's response is initially hesitant, a brief pause that lingers between you. But then, as if finding his resolve, he responds to the unspoken invitation. His lips meet yours, the kiss a gentle exploration of unfamiliar territory. It's an echo of his nature--simple, genuine, and filled with a quiet affection.",
+                outcome=True
             ),
             'response131': Response(
                 dialogue_id=dialogues_list[20].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
-                "Testing",  
+                "Your mischievous impulse takes hold as you draw near to Grimble, your actions seemingly leading to a passionate moment. But just as the tension reaches its peak, you pull back abruptly and drop his trowsers, leaving him bewildered and taken aback."
+"\n\nGrimble's reaction is swift and cutting. His eyes narrow in a mixture of irritation and confusion, his brows furrowing deeply. 'If this is your attempt at being funny, my friend, you have failed in that,' he remarks with a bitter edge to his voice. The disappointment is clear in his gaze, his insecurities momentarily exposed."
+"\n\nThe atmosphere shifts, a palpable tension settling between you. It's a reminder that not all actions hold the same weight, and some can cut deeper than others. Your attempt at humor has left a mark that lingers, a reminder of the boundaries you've crossed.",  
                 outcome=False
             ),
             'response132': Response(
                 dialogue_id=dialogues_list[21].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
-                "Testing",
+                "Your proclamation rings through the air, its tone laced with a sense of superiority as you declare yourself the winner of the day's interactions, demanding a payment for the 'entertainment' you've provided."
+"\n\nGrimble's reaction is a mixture of incredulity and annoyance. His eyes widen in surprise, and a disbelieving chuckle escapes him. 'You've got quite the imagination, don't you?' he retorts, his voice dripping with sarcasm. 'I didn't realize I was at a show. I'll not be paying you for this mummer's farce!'"
+"\n\nThe awkwardness of the moment hangs heavily, the tension between you palpable. Your attempt to assert dominance has fallen flat, leaving a hostile feeling to the date's end.",
                 outcome=False
             ),
             'response133': Response(
                 dialogue_id=dialogues_list[22].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
-                "Testing",
-                outcome=False
+                "With a mischievous glint in your eye, you sweep Grimble off his feet, your hand confidently finding his hip as you lower him in a gentle dip. A surprised yelp escapes him, quickly followed by a nervous chuckle, his cheeks flushing slightly."
+"\n\nAs the two of you share a playful moment, your eyes lock, and the atmosphere shifts. His lips part, as if in invitation, but you surprise him by reaching up and plucking a piece of grass from his cheek."
+"\n\nGrimble's eyes widen in surprise, but before he can react, you wink at him, and the tension breaks. A soft laugh escapes him, and his initial embarrassment transforms into genuine amusement. 'Well played,' he remarks, a grin tugging at the corners of his lips."
+"\n\nHis response is swift and unexpected, as he leans in to capture your lips with his own, the kiss deep and passionate. In that moment, the playful antics fade into the background, and the connection between you intensifies.",
+                outcome=True
             ),
             'response134': Response(
                 dialogue_id=dialogues_list[23].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
-                "Testing",
-                outcome=False
+                "With a friendly smile, you walk up to Grimble and pat him on the shoulder. 'Hey, that was a lot of fun,' you say. 'Thanks for the game.'"
+"\n\nGrimble's grin widens, his chest puffing out with pride. 'Glad you enjoyed it!' he replies. 'I'm always up for a good match.'"
+"\n\nAs you exchange a few more words, you can sense Grimble's genuine enthusiasm and his sincere pleasure in having shared this activity with you. His eyes gleam with a mix of satisfaction and relief, as if your positive feedback truly matters to him."
+"\n\n'It was a great way to spend time together,' Grimble adds, his voice warm and appreciative. 'You know, I was worried you might not enjoy it as much as I do, but I'm glad we could have some fun.'"
+"\n\nThe casual conversation eases any lingering tension from the game, and you find yourself genuinely enjoying Grimble's company. It's clear that even though you didn't win his heart, the time spent with Grimble was a victory in itself.",
+                outcome=True
             ),
             'response135': Response(
                 dialogue_id=dialogues_list[24].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
-                "Testing",
-                outcome=False
+                "As the game comes to an end, you're filled with a sense of contentment. The shared laughter, the friendly competition—it's been a wonderful time spent together. And as you catch Grimble's eye, you sense that he might be feeling the same way."
+"\n\nWithout hesitation, you take a step closer to him. The atmosphere around you seems to shift, the air charged with a quiet intensity. Your gaze lingers on Grimble's lips, and your heart races in anticipation."
+"\n\nClosing the distance between you, you press your lips against his in a soft, sweet kiss. It's a moment of connection, and the promise of more to come."
+"\n\nGrimble responds to your advance with a mixture of surprise and pleasure. His arms wrap gently around you, pulling you closer as he returns the kiss with equal tenderness. In that moment, the world around you fades, leaving only the two of you and the warmth of your emotions."
+"\n\nWhen you finally pull away, there's a soft, genuine smile on Grimble's face. 'I... I didn't see that coming,' he admits, his voice slightly breathless. 'But I'm glad you took the lead.'"
+"\n\nYou meet his gaze, your heart skipping a beat at the vulnerability you see in his eyes. It's a fleeting yet powerful connection—one that signifies the beginning of something more.",
+                outcome=True
             ),
             'response136': Response(
                 dialogue_id=dialogues_list[25].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
-                "Testing",
-                outcome=False
+                "With a playful wink and a mischievous giggle, you turn on your heels and start running away from Grimble. Your heart races with a mix of excitement and anticipation, wondering how he'll respond to your playful challenge."
+"\n\nYou hear the sound of footsteps behind you, growing closer with each passing moment. Grimble's laughter fills the air, his warm presence adding to the thrill of the chase. You steal a glance over your shoulder, catching his determined expression as he gains on you."
+"\n\nAs you slow down, pretending to tire, Grimble catches up to you and wraps his arms around your waist, bringing you to a gentle stop. Both of you are breathless, your laughter merging with the rustling leaves and the beating of your hearts."
+"\n\nIn that intimate moment, Grimble's eyes meet yours, his playfulness giving way to a deeper, more tender emotion. Without a word, he leans in, his lips meeting yours in a sweet and passionate kiss."
+"\n\nTime seems to stand still as your lips move together, the world around you fading away. It's a kiss that's both familiar and new, filled with the promise of the connection you've built and the future that awaits."
+"\n\nWhen you finally pull away, there's a gentle smile on Grimble's face. 'You're a handful, you know that?' he says, his tone affectionate. 'But I wouldn't have it any other way.'"
+"\n\nAs you catch your breath, you find comfort in the warmth of Grimble's embrace and the shared laughter that echoes between you. It's a moment of genuine connection, one that solidifies the bond you've formed.",
+                outcome=True
             ),
             'response137': Response(
                 dialogue_id=dialogues_list[26].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Grimble's eyes meet yours, his expression a mix of amusement and something deeper, more intense. His playful smile lingers as he takes a step closer, his confidence evident in his stance."
+"\n\n'You know what?' he says, his voice lower than before. 'I think it's about time someone took the initiative.'"
+"\n\nBefore you can react, Grimble's arms wrap around your waist, pulling you close to him. Your breath catches as his lips meet yours in a passionate kiss, sending a rush of heat through your veins."
+"\n\nIn that electrifying moment, time seems to slow down. The world around you fades away, leaving only the two of you in your own private universe. His lips are warm and insistent against yours, and you can feel the depth of his emotions in every touch."
+"\n\nThe kiss deepens, becoming a passionate exchange that ignites a fire within you. Your heart races, and you find yourself responding to his every move, your bodies pressed together as if drawn by an irresistible force."
+"\n\nWhen you finally break the kiss, both of you are breathless, your eyes locked in a lingering gaze. Grimble's playful facade has given way to something raw and genuine, his vulnerability visible in his eyes."
+"\n\n'I've wanted to do that since the moment I saw you,' he admits, his voice husky. 'I may be a bit of a show-off, but this? This is real.'"
+"\n\nAs you stand there, the weight of his words hangs in the air, the connection between you stronger than ever before. It's a moment that transcends the game you've been playing, and in its place, something meaningful and profound has taken root.",
+                outcome=True
             ),
             'response138': Response(
                 dialogue_id=dialogues_list[27].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
-                "Testing",
-                outcome=False
+                "With a gentle smile, you step closer to Grimble, your heart racing slightly as you wrap your arms around him in a warm and sincere embrace. His hesitation is only momentary before he responds, his arms encircling you in return."
+"\n\nThe world around you seems to fade as you feel the comforting weight of Grimble's embrace, the warmth of his body pressed against yours. It's a simple gesture, but it speaks volumes, conveying a sense of closeness that words often struggle to capture."
+"\n\nAfter a brief moment that feels both fleeting and timeless, you pull back slightly, meeting Grimble's gaze. His eyes hold a mixture of understanding and mild disappointment, a vulnerability that he allows you to see. Yet, his smile remains, a testament to his resilience."
+"\n\n'Guess I'll have to steal a kiss from you next time,' he says softly, a playful glint in his eyes that contrasts with the unspoken emotions beneath. 'But hey, a hug's not a bad way to end the date, right?'"
+"\n\nYou chuckle softly, appreciating Grimble's lightheartedness and his ability to find joy in the moment. There's a sense of connection that lingers in the air, a shared understanding that goes beyond words."
+"As you part ways, you carry with you the memory of this simple yet profound moment, a testament to the depth of your connection with Grimble.",
+                outcome=True
             ),
             'response139': Response(
                 dialogue_id=dialogues_list[28].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
-                "Testing",
-                outcome=False
+                "As the thought takes root in your mind, a mischievous smile tugs at your lips. Without overthinking it, you close the distance between you and Grimble, your hand reaching out to grab his in a playful gesture."
+"\n\nTo your delight, Grimble responds with unexpected enthusiasm. Instead of a simple handhold, he takes a step closer and smoothly twirls you around, his touch guiding you effortlessly. Laughter bubbles up between you, a joyful sound that reflects the carefree spirit of the moment."
+"\n\nThe twirl comes to a graceful stop, leaving you facing Grimble once again. His eyes meet yours, and in that fleeting instant, the world seems to fall away, leaving only the two of you."
+"\n\nWithout any further hesitation, Grimble's lips meet yours in a deep and intimate kiss. The world around you fades into the background as the sensation of his touch envelops you, igniting a warmth that spreads through your veins."
+"\n\nTime seems to stand still as you share this stolen moment, a passionate connection that defies the limits of the day. When you finally pull away, a hushed silence lingers between you, filled with unspoken words and the promise of more to come."
+"\n\nGrimble's eyes hold a mixture of emotions—desire, vulnerability, and a touch of surprise. A soft smile plays on his lips, and he brushes a strand of hair from your face."
+"\n\n'Well, I wasn't expecting that,' he says, his voice a gentle murmur. 'But I guess some surprises are better than others.'"
+"\n\nYou both share a moment of shared laughter, the tension of the moment broken by the easy camaraderie you've developed over the course of the date."
+"\n\nAs you part ways, the memory of the twirl and the kiss lingers in your mind.",
+                outcome=True
             ),
             'response140': Response(
                 dialogue_id=dialogues_list[29].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
-                "Testing",
+                "The charged moment hangs in the air; without a hint of hesitation, you draw Grimble closer to you, his body pressed against yours in a sensual embrace."
+"\n\nThe intensity of the connection between you is palpable, an electric current that sends shivers down your spine. Grimble responds in kind, his arms wrapping around you with a firm yet tender grip."
+"\n\nThe anticipation builds as your lips draw closer, a magnetic pull that neither of you can resist. And then, finally, your mouths meet in a passionate, hungry kiss that ignites a fire within you."
+"\n\nTime seems to blur as you lose yourself in the sensation of his lips against yours, the taste and feel of him driving you to the brink. Every touch, every press of his body against yours, fuels the growing heat between you."
+"\n\nGrimble's fingers trace a path along your spine, sending shivers coursing through your body. The kiss deepens, becoming a shared exploration of each other's desires and vulnerabilities."
+"\n\nWhen you eventually pull away, a low, almost guttural sound of satisfaction escapes Grimble's lips. His eyes meet yours, a mixture of passion and tenderness in his gaze."
+"\n\n'You certainly know how to make a statement,' he murmurs, his voice husky with emotion. 'And I have to admit, I'm not complaining.'"
+"\n\nA sense of contentment settles over you both, the intensity of the moment giving way to a quiet intimacy that speaks volumes."
+"\n\nAs you part ways, the memory of the passionate kiss lingers on your lips, a promise of the connection and chemistry that define your time with Grimble.",
                 outcome=False
             ),
             'response141': Response(
@@ -1911,70 +1985,70 @@ if __name__ == '__main__':
             ),
             'response181': Response(
                 dialogue_id=dialogues_list[30].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",  
                 outcome=False
             ),
             'response182': Response(
                 dialogue_id=dialogues_list[31].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response183': Response(
                 dialogue_id=dialogues_list[32].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response184': Response(
                 dialogue_id=dialogues_list[33].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response185': Response(
                 dialogue_id=dialogues_list[34].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response186': Response(
                 dialogue_id=dialogues_list[35].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response187': Response(
                 dialogue_id=dialogues_list[36].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response188': Response(
                 dialogue_id=dialogues_list[37].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response189': Response(
                 dialogue_id=dialogues_list[38].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response190': Response(
                 dialogue_id=dialogues_list[39].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
@@ -2263,70 +2337,70 @@ if __name__ == '__main__':
             ),
             'response231': Response(
                 dialogue_id=dialogues_list[40].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",  
                 outcome=False
             ),
             'response232': Response(
                 dialogue_id=dialogues_list[41].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response233': Response(
                 dialogue_id=dialogues_list[42].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response234': Response(
                 dialogue_id=dialogues_list[43].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response235': Response(
                 dialogue_id=dialogues_list[44].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response236': Response(
                 dialogue_id=dialogues_list[45].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response237': Response(
                 dialogue_id=dialogues_list[46].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response238': Response(
                 dialogue_id=dialogues_list[47].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response239': Response(
                 dialogue_id=dialogues_list[48].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response240': Response(
                 dialogue_id=dialogues_list[49].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
@@ -2615,70 +2689,70 @@ if __name__ == '__main__':
             ),
             'response281': Response(
                 dialogue_id=dialogues_list[50].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",  
                 outcome=False
             ),
             'response282': Response(
                 dialogue_id=dialogues_list[51].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response283': Response(
                 dialogue_id=dialogues_list[52].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response284': Response(
                 dialogue_id=dialogues_list[53].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response285': Response(
                 dialogue_id=dialogues_list[54].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response286': Response(
                 dialogue_id=dialogues_list[55].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response287': Response(
                 dialogue_id=dialogues_list[56].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response288': Response(
                 dialogue_id=dialogues_list[57].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response289': Response(
                 dialogue_id=dialogues_list[58].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response290': Response(
                 dialogue_id=dialogues_list[59].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
@@ -2967,70 +3041,70 @@ if __name__ == '__main__':
             ),
             'response331': Response(
                 dialogue_id=dialogues_list[60].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",  
                 outcome=False
             ),
             'response332': Response(
                 dialogue_id=dialogues_list[61].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response333': Response(
                 dialogue_id=dialogues_list[62].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response334': Response(
                 dialogue_id=dialogues_list[63].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response335': Response(
                 dialogue_id=dialogues_list[64].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response336': Response(
                 dialogue_id=dialogues_list[65].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response337': Response(
                 dialogue_id=dialogues_list[66].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response338': Response(
                 dialogue_id=dialogues_list[67].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response339': Response(
                 dialogue_id=dialogues_list[68].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response340': Response(
                 dialogue_id=dialogues_list[69].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
@@ -3319,70 +3393,70 @@ if __name__ == '__main__':
             ),
             'response381': Response(
                 dialogue_id=dialogues_list[70].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",  
                 outcome=False
             ),
             'response382': Response(
                 dialogue_id=dialogues_list[71].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response383': Response(
                 dialogue_id=dialogues_list[72].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response384': Response(
                 dialogue_id=dialogues_list[73].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response385': Response(
                 dialogue_id=dialogues_list[74].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response386': Response(
                 dialogue_id=dialogues_list[75].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response387': Response(
                 dialogue_id=dialogues_list[76].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response388': Response(
                 dialogue_id=dialogues_list[77].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response389': Response(
                 dialogue_id=dialogues_list[78].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response390': Response(
                 dialogue_id=dialogues_list[79].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
@@ -3671,70 +3745,70 @@ if __name__ == '__main__':
             ),
             'response431': Response(
                 dialogue_id=dialogues_list[80].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",  
                 outcome=False
             ),
             'response432': Response(
                 dialogue_id=dialogues_list[81].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response433': Response(
                 dialogue_id=dialogues_list[82].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response434': Response(
                 dialogue_id=dialogues_list[83].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response435': Response(
                 dialogue_id=dialogues_list[84].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response436': Response(
                 dialogue_id=dialogues_list[85].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response437': Response(
                 dialogue_id=dialogues_list[86].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response438': Response(
                 dialogue_id=dialogues_list[87].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response439': Response(
                 dialogue_id=dialogues_list[88].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
             ),
             'response440': Response(
                 dialogue_id=dialogues_list[89].id, 
-                goblin_id=blort.id, 
+                goblin_id=grimble.id, 
                 response=
                 "Testing",
                 outcome=False
