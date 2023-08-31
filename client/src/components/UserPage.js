@@ -120,6 +120,20 @@ function UserPage({ users, currentUser, handleChangeUser, handleDeleteUser }) {
               ...prevAssociations,
               data,
             ]);
+            try {
+              const response = await fetch(
+                `http://127.0.0.1:5555/users/${currentUser.id}`
+              );
+              if (response.status === 200) {
+                const updatedUserData = await response.json();
+                handleChangeUser(updatedUserData);
+              }
+              else {
+                console.error("Error updating user:", response.status);
+              }
+            } catch (error) {
+              console.error("Error updating user:", error);
+            }
             console.log("Trait associations created successfully!");
           } else {
             console.error(

@@ -46,7 +46,7 @@ const Login = ({ users, handleAddUser, handleLogin }) => {
               const data = await response.json();
               console.log("User Created:", data);
               handleAddUser(data);
-              history.push(`/user/${usernameExists.username}`);
+              history.push(`/user/${data.username}`);
             } else {
               console.log("Failed to Create User:", response.statusText);
             }

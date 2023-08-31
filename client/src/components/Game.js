@@ -36,7 +36,7 @@ function Game({ currentUser, goblins, handleChangeUser }) {
       if (response.status === 200) {
         const data = await response.json();
         const usertraits = currentUser.personality_traits.map(
-          (trait) => trait.id
+          (trait) => trait.trait_id
         );
         const dialogueOptions = data.filter((dialogue) =>
           usertraits.includes(dialogue.trait_id)
