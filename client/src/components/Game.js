@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useHistory } from "react-router-dom"
 
-
-function Game({ currentUser, goblins, }) {
+function Game({ currentUser, goblins, handleChangeUser}) {
     const [goblin, setGoblin] = useState(null);
     const [score, setScore] = useState(0);
     const [dates, setDates] = useState([])
@@ -56,7 +55,29 @@ function Game({ currentUser, goblins, }) {
         })
 
     }
+    async function updateUser(updatedUser) {
+        try {
+            const response = await fetch(`http://127.0.0.1:5555/users/${updatedUser.id}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify(updatedUser)
+            })
+            if (response.status === 200) {
+                const updatedUserData = await response.json()
+                handleChangeUser(updatedUserData)
+            } else {
+                console.log('Error updating user', response.status)
+            }
+        } catch (error) {
+            console.error('Error updating user', error)
+        }
+    }
     async function handleDialogueClick(dialogue) {
+        console.log(part)
+        console.log(score)
         if (responses.length === 0) {
             try {
                 const resp = await fetch('http://127.0.0.1:5555/responses')
@@ -76,18 +97,39 @@ function Game({ currentUser, goblins, }) {
             } catch (error) {
                 console.log('Error fetching responses', error)
             }
-        } else if (part > 3) {
+        } else if (part === 3) {
+            const newResponse = responses.find(response => response.dialogue_id === dialogue.id)
+            console.log(newResponse)
+            setResponse(newResponse)
+            setPart(part + 1)
+            if (newResponse.outcome === true) {
+                setScore(score + 1)
+            }
             try {
                 const resp = await fetch('http://127.0.0.1:5555/outcomes')
                 if (resp.status === 200) {
                     const data = await resp.json()
                     const dataOutcomes = data.filter(outcome => outcome.goblin_id === goblin.id)
                     console.log(dataOutcomes)
-                    if (score === 3) {
+                    if (score >= 2) {
                         const dataOutcome = dataOutcomes.find(outcome => outcome.date_id === chosenDate.id && outcome.result === true)
+                        const fieldName = `${goblin.name.toLowerCase()}_win`;
+                        const updatedUser = {
+                            id: currentUser.id,
+                            [fieldName]: currentUser[fieldName] + 1
+                        }
+                        updateUser(updatedUser)
+                        console.log(updatedUser)
                         setOutcomeResult(dataOutcome)
                     } else {
                         const dataOutcome = dataOutcomes.find(outcome => outcome.date_id === chosenDate.id && outcome.result === false)
+                        const fieldName = `${goblin.name.toLowerCase()}_win`;
+                        const updatedUser = {
+                            id: currentUser.id,
+                            [fieldName]: currentUser[fieldName] - 1
+                        }
+                        updateUser(updatedUser)
+                        console.log(updatedUser)
                         setOutcomeResult(dataOutcome)
                     }
                 } else {
@@ -97,7 +139,7 @@ function Game({ currentUser, goblins, }) {
                 console.log('Error fetching outcomes', error)
             }
         } else {
-            
+
             const newResponse = responses.find(response => response.dialogue_id === dialogue.id)
             console.log(newResponse)
             setResponse(newResponse)
@@ -108,11 +150,7 @@ function Game({ currentUser, goblins, }) {
         }
     }
     function endDate() {
-        if (score === 3) {
             history.push(`/user/${currentUser.username}`)
-        } else {
-            history.push(`/user/${currentUser.username}`)
-        }
     }
 
 
@@ -130,25 +168,24 @@ function Game({ currentUser, goblins, }) {
                             <br />
                             {part > 3 ? (
                                 <>
-                                    {score === 3? (
+                                    <h2>{outcomeResult ? outcomeResult.outcome_description : ""}</h2>
+                                    <br />
+                                    {score >= 2 ? (
                                         <>
-                                        <br />
-                                            <h2>{outcomeResult ? outcomeResult.outcome_description : ""}</h2>
                                             <button onClick={endDate}>End Date 😘</button>
                                         </>
                                     ) : (
                                         <>
-                                            <h2>{outcomeResult ? outcomeResult.outcome_description : ""}</h2>
-                                            <button onClick={endDate}>End Date 😒</button>                                        
+                                            <button onClick={endDate}>End Date 😒</button>
                                         </>
-                                )}
+                                    )}
                                 </>
                             ) : (
                                 <>
                                     {dialogues
                                         .filter(dialogue => dialogue.date_part === part)
                                         .map((dialogue, index) => (
-                                            <div>
+                                            <div key={index}>
                                                 <br />
                                                 <button onClick={() => handleDialogueClick(dialogue)}>{index + 1}</button>
                                                 <h4>{dialogue.description}</h4>
@@ -171,7 +208,7 @@ function Game({ currentUser, goblins, }) {
                                 </>
                             ) : (
                                 <>
-                                <h1>Who would you like to invite out?</h1>
+                                    <h1>Who would you like to invite out?</h1>
                                     {goblins.map((goblin, index) => (
                                         <div key={index}>
                                             <br />
@@ -187,19 +224,6 @@ function Game({ currentUser, goblins, }) {
                         </div>
                     )}
                 </>
-
-
-
-
-
-
-
-
-
-
-
-
-
             ) : (
                 <>
                     <h1>Please Log In First!</h1>

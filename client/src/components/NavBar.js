@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Hamburger from "./Hamburger";
 
-function NavBar({currentUser}) {
+function NavBar({ currentUser }) {
     const [hamburgerOpen, setHamburgerOpen] = useState(false)
     const [loggedIn, setLoggedIn] = useState(false)
 
     useEffect(() => {
-        if(currentUser) {
+        if (currentUser) {
             setLoggedIn(true)
         }
     }, [currentUser])
@@ -23,40 +23,40 @@ function NavBar({currentUser}) {
                     <Hamburger />
                 </div>
                 <div className={`menu ${hamburgerOpen ? "active" : ""}`}>
-                <ul>
-                    <li className="links">
-                        <Link to="/">Home</Link>
-                    </li>
-                    {loggedIn ? (
-                        <>
-                        <li>
-                            <Link to={`/user/${currentUser.username}`}>Profile</Link>
+                    <ul>
+                        <li className="links">
+                            <Link to="/">Home</Link>
                         </li>
-                        </>
-                    ) : (
-                        <>
+                        {loggedIn ? (
+                            <>
+                                <li>
+                                    <Link to={`/user/${currentUser.username}`}>Profile</Link>
+                                </li>
+                                <li>
+                                    <Link to="/date">Go On A Date</Link>
+                                </li>
+                            </>
+                        ) : (
+                            <>
+                                <li>
+                                    <Link to="/login">Login</Link>
+                                </li>
+                            </>
+                        )}
                         <li>
-                            <Link to="/login">Login</Link>
+                            <Link to="/goblins">Goblin Boys</Link>
                         </li>
-                        </>
-                    )}
-                    <li>
-                        <Link to="/goblins">Goblin Dates</Link>
-                    </li>
-                    <li>
-                        <Link to="/date">Go On A Date</Link>
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.cosmopolitan.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Tips & Tricks
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                        <li>
+                            <a
+                                href="https://www.cosmopolitan.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Tips & Tricks
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     );
