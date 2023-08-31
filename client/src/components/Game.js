@@ -149,15 +149,17 @@ function Game({ currentUser, goblins }) {
                 alt={goblin.name}
               />
               <br />
-              <h2>
-                {part === 1
-                  ? chosenDate.description
-                  : response
-                  ? response.response
-                  : ""}
-              </h2>
-              <br />
-              <h3>{partDesc[part]}</h3>
+              <div className="date-desc">
+                <h3>
+                  {part === 1
+                    ? chosenDate.description
+                    : response
+                    ? response.response
+                    : ""}
+                </h3>
+                <br />
+              </div>
+              <h3 className="date-question">{partDesc[part]}</h3>
               <br />
               {part > 3 ? (
                 <>
@@ -185,13 +187,19 @@ function Game({ currentUser, goblins }) {
                     .map((dialogue, index) => (
                       <div>
                         <br />
-                        <button onClick={() => handleDialogueClick(dialogue)}>
+                        <button
+                          onClick={() => handleDialogueClick(dialogue)}
+                          className="date-opt-desc-button"
+                        >
                           {index + 1}
                         </button>
-                        <h4>{dialogue.description}</h4>
+                        <h4 className="date-opt-desc">
+                          {dialogue.description}
+                        </h4>
                         <br />
                       </div>
                     ))}
+                  <div className="date-space"></div>
                 </>
               )}
             </div>
