@@ -199,12 +199,19 @@ function Game({ currentUser, goblins }) {
             <div>
               {goblin ? (
                 <>
-                  <h3>What date would you like to go on?</h3>
+                  <h3 className="what-date">
+                    What date would you like to go on?
+                  </h3>
                   {dates.map((date, index) => (
-                    <button key={index} onClick={() => pickDate(date)}>
+                    <button
+                      key={index}
+                      onClick={() => pickDate(date)}
+                      className="date-pick-button"
+                    >
                       {date.name}
                     </button>
                   ))}
+                  <div className="date-space"></div>
                 </>
               ) : (
                 <>

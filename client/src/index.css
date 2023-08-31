@@ -107,6 +107,7 @@ body {
   justify-content: center;
   margin: 0 auto;
   padding: 20px;
+  text-decoration: underline;
 } /*^^ go on a date/game */
 
 .gob-name-date {
@@ -137,6 +138,7 @@ body {
   color: white;
   margin: 0 auto;
   margin-bottom: 66px;
+  cursor: pointer;
 }
 
 .login-first {
@@ -147,6 +149,37 @@ body {
   justify-content: center;
   display: flex;
   margin: 0 auto;
+}
+
+.what-date {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #89c445;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.date-pick-button {
+  padding: 11px;
+  background-color: rgb(247, 3, 117);
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  width: 300px;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 33px;
+  display: flex;
+  font-size: 17px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.date-space {
+  padding: 40px;
 }
 
 .account {
