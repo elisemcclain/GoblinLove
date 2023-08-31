@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-function Game({ currentUser, goblins }) {
+function Game({ currentUser, goblins, handleChangeUser }) {
   const [goblin, setGoblin] = useState(null);
   const [score, setScore] = useState(0);
   const [dates, setDates] = useState([]);
@@ -137,7 +137,7 @@ function Game({ currentUser, goblins }) {
         <img className="gob-head" src={"./GoblinHead.png"} alt="GOBSMACKED" />
       </div>
       <div>
-        <h1 className="gob-date-page">GOBLIN DATE</h1>
+        <h1 className="gob-date-page">GO ON A DATE</h1>
       </div>
       {currentUser ? (
         <>
@@ -169,14 +169,20 @@ function Game({ currentUser, goblins }) {
                       <h2>
                         {outcomeResult ? outcomeResult.outcome_description : ""}
                       </h2>
-                      <button onClick={endDate}>End Date 😘</button>
+                      <button className="end-date" onClick={endDate}>
+                        End Date 😘
+                      </button>
+                      <div className="date-space"></div>
                     </>
                   ) : (
                     <>
                       <h2>
                         {outcomeResult ? outcomeResult.outcome_description : ""}
                       </h2>
-                      <button onClick={endDate}>End Date 😒</button>
+                      <button className="end-date" onClick={endDate}>
+                        End Date 😒
+                      </button>
+                      <div className="date-space"></div>
                     </>
                   )}
                 </>
@@ -229,9 +235,9 @@ function Game({ currentUser, goblins }) {
                     </h1>
                     <div className="gob-card-item">
                       {goblins.map((goblin, index) => (
-                        <div key={index}>
+                        <div className="gob-name-date" key={index}>
                           <br />
-                          <h3 className="gob-name-date">{goblin.name}</h3>
+                          <h3>{goblin.name}</h3>
                           <img
                             className="gob-imgs-date"
                             src={goblin.img_url}

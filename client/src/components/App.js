@@ -101,7 +101,7 @@ function App() {
             <UserPage users = {users} currentUser = {currentUser} handleChangeUser = {handleChangeUser} handleDeleteUser = {handleDeleteUser}/>
           </Route>
           <Route exact path = "/date">
-            <Game currentUser = {currentUser} goblins = {goblins}/>
+            <Game currentUser = {currentUser} goblins = {goblins} handleChangeUser = {handleChangeUser}/>
           </Route>
         </Switch>
       </main>

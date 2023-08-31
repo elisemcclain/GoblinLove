@@ -11,13 +11,7 @@ function NavBar({ currentUser }) {
       setLoggedIn(true);
     }
   }, [currentUser]);
-  useEffect(() => {
-    if (currentUser) {
-      setLoggedIn(true);
-    }
-  }, [currentUser]);
   const toggleHamburger = () => {
-    console.log(currentUser, "current user in NavBar");
     console.log(currentUser, "current user in NavBar");
     setHamburgerOpen(!hamburgerOpen);
   };
@@ -45,6 +39,11 @@ function NavBar({ currentUser }) {
                     PROFILE
                   </Link>
                 </li>
+                <li>
+                  <Link to="/date" className="nav-link">
+                    GO ON A DATE
+                  </Link>
+                </li>
               </>
             ) : (
               <>
@@ -57,12 +56,7 @@ function NavBar({ currentUser }) {
             )}
             <li>
               <Link to="/goblins" className="nav-link">
-                GOBLIN DATES
-              </Link>
-            </li>
-            <li>
-              <Link to="/date" className="nav-link">
-                GO ON A DATE
+                GOBLIN BOYS
               </Link>
             </li>
             <li>

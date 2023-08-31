@@ -8,8 +8,9 @@ function GoblinCard({ goblin }) {
     const path = `/goblins/${goblin.name}`;
     history.push(path);
   };
+
   return (
-    <div>
+    <div className="gob-card-back">
       <h2 className="gob-name">{goblin.name}</h2>
       <img
         className="gob-imgs-boys"
@@ -17,25 +18,11 @@ function GoblinCard({ goblin }) {
         alt={goblin.name}
         onClick={navigate}
       />
-      <p className="see-more">Click to see more!</p>
+      <p className="see-more" onClick={navigate}>
+        Click to see more!
+      </p>
     </div>
   );
 }
 
 export default GoblinCard;
-
-// {goblins.length > 0 && (
-//   <div>
-//     {goblins.map((goblin) => {
-//       return (
-//         <img
-//           className="gob-imgs"
-//           src={goblin.img_url}
-//           alt={goblin.name}
-//           onClick={() => handleGoblinClick(goblin)}
-//         />
-//       );
-//     })}
-//     ,
-//   </div>
-// )}

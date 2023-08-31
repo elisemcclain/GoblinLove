@@ -145,7 +145,7 @@ function UserPage({ users, currentUser, handleChangeUser, handleDeleteUser }) {
           alt="GOBLINHEAD"
         />
         <div>
-          <h1 className="account">ACCOUNT</h1>
+          <h1 className="account">PROFILE</h1>
         </div>
       </div>
       <div className="bar-user"></div>
