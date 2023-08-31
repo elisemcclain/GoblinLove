@@ -215,20 +215,20 @@ function Game({ currentUser, goblins }) {
                     <div className="gob-card-item">
                       {goblins.map((goblin, index) => (
                         <div key={index}>
-                          {/* <br /> */}
+                          <br />
+                          <h3 className="gob-name-date">{goblin.name}</h3>
                           <img
                             className="gob-imgs-date"
                             src={goblin.img_url}
                             alt={goblin.name}
                           />
-                          <h3 className="gob-name-date">{goblin.name}</h3>
                           <button
-                            className="gob-card"
+                            className="gob-card-button"
                             onClick={() => setGoblin(goblin)}
                           >
                             Pick Me 😘
                           </button>
-                          {/* <br /> */}
+                          <br />
                         </div>
                       ))}
                     </div>
@@ -240,8 +240,14 @@ function Game({ currentUser, goblins }) {
         </>
       ) : (
         <>
-          <h1>Please Log In First!</h1>
-          <Link to="/login">Login</Link>
+          <div>
+            <h2 className="login-first">Please Log In First!</h2>
+          </div>
+          <div>
+            <Link to="/login" className="login-first-button">
+              Login
+            </Link>
+          </div>
         </>
       )}
     </div>
