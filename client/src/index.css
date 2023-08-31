@@ -518,6 +518,7 @@ body {
   padding-top: 0px;
   padding-bottom: 30px;
   justify-content: center;
+  display: flex;
   margin: 0 auto;
   text-decoration-line: underline;
   text-decoration-style: double;
