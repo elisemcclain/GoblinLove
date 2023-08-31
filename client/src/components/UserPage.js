@@ -233,6 +233,7 @@ function UserPage({ users, currentUser, handleChangeUser, handleDeleteUser }) {
                 <h3>Username: {currentUser.username}</h3>
                 <h3>Email: {currentUser.email}</h3>
                 <h3>Password: 🤣</h3>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <h4>
                   Successful Dates with Grubnub: {currentUser.grubnub_win}
                 </h4>

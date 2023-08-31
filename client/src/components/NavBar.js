@@ -42,7 +42,7 @@ function NavBar({ currentUser }) {
                     to={`/user/${currentUser.username}`}
                     className="nav-link"
                   >
-                    Profile
+                    PROFILE
                   </Link>
                 </li>
               </>
