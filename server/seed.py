@@ -51,6 +51,7 @@ if __name__ == '__main__':
         db.session.add_all(traits)
         db.session.commit()
 
+
         print("Creating trait associations...")
         trait_association1 = TraitAssociation(trait_id=trait1.id, user_id=user1.id)
         trait_association2 = TraitAssociation(trait_id=trait2.id, user_id=user2.id)
@@ -112,6 +113,8 @@ if __name__ == '__main__':
             part_2 = "Shortly after the two of you begin the game together, you are interrupted by the sounds of a child screaming for their parent. How do you respond?",
             part_3 = "After playing for what seems like hours, the game finally ends. Your date stands expectantly--you realize they are waiting for you to do something. What do you do?",
             )
+
+
         date2 = Date(
             name="Grab a Drink",
             description="When you've had a long day of raiding, the best thing you can do is sit down at the rotten elder tree saloon and grab a lukewarm glass of Muk. Muk is made from local forest fungi and potatoes. With plenty of farmhouse funk, this wild fermented Muk will leave a vibrant zestiness on your tongue!",
@@ -119,6 +122,8 @@ if __name__ == '__main__':
             part_2 = "The server comes back with a fresh round and a complementary plate of peanuts. You do notice that your date has been slipped a note by the server... what do you say?",
             part_3 = "The night is just about wrapped up. The server comes back around and drops off the check. Who's paying?"
             )
+
+
         date3 = Date(
             name="Home Cooked Meal",
             description="What could be more romantic than a home cooked meal? You can really express yourself with cooking, and your partner will learn just who you are by the time its done. With top shelf ingredients, such as zucchini (stolen), rice (stolen), tomatoes (stolen), salt (stolen), and fresh dwarf ribs (stolen?) you have plenty of options!",
@@ -127,9 +132,13 @@ if __name__ == '__main__':
             part_3 = "After the meal wraps up, there is an awkward silence from your date. Are they expecting you to ask them to stay over? What do you say?"
             )
 
+
+
         dates = [date1, date2, date3]
         db.session.add_all(dates)
         db.session.commit()
+
+
 
         print("Creating dialogues...")
         dialogues_1 = {
@@ -165,6 +174,8 @@ if __name__ == '__main__':
             'dialogue30': Dialogue(date_part=3, date_id=date1.id, trait_id=trait10.id, description="You move without hesitation and hold them close, giving them the charge to finish what you started."),
         }
 
+
+
         dialogues_2 = {
             'dialogue31': Dialogue(date_part=1, date_id=date2.id, trait_id=trait1.id, description="You realize that after a couple mugs of Muk, you might convince them to join your plan to overthrow the goblin government."),
             'dialogue32': Dialogue(date_part=1, date_id=date2.id, trait_id=trait2.id, description="You agree, but only on the condition that they pay for all your Muk. They must also present you with a goblin made tiara because you deserve it, but mostly to show everyone at the Rotten Elder Tree Saloon that you're better than them."),
@@ -198,6 +209,8 @@ if __name__ == '__main__':
             'dialogue60': Dialogue(date_part=3, date_id=date2.id, trait_id=trait10.id, description="Impulsive Option"),
         }
 
+
+
         dialogues_3 = {
             'dialogue61': Dialogue(date_part=1, date_id=date3.id, trait_id=trait1.id, description="You love the idea of going to their grotto for a home cooked meal. You can raid their bedroom for secrets and red flags while they aren't looking."),
             'dialogue62': Dialogue(date_part=1, date_id=date3.id, trait_id=trait2.id, description="You would of course expect nothing less than a gourmet home cooked meal. They can cook absolutely everything, and you can enjoy being served delicious hors d'oeuvres. You won't even lift a hairy finger"),
@@ -230,9 +243,9 @@ if __name__ == '__main__':
             'dialogue89': Dialogue(date_part=3, date_id=date3.id, trait_id=trait9.id, description="Curious Option"),
             'dialogue90': Dialogue(date_part=3, date_id=date3.id, trait_id=trait10.id, description="Impulsive Option"),
         }
-        
 
-        
+
+
 
         all_dialogues = list(dialogues_1.values()) + list(dialogues_2.values()) + list(dialogues_3.values())
 
@@ -1085,6 +1098,18 @@ if __name__ == '__main__':
                 dialogue_id=dialogues_list[15].id, 
                 goblin_id=blort.id, 
                 response=
+                "Empathy guiding your actions, you decide to lift the child's spirits. Extending a kind smile, you offer them a bone you've found nearby and ask in a friendly tone, 'Hey there, how about a little game while we wait for your parents? We can pass the time together.'"
+"\n\nGrimble's eyes shine with approval, his genuine kindness echoing your gesture. 'That's a lovely idea.'"
+"\n\nThe child's tearful gaze shifts to the bone you've given them, curiosity mingling with gratitude. They nod shyly, intrigued by the prospect."
+"\n\nGrimble's enthusiasm is infectious. 'Alright, let's make the best out of this wait! What sort of game would you like to play?'"
+"\n\nWith the help of Grimble's creativity and your engaging presence, the three of you embark on a lighthearted adventure, turning a potentially distressing moment into a delightful memory."
+"\n\nAs the child's parents arrive and the family is reunited, Grimble's smile reflects the contentment in his heart. 'See, we managed to make their waiting time enjoyable.' The date continues on an uplifting note, the baseball game enhanced by the camaraderie you've fostered.",
+                outcome=True
+            ),
+            'response87': Response(
+                dialogue_id=dialogues_list[16].id, 
+                goblin_id=blort.id, 
+                response=
                 "In an unexpected turn, you choose to ignore the child's distress and focus solely on the baseball game, determined not to let anything disrupt your enjoyment."
 "\n\nGrimble raises an eyebrow in surprise, his concern evident as he speaks up. 'Hey, I get wanting to enjoy the game, but we can't just ignore a child in need.'"
 "\n\nDespite your decision, Grimble's caring nature takes over. He approaches the child and gently addresses them, 'Hey, are you okay? Don't worry, we'll help you find your parents.'"
@@ -1094,8 +1119,8 @@ if __name__ == '__main__':
 "\n\nDespite your choice, Grimble's compassion shines through, and you share the experience of the baseball game, even if your approach has introduced a hint of tension.",
                 outcome=False
             ),
-            'response87': Response(
-                dialogue_id=dialogues_list[16].id, 
+            'response88': Response(
+                dialogue_id=dialogues_list[17].id, 
                 goblin_id=blort.id, 
                 response=
                 "In a moment of seriousness, you find yourself unusually superstitious. Turning to Grimble with a grave expression, you share your concern, 'Grimble, call it a hunch, but I can't shake this feeling. Something about this child... it's like a dark cloud hanging over us. We should find their parents quickly, or who knows what might happen.'"
@@ -1106,96 +1131,148 @@ if __name__ == '__main__':
 "\n\nGrimble's tone is thoughtful as he speaks. 'It's good to trust your instincts sometimes.' The date continues on a more cautious note as you both enjoy the baseball game and the unity you've established.",
                 outcome=True
             ),
-            'response88': Response(
-                dialogue_id=dialogues_list[17].id, 
-                goblin_id=blort.id, 
-                response=
-                "Testing",
-                outcome=False
-            ),
             'response89': Response(
                 dialogue_id=dialogues_list[18].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Driven by curiosity, you decide to dive into conversation with the child. Gently crouching down beside them, you adopt a warm and compassionate tone, 'Hey there, little wanderer. What's the story behind this grand adventure? How did you end up separated from your folks?'"
+"\n\nGrimble watches your approach with a grin of approval, his eyes reflecting an appreciative nod. 'I see where you're going with this.'"
+"\n\nThe child sniffs, their teary eyes meeting yours. With a mixture of trust and hesitation, they begin to recount, 'We were all watching the thrilling game together. I got mesmerized by a dazzling dragonfly and couldn't resist chasing it. When I turned back, they were like... poof! Gone!'"
+"\n\nGrimble's laughter dances in the air, his voice resonating with genuine amusement. 'A dragonfly, huh? Those tricky little daredevils.'"
+"\n\nLeaning in, you listen closely to the child's tale, interjecting with understanding nods and soothing reassurances. Together with Grimble, you embark on a quest to reunite the child with their parents, your unity becoming a heartening beacon."
+"\n\nAs the family is finally reunited, Grimble's eyes twinkle with joy. 'Look at that, our very own happy ending.' The date continues on an uplifting note as you all bask in the magic of the baseball game and the beautiful connection you've forged.",
+                outcome=True
             ),
             'response90': Response(
                 dialogue_id=dialogues_list[19].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
-                outcome=False
+                "With a burst of determination, you choose to take immediate action. Scooping up the child under your arm, you start sprinting across the area, your voice ringing out in urgent shouts as you call for their parents."
+"\n\nGrimble's eyes widen in surprise and amusement, his initial shock quickly turning into a hearty chuckle. 'Well, I guess we're running now.'"
+"\n\nThe child clings to you, a mixture of surprise and exhilaration in their eyes as the wind whizzes past. Their laughter mingles with your shouts, a chorus of voices echoing through the air."
+"\n\nGrimble's laughter joins in the symphony, his voice infused with the thrill of the moment. 'You've turned this into quite the adventure!'"
+"\n\nYour sprint comes to an end as the child's parents rush over with a mixture of relief and amusement on their faces. Grimble is there to welcome them with a grin, clearly enjoying the energetic scene."
+"\n\nGrimble's voice is filled with mirth as he addresses the parents. 'I think we've managed to find you faster than we expected.' The date continues on a vibrant note as you all share a lively moment of unity and enjoyment.",
+                outcome=True
             ),
             'response91': Response(
                 dialogue_id=dialogues_list[10].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",  
+                "With a mischievous glint in your eye, you decide to pull a prank on Zongo. Striding up to the child, you slip into a role that is far from your usual self – that of their parent. You play your part with gusto, amplifying the theatrics while stealing a glance at Zongo, who watches with a mix of confusion and mild annoyance."
+"\n\nZongo's brow furrows, his typically confident demeanor replaced by a hint of bafflement. 'What in the world are you up to?'"
+"\n\nEmbracing the act, you emphasize your role with exaggerated gestures and a lively tone, intent on keeping Zongo guessing."
+"\n\nZongo's voice carries a touch of exasperation. 'Alright, I'll bite. What's with this whole charade? You clearly are not their parent.'"
+"\n\nAs the child's real parent arrives and you reveal the prank, Zongo lets out an exasperated sigh, his irritation thinly veiled."
+"\n\nZongo's tone is unimpressed as he addresses you. 'You certainly have a knack for the unexpected, I'll give you that.' The date continues, though Zongo's mood might have been slightly dampened by the prank.",  
                 outcome=False
             ),
             'response92': Response(
                 dialogue_id=dialogues_list[11].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
+                "In a shockingly misguided choice, you entertain the idea of exploiting the child for personal gain. Pushing aside your usual persona, you approach the child with an unsettling intent, a decision that catches Zongo off guard."
+"\n\nZongo's voice carries a mix of astonishment and disapproval. 'Whoa, hold on a second. What in the world are you even thinking?'"
+"\n\nBefore you can fully act on your decision, a wave of realization washes over you, prompted by Zongo's appalled reaction. His disapproval weighs heavily on your conscience."
+"\n\nZongo's tone is firm as he condemns your choice. 'This is not the kind of story we're going to be a part of.'"
+"\n\nAs the child's real parent arrives, concern etched on their face, Zongo's gaze shifts between you and the unfolding situation. Relief washes over him as the family is reunited before the baseball game resumes."
+"\n\nZongo's voice is laced with a mix of relief and malice. 'Let's stick to the game AND better choices, shall we?' The date continues with a renewed focus on the baseball game, the incident serving as a reminder of the importance of integrity.",
                 outcome=False
             ),
             'response93': Response(
                 dialogue_id=dialogues_list[12].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Thinking on your feet, you opt for a creative solution to aid the child. Swiftly grabbing a thin strip of bark, you expertly coil it into a cone shape. As you prepare to blow into it, Zongo steps in, his eyes gleaming with mischief. With a flick of his fingers, he weaves a touch of thaumaturgy magic into the bark, amplifying the sound into a resonating call for the child's parents."
+"\n\nZongo's playful grin is paired with a subtle nod of approval. 'Now that's what I call thinking outside the box.'"
+"\n\nThe child's eyes widen in wonder as the amplified sound captures their attention, instilling a sense of hope."
+"\n\nZongo's voice carries a touch of satisfaction. 'Just a bit of magical enhancement to get our point across.'"
+"\n\nAs the child's parents hurry over, their relief is mirrored by Zongo's appreciative nod towards you."
+"\n\nZongo's tone is laced with camaraderie. 'Great job, partner. We made quite the team there.' The rest of the date continues with a sense of achievement, both of you enjoying the baseball game and the collaborative magic you've conjured.",
+                outcome=True
             ),
             'response94': Response(
                 dialogue_id=dialogues_list[13].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
+                "In a moment of trepidation, you find yourself succumbing to your nerves. Concerned that the child might be a potential trap, you opt for a discreet retreat, quietly fading into the background while ignoring the situation, hopeful that they'll eventually leave on their own."
+"\n\nZongo's expression shifts as an idea forms in his mind. With a mischievous grin, he extends his hand toward you, casting an invisibility spell to shroud you from sight. Simultaneously, he weaves a touch of his thaumaturgy magic into the air, creating a resonating, booming voice that calls out for the child's parents."
+"\n\nZongo's voice echoes heavy sarcasm and judgement. 'Well, if we're going for stealth, might as well go all out.'"
+"\n\nThe child looks around, startled by the magical voice, while Zongo's suppressed chuckle is barely audible."
+"\n\nZongo's voice carries a mix of mischief and amusement. 'I've always wanted to be a magical announcer.'"
+"\n\nAs the child's parents rush over, finding their lost child, Zongo releases the invisibility spell with a flick of his fingers and flashes you a satisfied grin."
+"\n\nZongo's tone is disapproving, 'Well, I see you have a knack for disappearing when things get tricky.' The date carries on, though an air of somberness has crept in, the baseball game becoming a backdrop to an encounter that has subtly shifted the dynamics between you and Zongo.",
                 outcome=False
             ),
             'response95': Response(
                 dialogue_id=dialogues_list[14].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Radiating unshakable confidence, you take charge of the situation. Flashing a self-assured grin, you crouch down beside the child and deliver your reassurance with a touch of flair, 'Fear not, youngster. With me around, finding your parents is as good as done. They must be frantically searching for the coolest kid in town.'"
+"\n\nZongo watches your approach with a mixture of amusement and a raised eyebrow. 'Quite the confident speech there.'"
+"\n\nThe child's eyes widen, a mixture of awe and hope in their gaze as they nod in agreement."
+"\n\nZongo's voice is laden with wry amusement. 'Your confidence knows no bounds, huh?'"
+"\n\nAs you, Zongo, and the child embark on your search, your collective determination pays off when the family is joyfully reunited."
+"\n\nZongo's tone carries a hint of begrudging acknowledgment. 'Looks like your bold approach paid off.' The date continues with an air of victorious energy, the baseball game even more invigorating thanks to the confident camaraderie you've ignited.",
+                outcome=True
             ),
             'response96': Response(
                 dialogue_id=dialogues_list[15].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Recognizing the child's need for a lift, you swiftly take action. Digging into your bag, you retrieve a bone and offer it to the child with a warm smile. 'Hey there, sport. How about we have a little game to pass the time? And guess what? My partner here knows a thing or two about making things exciting.'"
+"\n\nZongo's eyes gleam with approval, his focus shifting to you and your thoughtful approach. 'A thoughtful gesture indeed.'"
+"\n\nThe child's eyes widen with curiosity as they eagerly accept the bone, intrigued by what's to come."
+"Zongo's voice holds a touch of admiration, 'You know what? I've got something up my sleeve to make this even more unforgettable.' Zongo conjures a playful illusion, captivating the child's attention."
+"\n\nZongo's tone carries a note of appreciation. 'You've got a knack for brightening their day.' The date continues with a spirited energy, the baseball game paired with the shared enjoyment you've kindled.",
+                outcome=True
             ),
             'response97': Response(
                 dialogue_id=dialogues_list[16].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
+                "Opting for an unorthodox approach, you purposely overlook the child, throwing yourself entirely into the baseball game. Your fixation on the match remains unbroken, and Zongo's eyes spark with mischief and determination."
+"\n\nZongo's voice resonates with a playful challenge. 'Ah, the oblivious path, I see. Let's see how this unfolds.'"
+"\n\nWhile your attention remains committed to the game, Zongo seizes the opportunity to wield his magical prowess. He conjures an enchanting illusion that captivates the child's interest and leads them closer to their waiting parents."
+"\n\nZongo's tone carries a self-satisfied note. 'Magic, my friend, can be quite the guiding star.'"
+"\n\nAs the child's parents locate them through Zongo's magical diversion, he receives their gratitude with a nod of acknowledgement."
+"\n\nZongo's voice rings with indifference as he addresses you. 'Well, looks like you were too focused to notice, huh?' The date continues with an air of completion, Zongo's actions taking center stage in an experience that has subtly shifted the balance of attention.",
                 outcome=False
             ),
             'response98': Response(
                 dialogue_id=dialogues_list[17].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
+                "Amidst the unfolding events, an irrational fear takes hold of you. Convinced that the child's presence is an ill omen, you feel a growing urgency for their parents to be found, lest the date be cursed."
+"\n\nZongo's reaction is one of clear disbelief. 'A cursed date? Seriously?'"
+"\n\nAs your apprehension mounts, Zongo's voice carries an undertone of skepticism. 'You do realize this is just a child, right? I doubt they're a harbinger of doom.'"
+"\n\nYour attempts to locate the child's parents intensify, your every action driven by the unfounded belief of impending misfortune."
+"\n\nZongo's tone is marked by a mixture of amusement and frustration. 'I can't believe you're taking this so seriously.'"
+"\n\nAs the child's parents are eventually found, Zongo exchanges a bemused glance with you, his reaction a testament to your baseless apprehension."
+"\n\nZongo's voice carries a hint of incredulity. 'Well, I guess you got what you wanted—no curse in sight. I am glad we found their parents at least.' The date continues, though your unease leaves a lingering impact.",
                 outcome=False
             ),
             'response99': Response(
                 dialogue_id=dialogues_list[18].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Intrigued by the circumstances surrounding the child, you initiate a lively conversation. Your genuine curiosity leads you through a series of questions, enabling the child to share their story with you."
+"\n\nZongo's occasional interjections add a layer of insight and humor to the unfolding narrative."
+"\n\nAs the child's tale unravels, your empathetic engagement creates a connection between you. Moments later, the child's parents spot them, their reunion infused with gratitude."
+"\n\nZongo's voice carries a note of acknowledgment. 'Nicely done. You brought them back together.' He conjures a detectives cap atop your head with a flick of his wrist and gives you a knowing smile as the game resumes.",
+                outcome=True
             ),
             'response100': Response(
                 dialogue_id=dialogues_list[19].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Without hesitation, you scoop up the child under your arm and break into a sprint, your voice echoing as you call out for their parents."
+"\n\nZongo's eyes widen in disbelief. 'Are you actually...?'"
+"\n\nAs you dash across the field, Zongo, seemingly amused by your boldness, casts a swift spell that enhances your speed, making you nearly blur as you race towards the child's parents."
+"\n\nZongo's voice carries a touch of amusement. 'Mind the roots and rocks!'"
+"\n\nThe child's parents spot you and their child, relief flooding their faces as they rush forward to reunite with their little one."
+"\n\nZongo's tone reflects his amusement. 'Looks like your dramatic rescue worked out in the end.' You can't help but notice Zongo laughing to himself from time to time as he reflects on your absurd action.",
+                outcome=True
             ),
         }
         responses_3 = {
@@ -1203,140 +1280,213 @@ if __name__ == '__main__':
                 dialogue_id=dialogues_list[20].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "The game's end marks a pause in the day's activities, and your date stands before you with anticipation in their eyes. Stepping closer, your intentions remain ambiguous. Yet, your actions deviate unexpectedly as you feign a kiss, only to swiftly lower their trousers in a prank."
+"\n\nGrubnub's initial surprise shifts rapidly into confusion, his cheeks tinged with both embarrassment and uncertainty. He takes a cautious step back, his brow furrowing as he tries to decipher the nature of your prank."
+"\n\nA heavy silence hangs between you, and you can see the hurt and sadness in Grubnub's eyes, his heart clearly wounded by the unexpected betrayal. His voice trembles slightly as he addresses you."
+"\n\n'Was... was that really necessary?' he asks, his tone a mixture of hurt and disappointment. The atmosphere remains charged with a profound sense of awkwardness and regret, the prank leaving behind a palpable sense of hurt between you.",
                 outcome=False
             ),
             'response102': Response(
                 dialogue_id=dialogues_list[21].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "Your proclamation reverberates with an unsettling undertone, casting a shadow as you assert your victorious position and demand that your date pay for the amusement you've provided."
+"\n\nGrubnub's expression undergoes a swift transformation, surprise giving way to discomfort as he takes a hesitant step back. His voice carries a note of unease. 'Oh, I didn't realize this was a competition.'"
+"\n\nThe atmosphere turns strained, your words leaving a trail of tension in their wake. Despite the unease, you continue to press, your insistence bordering on aggression."
+"\n\n'Come on, now,' you push further, a hint of coercion in your tone as you assert your dominance. 'You owe me for making this date interesting.'"
+"\n\nGrubnub's discomfort deepens, and he hesitates before reluctantly complying. The air remains heavy with the uncomfortable exchange, your victory now marred by the discord that hangs in the space between you.",
                 outcome=False
             ),
             'response103': Response(
                 dialogue_id=dialogues_list[22].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "A mischievous twinkle lights up your eyes as you draw them close, your hand confidently resting on their hip as they sway low. Laughter bubbles from their lips, their warmth seeping into your embrace as you pull them snugly against you."
+"\n\nAs you lean in, the air electrifies with anticipation, your lips poised as if to taste the sweetness of a kiss. But, in a playful twist, you divert your course, plucking a delicate piece of grass from their cheek and grinning as you hold it up, winking suggestively."
+"\n\nGrubnub's reaction is a delightful mix of surprise and amusement. His laughter dances through the air, the sound like a sweet melody that harmonizes with the setting sun. He clears his throat playfully, voice laced with flirtatiousness. 'Well, I'll be a pigs uncle! I thought you kiss me!'"
+"\n\nIn that shared moment, a potent blend of attraction and connection hangs in the air, an unspoken acknowledgment of the chemistry that's been building between you. Your actions and his response intertwine like the first notes of a secret love song, promising more to come.",
+            outcome=True
             ),
+            
             'response104': Response(
                 dialogue_id=dialogues_list[23].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "With a wide, earnest grin on your face, you make your way toward your date, Grubnub. His eyes light up with a mix of surprise and happiness as you approach, clearly pleased by your presence."
+        "\n\n'Hey there,' you say with a warm chuckle, 'That was quite the game, huh? Good job out there!' Your tone is genuine, and you make sure to emphasize the fun you had."
+        "\n\nGrubnub's response is a genuine mixture of delight and modesty. 'Oh, uh, thanks! I, um, tried my best.' He scratches his head and looks a bit bashful."
+        "\n\nThe two of you stand there for a moment, exchanging smiles and sharing a lighthearted atmosphere. It's a simple yet genuine interaction.",
+                outcome=True
             ),
             'response105': Response(
                 dialogue_id=dialogues_list[24].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "A surge of excitement pulses through your veins as you take a bold step forward, closing the distance between you and Grubnub. Your heart races as you gaze into his eyes, feeling the warmth of his presence enveloping you both."
+"\n\nWith a gentle yet confident smile, you tilt your head slightly, wordlessly conveying your intentions. As you move in, his lips part in a soft gasp of surprise, but the spark of anticipation in his eyes is undeniable."
+"\n\nTime seems to slow as your lips meet, the world around you fading into insignificance. The kiss is tender and full of promise, a sweet connection that ignites a fire of emotions deep within both of you."
+"\n\nAs you pull away, the air is charged with an electric energy, and Grubnub's dazed yet dreamy expression mirrors your own. A soft, contented smile graces his lips, a silent affirmation of the meaningful connection you've shared.",
+                outcome=True
             ),
             'response106': Response(
                 dialogue_id=dialogues_list[25].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "With a mischievous glint in your eye, you playfully wink at Grubnub, letting out a light giggle that dances in the air. Without further ado, you start running away from him, the thrill of the chase making your heart race."
+"\n\nAs you glance back, you expect to see him right behind you, caught up in the playful game. However, to your surprise, he blinks in confusion and seems momentarily unsure of what's happening. There's a brief pause, and then realization slowly dawns on him."
+"\n\nA faint blush tinges his cheeks as he starts to grin, and his feet fumble into action as he clumsily begins to chase after you. His laughter joins yours, a chorus of joy as you both playfully dart around, caught in a lighthearted dance."
+"\n\nThe moment is filled with shared laughter and genuine connection, a memory that will surely bring smiles to your faces for days to come.",
+                outcome=True
             ),
             'response107': Response(
                 dialogue_id=dialogues_list[26].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "A sense of confidence washes over you as you stand your ground, convinced that the initiative should come from your date. You've invited them here, after all, and you're eager to see if they're equally interested in taking things to the next level."
+"\n\nYour demeanor is calm and composed as you wait, watching their every move with an air of expectation. Grubnub, however, seems momentarily uncertain, his gaze flickering between you and the surroundings. There's a brief pause before a small smile tugs at his lips."
+"\n\nAs he steps closer, his expression shifts from uncertainty to determination, his heart shining through his eyes. With a soft yet sincere grin, he closes the gap between you, his hand reaching out to gently cup your cheek. It turns out he has some confidence in him after all."
+"\n\nIn that moment, time seems to slow as his lips meet yours, a gentle yet meaningful kiss that sends shivers down your spine. The quiet intimacy of the gesture speaks volumes, a silent declaration of his feelings."
+"\n\nAs the kiss ends, a warmth settles in the air, and you find yourselves sharing a tender moment that speaks of the connection you've forged. It's a memory that you'll carry with you, a testament to the beauty of allowing things to unfold naturally.",
+                outcome=True
             ),
             'response108': Response(
                 dialogue_id=dialogues_list[27].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "With a gentle smile, you decide to heed the age-old superstition and opt for a friendly hug instead of a kiss. After all, you don't want to tempt fate, and you want to ensure that your connection remains positive and free from any potential bad luck."
+"\n\nAs you open your arms, Grubnub's gaze meets yours, and he returns your smile with a genuine one of his own. He steps forward, his arms encircling you in a warm embrace that feels surprisingly comforting and natural."
+"\n\nThe hug lingers for a moment, a shared moment of closeness that speaks volumes without the need for words. It's a gesture of friendship and connection, a testament to the meaningful time you've spent together."
+"\n\nAs you pull away, his gaze remains warm, and you both share a final smile before parting ways. While the romantic tension may not have escalated, the memory of your date's kindness and the friendly hug will remain a cherished part of your journey.",
+                outcome=True
             ),
             'response109': Response(
                 dialogue_id=dialogues_list[28].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Curiosity piqued, you decide to test the waters and see how Grubnub reacts if you make a bold move. Without hesitation, you move closer to him and reach out, your fingers wrapping around his hand in a gentle yet confident grip."
+"\n\nHis eyes widen in surprise as your touch registers, and for a moment, you sense a fleeting hint of uncertainty in his gaze. However, that uncertainty quickly gives way to a warm and genuine smile that lights up his features."
+"\n\nSeemingly unfazed by the unexpected gesture, Grubnub's fingers instinctively intertwine with yours, his touch surprisingly gentle and reassuring. The connection feels natural and comfortable, an unspoken understanding passing between you."
+"\n\nAs you stand hand in hand, a sense of camaraderie and connection envelops you both, creating a moment of quiet intimacy amidst the bustling surroundings. It's a simple yet meaningful gesture that speaks volumes about the potential for something more.",
+                outcome=True
             ),
             'response110': Response(
                 dialogue_id=dialogues_list[29].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Driven by a surge of confidence and desire, you act on your instincts without hesitation. Closing the distance between you and Grubnub, you wrap your arms around him in a tight yet gentle embrace, drawing him close to you."
+"\n\nHis initial surprise is quickly replaced by a mixture of anticipation and understanding, his body responding to your unspoken invitation. There's a subtle shift in his demeanor as he holds you in return, a silent acknowledgment of the shared connection."
+"\n\nGrubnub takes the initiative and leans in, his lips meeting yours in a gentle yet meaningful kiss. The touch is soft and tender, a silent declaration of his affection."
+"\n\nAs the kiss deepens, you feel a surge of warmth and connection, the intensity of the moment encapsulating the emotions swirling between you. In the midst of the shared intimacy, he pulls back slightly, his lips brushing against your ear as he whispers something that, despite its simplicity, carries a potent charm."
+"\n\n'You... make my heart go all goblin-y,' he murmurs, his words accompanied by a playful nibble on your earlobe. His confession is accompanied by a nervous yet genuine chuckle, a testament to his endearing nature."
+"\n\nThe memory of that whispered sentiment lingers in the air, adding a touch of whimsy to the romantic atmosphere. It's a moment that encapsulates the unique connection you share, reminding you of the beauty in embracing the authentic and heartfelt.",
+                outcome=True
             ),
             'response111': Response(
                 dialogue_id=dialogues_list[20].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",  
-                outcome=False
+                "Embracing your mischievous side, you move in closer to Sneezle as if you're about to initiate a kiss. His eyes widen slightly, his surprise evident as he anticipates the romantic gesture."
+"\n\nHowever, just as the tension mounts and the moment seems ripe for a kiss, you execute a swift and unexpected maneuver. Instead of kissing him, you playfully tug at his waistband, causing his pants to sag for a split second before they snap back into place."
+"\n\nSneezle's reaction is a mix of amusement and disbelief, his laughter bubbling up as he grins at you. 'Oh, you sly trickster!' he exclaims, his tone a blend of mock indignation and genuine enjoyment."
+"\n\nThe playful banter between you and Sneezle fills the air with a lighthearted energy, a reminder of the unique dynamic you share. It's a moment that showcases your ability to keep each other on your toes, sparking a connection that thrives on shared laughter and camaraderie.",  
+                outcome=True
             ),
             'response112': Response(
                 dialogue_id=dialogues_list[21].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "With a cold, calculated demeanor, you assert yourself as the victor and demand payment from your date for the entertainment you've provided. Your words carry a sense of entitlement and self-assuredness that leaves a chilling impact on the atmosphere."
+"\n\nSneezle's initial reaction is a mixture of surprise and disbelief, his features contorting into a mixture of confusion and unease. 'Wait, are you serious? You're actually... expecting me to pay?'"
+"\n\nAs your words sink in, the playful banter that once defined your interaction is replaced by a palpable tension. Sneezle's expression hardens, his sarcastic smile fading as his eyes narrow with a touch of indignation."
+"\n\n'Look, I thought we were just having a good time here,' he retorts, his voice tinged with a combination of irritation and disappointment. Without waiting for a response, he turns on his heels and storms off, leaving behind a sense of unease and regret."
+"\n\nAs you watch Sneezle's departing figure, you're struck by the realization that you have probably ruined your relationship with Sneezle.",
+                outcome=True
             ),
             'response113': Response(
                 dialogue_id=dialogues_list[22].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "A mischievous glint in your eye, you sweep Sneezle off his feet, your hand confidently finding his hip as you lower him in a dramatic dip. His surprised laughter fills the air, blending seamlessly with the playful atmosphere that surrounds you both."
+"\n\nAs you hold Sneezle in the dramatic pose, you can't help but notice a small piece of grass stuck to his cheek. With a playful grin, you move in as if for a kiss, your lips mere inches from his."
+"\n\nThe tension between you and Sneezle escalates, the anticipation tangible as you close the distance between your lips. But just as he leans in, you pluck the stray piece of grass from his cheek with a swift and deliberate motion."
+"\n\nSneezle's laughter fills the air, a mixture of amusement and surprise, his eyes crinkling with genuine joy. 'Oh, you smooth operator, you!' he exclaims, his tone a delightful blend of mock awe and heartfelt appreciation."
+"\n\nThe shared moment is one of playful intimacy, a testament to the connection you share. As Sneezle rises back to his feet, the lingering energy of the dip and the near-kiss hangs between you, a reminder of the shared laughter and flirtatious tension that will define this date.",
+                outcome=True
             ),
             'response114': Response(
                 dialogue_id=dialogues_list[23].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "With a friendly smile, you approach Sneezle and offer your congratulations on the game. You express how much fun you had, genuinely enjoying the time spent together. However, you admit that you're feeling a bit nervous and unsure about what comes next."
+"\n\nSneezle's response is a playful twinkle in his eyes, his tone light and teasing. 'Oh, don't tell me you're getting cold feet now? After all that grand adventure on the field?'"
+"\n\nHis good-natured ribbing is evident, and he chuckles softly as he continues. 'Don't worry. No pressure here. We're just a couple of goblins having a good time, right? If you're not feeling bold, that's perfectly fine.'"
+"\n\nHis words carry a sense of camaraderie, an assurance that there's no need to rush into anything. As you share a laugh with Sneezle, you're reminded of the easygoing nature of your connection, a reminder that the journey is just as enjoyable as the destination.",
+                outcome=True
             ),
             'response115': Response(
                 dialogue_id=dialogues_list[24].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Filled with a sense of excitement and connection, you're certain that you and Sneezle have had a wonderful time together. The playful banter and shared moments have built a strong foundation of camaraderie and attraction."
+"\n\nBuoyed by this confidence, you take the lead, closing the distance between you and Sneezle. With a gentle yet assured gesture, you cup his cheek, your thumb brushing against his skin as you tilt his face toward yours. There's a spark in his eyes, an anticipation that mirrors your own."
+"\n\nWithout hesitation, you lean in, your lips meeting his in a tender yet passionate kiss. The world seems to fade away as the two of you share this intimate moment, a culmination of the chemistry that has been building between you."
+"\n\nSneezle responds to your advances with eagerness, his lips moving in sync with yours as he pulls you closer. It's a kiss filled with warmth, desire, and the unspoken promise of what the future might hold."
+"\n\nAs the kiss deepens and then slowly breaks, a smile tugs at the corners of Sneezle's lips. 'Now that's what I call a grand finale,' he murmurs, his voice a soft mixture of satisfaction and playfulness."
+"\n\nThe lingering energy of the kiss and the connection you share fills the air, creating a moment that will remain etched in your memory as a testament to the magic of unexpected connections.",
+                outcome=True
             ),
             'response116': Response(
                 dialogue_id=dialogues_list[25].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "A mischievous twinkle lights up your eyes as you wink playfully at Sneezle. With a light giggle escaping your lips, you take off in a burst of energy, your feet carrying you away from him. The wind rushes past you, and you can't help but glance back, expecting to see Sneezle giving chase."
+"\n\nYour expectations are met as you catch sight of him, his laughter ringing through the air as he playfully follows after you. With each step, the sounds of your laughter and the patter of his footsteps create a symphony of shared joy."
+"\n\nThe thrill of the chase adds a layer of excitement to the moment, the two of you engaged in a lighthearted game that symbolizes the carefree spirit of your connection. Sneezle's playfulness matches your own, his laughter infectious as he runs after you."
+"\n\nEventually, you slow down, allowing him to catch up, both of you breathing slightly faster from the exertion. Sneezle grins, his eyes sparkling with mirth. 'If I keep hanging out with you I'm gonna have to start doing cardio again,' he teases."
+"\n\nThe playful energy lingers between you, a reminder that friendship can be just as fulfilling as romance. As you share a grin with Sneezle, you're grateful for the moments of joy and connection that have woven themselves into your time together.",
+                outcome=True
             ),
             'response117': Response(
                 dialogue_id=dialogues_list[26].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "The air is charged with anticipation as you and Sneezle share a moment of lingering silence. The energy between you is palpable, a mix of curiosity and attraction that hangs in the air."
+"\n\nYou catch a mischievous glint in Sneezle's eye, and his lips curve into a playful smile. His gaze remains locked with yours, a silent challenge that speaks volumes."
+"\n\nAs the seconds tick by, Sneezle's confidence grows more apparent. With a slow, deliberate motion, he leans in closer, his hand reaching out to gently brush against yours. The touch is electric, sending a thrill down your spine."
+"\n\nIn that moment, the world around you seems to fade away, leaving only the two of you in a bubble of anticipation. Sneezle's lips are inches away, and you can feel his breath on your skin."
+"\n\nAnd then, finally, he closes the remaining distance, his lips meeting yours in a soft, lingering kiss. It's a gesture that speaks volumes, conveying the unspoken feelings that have been building between you."
+"\n\nAs the kiss ends, Sneezle pulls back slightly, his eyes locked with yours. There's a playful spark in his gaze, a silent acknowledgment of the moment you've shared. And in that instant, you know that this is just the beginning of something that holds endless possibilities.",
+                outcome=True
             ),
             'response118': Response(
                 dialogue_id=dialogues_list[27].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "With a friendly smile, you open your arms, signaling your intention for a warm embrace. Sneezle's usual playful demeanor softens as he steps forward, accepting the invitation. His arms wrap around you, and you feel a sense of kinship."
+"\n\nThe hug lingers for a moment, a reminder of the enjoyable time you've spent together during your date. As you pull away, Sneezle's gaze meets yours, a faint smile still playing on his lips. 'I had a great time today,' he says, his voice carrying a note of sincerity."
+"\n\nDespite the absence of a kiss, the evening has been filled with shared laughter and moments that have brought you closer. As you continue to talk and enjoy each other's company, you realize that without the romantic gesture, the connection between you and Sneezle may be moving towards friendship.",
                 outcome=False
             ),
             'response119': Response(
                 dialogue_id=dialogues_list[28].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "A mischievous thought crosses your mind as you decide to take the initiative. With a playful grin, you break into a sudden sprint and reach out to grab Sneezle's hand. His surprise is evident as his fingers intertwine with yours, and you feel a rush of excitement as you lead him in a spontaneous dance of laughter and movement."
+"\n\nThe two of you spin around, your steps matching the rhythm of your shared laughter. Sneezle's eyes sparkle with amusement, and his carefree spirit seems to mirror your own. As the dance comes to an end, you release his hand, both of you slightly breathless from the unexpected burst of energy."
+"\n\nSneezle lets out a chuckle, shaking his head in amusement. 'Phew! As if I hadn't been tired enough from the game' he exclaims, his tone filled with light-heartedness. 'Next time we'll have to go dancing!'"
+"\n\nAs you catch your breath, you meet Sneezle's gaze and share a moment of shared joy. The impromptu dance has added a playful and memorable touch to your date, a reminder of the unexpected twists and turns that life can bring when you're in good company.",
+                outcome=True
             ),
             'response120': Response(
                 dialogue_id=dialogues_list[29].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "In a bold and confident move, you close the distance between you and Sneezle, your arms wrapping around his waist as you pull him close. His surprise is fleeting, replaced by a sense of warmth and connection as your bodies press together. The atmosphere is charged with anticipation, the air thick with unspoken desire."
+"\n\nSneezle's gaze meets yours, his eyes reflecting a mixture of surprise and longing. There's a raw vulnerability in this moment, as if you've both let down your guard and allowed yourselves to be truly seen by one another."
+"\n\nYou hold each other close, the space between you narrowing until there's nothing but the shared warmth of your bodies. The world around you seems to fade away, leaving only the intoxicating intimacy of this moment. The unspoken question lingers in the air, a question that requires no words."
+"\n\nAs the tension builds, Sneezle's fingers find their way to the back of your neck, his touch gentle yet possessive. In that instant, you can feel his hesitation and desire battling within him. With a soft exhale, he closes the remaining distance, his lips meeting yours in a kiss that carries all the intensity of the moment."
+"\n\nTime seems to stand still as your lips move together, each touch igniting a spark that grows into a flame. The world fades away, leaving only the two of you, lost in the sweet intensity of the kiss.",
+                outcome=True
             ),
             'response121': Response(
                 dialogue_id=dialogues_list[20].id, 
