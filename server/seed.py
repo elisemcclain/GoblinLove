@@ -248,7 +248,6 @@ if __name__ == '__main__':
 
 
         all_dialogues = list(dialogues_1.values()) + list(dialogues_2.values()) + list(dialogues_3.values())
-
         db.session.add_all(all_dialogues)
         db.session.commit()
         dialogues_list = Dialogue.query.all()

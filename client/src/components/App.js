@@ -14,7 +14,6 @@ function App() {
   const [goblins, setGoblins] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
 
-
   useEffect(() => {
     fetch("http://localhost:5555/users")
       .then((r) => r.json())
@@ -31,7 +30,7 @@ function App() {
         const goblinArray = await response.json();
         setGoblins(goblinArray);
       } catch (error) {
-        console.error("Error fetching goblin data:", error)
+        console.error("Error fetching goblin data:", error);
       }
     }
     fetchGoblins();
@@ -43,14 +42,14 @@ function App() {
   };
 
   const handleLogin = (user) => {
-    console.log(user)
+    console.log(user);
     setCurrentUser(user);
-  }
+  };
 
   const handleChangeUser = async (user) => {
-          setUsers([...users, user]);
-          setCurrentUser(user);
-  }
+    setUsers([...users, user]);
+    setCurrentUser(user);
+  };
 
   const handleDeleteUser = async (user) => {
     try {
@@ -60,37 +59,40 @@ function App() {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-    })
-    if (response.status === 200) {
-      const updatedUsers = users.filter((u) => u.username!== user.username);
-      setUsers(updatedUsers)
-      setCurrentUser(null);
-    } else {
-      console.log("Error deleting user:", response.status);
+      });
+      if (response.status === 200) {
+        const updatedUsers = users.filter((u) => u.username !== user.username);
+        setUsers(updatedUsers);
+        setCurrentUser(null);
+      } else {
+        console.log("Error deleting user:", response.status);
+      }
+    } catch (error) {
+      console.error("Error deleting user:", error);
     }
-    } catch(error) {
-      console.error("Error deleting user:", error)
-    }
-
-  }
+  };
 
   return (
     <BrowserRouter>
       <main>
-        <NavBar currentUser = {currentUser}/>
+        <NavBar currentUser={currentUser} />
         <Switch>
           <Route exact path="/">
-            <Home goblins = {goblins}/>
+            <Home goblins={goblins} />
           </Route>
           <Route exact path="/login">
-            <Login users = {users} handleAddUser = {handleAddUser} handleLogin = {handleLogin}/>
+            <Login
+              users={users}
+              handleAddUser={handleAddUser}
+              handleLogin={handleLogin}
+            />
           </Route>
           <Route exact path="/goblins">
             {goblins.length > 0 ? (
-              <GoblinContainer goblins = {goblins}/>
-              ) : (
-                <p>Loading goblins...</p>
-                )}
+              <GoblinContainer goblins={goblins} />
+            ) : (
+              <p>Loading goblins...</p>
+            )}
           </Route>
           <Route path = "/goblins/:goblinName">
             <GoblinDetails goblins = {goblins}/>
@@ -108,5 +110,3 @@ function App() {
 }
 
 export default App;
-
-
