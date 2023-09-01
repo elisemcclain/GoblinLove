@@ -97,7 +97,7 @@ if __name__ == '__main__':
             name="Zongo", 
             artist = "Thomas Wievegg", 
             img_url = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4cb531bc-c606-411b-8e3f-8f95895d1829/d6pz3h3-45094d2d-136b-4e49-a359-a37a4bd18d95.jpg/v1/fit/w_800,h_1038,q_70,strp/goblin_by_thomaswievegg_d6pz3h3-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAzOCIsInBhdGgiOiJcL2ZcLzRjYjUzMWJjLWM2MDYtNDExYi04ZTNmLThmOTU4OTVkMTgyOVwvZDZwejNoMy00NTA5NGQyZC0xMzZiLTRlNDktYTM1OS1hMzdhNGJkMThkOTUuanBnIiwid2lkdGgiOiI8PTgwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.DhVqrDdIz4KSYckucxuM9fZMiQ0nGx2ztIf7THbvEh8", 
-            description="Zongo thinks he is the smartest goblin to ever live. He finds comfort in knowing he is the best that there ever will be. He isn't looking for a partner, really. He just wants someone to suck up to him. He's just lucky he's so handsome."
+            description="Zongo thinks he is the smartest goblin booyahg to ever live. He finds comfort in knowing he is unmatched in magical prowess here in the village. His personality can be a bit grating at first, but he is a passionate man. He's also very handsome."
             )
 
         goblins = [grubnub, sneezle, blort, grimble, zongo]
@@ -1705,71 +1705,118 @@ if __name__ == '__main__':
                 dialogue_id=dialogues_list[20].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",  
+                "With a mischievous glint in your eye, you move in as if to go for a kiss, but at the last moment, you divert your aim and instead give Zongo's pants a swift tug downward."
+"\n\nZongo's expression shifts from anticipation to confusion in an instant. His brow furrows as immediately pulls his breeches back in place, surprise quickly giving way to a flash of fury."
+"\n\n'What is the meaning of this?' Zongo demands, his voice carrying a touch of irritation. In the blink of an eye, he raises a hand and mutters an incantation under his breath."
+"\n\nTo your astonishment, you suddenly feel the sensation of wind on your legs, and then you look down to realize that your own pants have mysteriously vanished. You're left standing there in your underwear, feeling a mix of shock and embarrassment."
+"\n\nZongo's lips curl into a self-satisfied smirk as he surveys his handiwork. 'Seems like a fair exchange, wouldn't you agree?' he remarks, his tone dripping with smug satisfaction."
+"\n\nYou can't help but laugh, despite the embarrassment. Zongo may be infuriating, but you have to give him credit for his swift and creative retaliation."
+"\n\n'Alright, Zongo, you win this round,' you concede, shaking your head with a grin. 'But mark my words, the battle is far from over.'"
+"\n\nZongo's irritation seemingly forgotten and traded for confidence as he crosses his arms and leans against a nearby tree. 'I'll be waiting,' he says, a hint of challenge in his eyes. 'Just remember, I always win in the end.'",  
                 outcome=False
             ),
             'response142': Response(
                 dialogue_id=dialogues_list[21].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
+                "With an air of triumph, you announce that you are undoubtedly the victor of the game and that your date owes you for the enjoyable entertainment you've provided."
+"\n\nZongo's eyebrows shoot up in surprise, his gaze narrowing at you. He doesn't seem pleased by your proclamation, and his response is swift."
+"\n\nRaising a hand, Zongo mutters an incantation under his breath, and suddenly, a shower of glittering gold coins materializes in the air above you. They rain down in a cascading shimmer, surrounding you in a mesmerizing spectacle."
+"\n\n'Payment made,' Zongo states with a smug grin, watching as the coins fall around you. 'But let's not forget that I refrained from using my magic in our contest. Had I played to win, I would have.'"
+"\n\nYou find yourself insulted by his response, unable to suppress your anger. 'You can certainly try, Zongo,' you pronounce."
+"\n\n'I do not try, I simple do,' Zongo replies, his confidence unwavering. 'Now, I shall take my leave and flee your avaracious stupidity.'"
+"\n\nAs you both part ways, you feel you've made more of a rival of Zongo than a romantic parter.",
                 outcome=False
             ),
             'response143': Response(
                 dialogue_id=dialogues_list[22].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
-                outcome=False
+                "With a mischievous glint in your eye, you sweep your date into a gentle dip, cradling them in your arms with unexpected tenderness. As you lean in as if to share a kiss, your lips remain tantalizingly distant, and you pluck at something on their cheek."
+"\n\nTo your surprise the piece of grass stuck there was nothing more than an illusion he had conjured. A knowing wink slides into his eye."
+"\n\n'Ah, the allure of magic and mystery,' he remarks, his voice rich with satisfaction. 'Isn't it fascinating how reality be so easily warped by our perceptions?'"
+"\n\nYou smile shyly in agreement, appreciating Zongo's playful approach to the situation. 'At least this fake reality got me a little closer to you,' you reply, your gaze lingering on his lips."
+"\n\n'Indeed, I pride myself on it,' Zongo says, his smug grin undeniably charming. 'However, I would like to show you something else.' He leans in and kisses you deeply. His lips seem to be electrified as they press against yours."
+"\n\nAs a shiver runs down your spine, you give yourself to the moment and are transported to the stars. Among the constellations nothing seems to exist but your shared intimacy. As he pulls away, you are washed back to reality."
+"\n\n'That, my dear, was real.",
+                outcome=True
             ),
             'response144': Response(
                 dialogue_id=dialogues_list[23].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
+                "You approach Zongo, offering a congratulatory smile on the game that you both enjoyed. 'Well played,' you say, genuinely appreciating the time spent together."
+"\n\nZongo's response is less enthusiastic than you expected, his eyes briefly scanning the surroundings as if searching for something more captivating. 'Yes, indeed. Well then, I'd best be off. There are other matters I must attend to.' he replies, a touch of boredom in his voice."
+"\n\nYou can't help but feel a pang of disappointment at his lackluster reaction. Maybe this wasn't the way to truly capture his attention. Perhaps there was something more you could do to engage him.",
                 outcome=False
             ),
             'response145': Response(
                 dialogue_id=dialogues_list[24].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
-                outcome=False
+                "In a bold move, you close the remaining distance between you and Zongo, your heart pounding with a mixture of excitement and uncertainty. As you lock eyes with him, a flicker of magic dances in his gaze, and suddenly, a burst of fiery energy envelops you both."
+"\n\nThe kiss that follows is unlike anything you've ever experienced. It's as if the very passion and desire you both feel have been channeled into this single moment. The flames of magic swirl around you, consuming any doubts or hesitations."
+"\n\nZongo's lips are soft and electrifying against yours, the heat of the kiss matching the intensity of the magic that envelopes you. The world around you fades away as the kiss deepens, leaving only the two of you in this enchanted embrace."
+"\n\nAs the flames subside and the kiss comes to an end, you're left breathless and exhilarated. Zongo's eyes are smoldering with a newfound intensity, and a slow smile spreads across his lips. 'Careful, my dear. Stick with me and you might just burn,' he remarks."
+"\n\nYour heart races as you catch your breath, small embers puffing with each exhale. You realize that this fiery kiss has ignited your undeniable feelings for him.",
+                outcome=True
             ),
             'response146': Response(
                 dialogue_id=dialogues_list[25].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
-                outcome=False
+                "As you wink playfully and take off running, you can't help but giggle at the thought of Zongo chasing after you. Little do you know, Zongo has other plans. With a swift gesture of his hand, the very earth beneath your feet ripples and molds, forming restraints that ensnare your legs."
+"\n\nYou stumble and come to a halt, looking back in surprise as Zongo approaches, an enigmatic smile playing on his lips. 'Looks like I've got you right where I want you,' he quips, his tone a mixture of amusement and anticipation."
+"\n\nYour heart races as Zongo closes the distance between you, his magic-infused gaze locking onto yours. The energy of the earth resonates with his power, binding you to his will in more ways than one."
+"\n\nWithout a word, Zongo's lips meet yours in a passionate kiss that feels as deep and primal as the very earth itself. The sensation is unlike anything you've ever experienced, an intoxicating blend of magic, desire, and connection."
+"\n\nAs the kiss lingers, you become acutely aware of the pulsating energy between you and Zongo. The world around you seems to fade into the background, leaving only the two of you and the raw, untamed power that courses through your veins."
+"\n\nWhen the kiss finally ends, Zongo's eyes gleam with satisfaction. 'Know that I can shape your world, if you'll let me,' he confesses with a playful grin, leaving you both breathless and exhilarated.",
+                outcome=True
             ),
             'response147': Response(
                 dialogue_id=dialogues_list[26].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
-                outcome=False
+                "With a sly grin, you decide to let Zongo take the lead for once. You lean back slightly, letting the ball fall into his court. However, Zongo seems to have other plans in mind."
+"\n\nA sudden gust of freezing wind sweeps through the air, cutting through your clothes and chilling you to the bone. You shiver involuntarily, caught off guard by the sudden change in temperature."
+"\n\nZongo chuckles at your reaction, his eyes gleaming with mischief. 'Oh no, it seems like you've got a need for warmth,' he remarks casually. 'I can solve that for you.'"
+"\n\nBefore you can even react, Zongo's arms wrap around you, pulling you close in a firm embrace. Instantly, a comforting warmth spreads from his body to yours, thawing away the cold like a bundle of furs."
+"\n\nAs the warmth envelops you, Zongo's lips meet yours in a kiss that radiates like a crackling campfire on a frosty winter night. The contrast between the icy air and his fiery kiss sends a rush of sensations through your body, leaving you tingling from head to toe."
+"\n\nThe kiss is tender and passionate, a perfect blend of heat and desire that ignites your senses. It's as if you're sharing a moment of intimacy in the midst of a snow-covered forest, wrapped in the cozy embrace of a roaring fire."
+"\n\nWhen the kiss finally ends, Zongo's eyes meet yours, a mix of playfulness and intensity in his gaze. 'A little frostbite can lead to the sweetest of warmths,' he murmurs, his voice a low, enticing whisper.",
+                outcome=True
             ),
             'response148': Response(
                 dialogue_id=dialogues_list[27].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
+                "You decide to play it safe and avoid any potential bad luck by opting for a friendly hug instead of a kiss. As you move in, your arms encircle Zongo's form, pulling him close in an embrace."
+"\n\nZongo's response, however, is far from the warm reception you expected. He seems unamused by the hug, his posture rigid and his expression distant. It's as if he's not entirely satisfied with your choice."
+"\n\nAfter a brief moment, he gently extricates himself from the hug, his gaze avoiding yours. 'Well, I suppose that's one way to handle it, buddy.' he says with a faint air of indifference."
+"\n\nThe awkwardness of the situation hangs in the air, and you're left feeling a bit perplexed by his response. It seems that Zongo's playful demeanor has been momentarily subdued, leaving you wondering if you've misread the signals.",
                 outcome=False
             ),
             'response149': Response(
                 dialogue_id=dialogues_list[28].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Curiosity gets the better of you, and you decide to find out how Zongo would react if you made a bold move. Without further ado, you make your move, dashing toward him and interlinking your hand with his."
+"\n\nHowever, just as your hands meet, an unexpected surge of energy courses through your bodies. Before you know it, the two of you are soaring into the sky, lifted off the ground by Zongo's levitation spell. The world around you blurs as you ascend higher and higher, your heart racing."
+"\n\nDespite the sudden turn of events, your hands remain firmly entwined, and as you look into Zongo's eyes, you see a mixture of admiration, amusement, and perhaps a touch of desire. In the midst of the magical flight, your lips meet in a passionate kiss amongst the clouds."
+"\n\nThe world below becomes a distant panorama as you and Zongo share an intimate connection in the skies. The kiss is both exhilarating and enchanting, a blend of magic and emotion that defies the bounds of reality. As the levitation spell gradually wanes, the two of you begin to descend back to the ground."
+"\n\nAs your feet touch the earth once more, Zongo releases the spell, and you find yourselves standing together, breathless and locked in a lingering gaze. 'Well,' Zongo says with a playful smile, 'I'd say I was on cloud nine, wouldn't you?'",
+                outcome=True
             ),
             'response150': Response(
                 dialogue_id=dialogues_list[29].id, 
                 goblin_id=zongo.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Driven by the powerful connection between you and Zongo, you don't hesitate to close the distance between you. With a sense of purpose, you pull him into your arms, holding him close with an intensity that reflects the passion in your heart."
+"\n\nAs you do, an unexpected surge of magic envelops the two of you. A radiant light, divine and ethereal, emanates from your intertwined forms. The very air around you seems to shimmer with the essence of something greater, as if the magic itself acknowledges the strength of your feelings."
+"\n\nThe embrace takes on a transcendent quality, and as your lips meet in a tender yet fervent kiss, you can almost feel the presence of unseen forces watching over you. The kiss is imbued with an otherworldly energy, as if the heavens themselves are blessing this moment between you and Zongo."
+"\n\nTime seems to stand still as you share this divine connection, lost in the depths of emotion and magic. When the kiss finally ends, you find yourselves still locked in a profound embrace, the echoes of the spell's magic resonating in the air around you."
+"\n\nZongo's gaze meets yours, his eyes reflecting the awe and wonder of the moment. 'Well,' he says softly, his voice carrying a tone of reverence, 'It seems my prayers were answered.' The two of you share a knowing smile, forever connected by the magic that sparked between you.",
+                outcome=True
             ),
         }
         responses_4 = {
@@ -3891,16 +3938,16 @@ if __name__ == '__main__':
         print("Creating outcomes...")
 
         outcomes_1 = {
-            "outcome1": Outcome(date_id = date1.id, goblin_id=grubnub.id, outcome_description="Test_Outcome_Grubnub_Good", result = False),
-            "outcome2": Outcome(date_id = date1.id, goblin_id=grubnub.id, outcome_description="Test_Outcome_Grubnub_Bad", result = True),
-            "outcome3": Outcome(date_id = date1.id, goblin_id=sneezle.id, outcome_description="Test_Outcome_Sneezle_Good", result = False),
-            "outcome4": Outcome(date_id = date1.id, goblin_id=sneezle.id, outcome_description="Test_Outcome_Sneezle_Bad", result = True),
-            "outcome5": Outcome(date_id = date1.id, goblin_id=blort.id, outcome_description="Test_Outcome_Blort_Good", result = False),
-            "outcome6": Outcome(date_id = date1.id, goblin_id=blort.id, outcome_description="Test_Outcome_Blort_Bad", result = True),
-            "outcome7": Outcome(date_id = date1.id, goblin_id=grimble.id, outcome_description="Test_Outcome_Grimble_Good", result =False),
-            "outcome8": Outcome(date_id = date1.id, goblin_id=grimble.id, outcome_description="Test_Outcome_Grimble_Bad", result = True),
-            "outcome9": Outcome(date_id = date1.id, goblin_id=zongo.id, outcome_description="Test_Outcome_Zongo_Good", result = False),
-            "outcome10": Outcome(date_id = date1.id, goblin_id=zongo.id, outcome_description="Test_Outcome_Zongo_Bad", result = True),
+            "outcome1": Outcome(date_id = date1.id, goblin_id=grubnub.id, outcome_description="Though your game of Baseball with Grubnub was eventful, it seems your actions did not fully spark their heart.", result = False),
+            "outcome2": Outcome(date_id = date1.id, goblin_id=grubnub.id, outcome_description="It seems your time spent playing Baseball with Grubnub was well received. His affection for you has grown intensly", result = True),
+            "outcome3": Outcome(date_id = date1.id, goblin_id=sneezle.id, outcome_description="Though your game of Baseball with Sneezle was eventful, it seems your actions did not fully spark their heart.", result = False),
+            "outcome4": Outcome(date_id = date1.id, goblin_id=sneezle.id, outcome_description="It seems your time spent playing Baseball with Sneezle was well received. His affection for you has grown intensly", result = True),
+            "outcome5": Outcome(date_id = date1.id, goblin_id=blort.id, outcome_description="Though your game of Baseball with Blort was eventful, it seems your actions did not fully spark their heart", result = False),
+            "outcome6": Outcome(date_id = date1.id, goblin_id=blort.id, outcome_description="It seems your time spent playing Baseball with Blort was well received. His affection for you has grown intensly", result = True),
+            "outcome7": Outcome(date_id = date1.id, goblin_id=grimble.id, outcome_description="Though your game of Baseball with Grimble was eventful, it seems your actions did not fully spark their heart", result =False),
+            "outcome8": Outcome(date_id = date1.id, goblin_id=grimble.id, outcome_description="It seems your time spent playing Baseball with Grimble was well received. His affection for you has grown intensly", result = True),
+            "outcome9": Outcome(date_id = date1.id, goblin_id=zongo.id, outcome_description="Though your game of Baseball with Zongo was eventful, it seems your actions did not fully spark their heart", result = False),
+            "outcome10": Outcome(date_id = date1.id, goblin_id=zongo.id, outcome_description="It seems your time spent playing Baseball with Zongo was well received. His affection for you has grown intensly", result = True),
         }
         outcomes_2 = {
             "outcome11": Outcome(date_id = date2.id, goblin_id=grubnub.id, outcome_description="Test_Outcome_Grubnub_Good", result = False),
