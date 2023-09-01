@@ -115,7 +115,8 @@ if __name__ == '__main__':
         date2 = Date(
             name="Grab a Drink",
             description="When you've had a long day of raiding, the best thing you can do is sit down at the rotten elder tree saloon and grab a lukewarm glass of Muk. Muk is made from local forest fungi and potatoes. With plenty of farmhouse funk, this wild fermented Muk will leave a vibrant zestiness on your tongue!",
-            part_1 = "After fetching a table, the server brings over two room temperature pints of Muk. The aromatics fill you and your date's nostrils. They look at you expectantly--it seems that they would like you to start the conversation. What do you open with?",
+            # part_1 = "After fetching a table, the server brings over two room temperature pints of Muk. The aromatics fill you and your date's nostrils. They look at you expectantly--it seems that they would like you to start the conversation. What do you open with?",
+            part_1 = "Your hot new date is feeling particularly parched on this warm summer night. They ask if you'd like to relax after the raid with some Muk. What do you say?",
             part_2 = "The server comes back with a fresh round and a complementary plate of peanuts. You do notice that your date has been slipped a note by the server... what do you say?",
             part_3 = "The night is just about wrapped up. The server comes back around and drops off the check. Who's paying?"
             )
@@ -219,7 +220,7 @@ if __name__ == '__main__':
             'dialogue78': Dialogue(date_part=2, date_id=date3.id, trait_id=trait8.id, description="You were afraid of this. Even though you performed your routine ritual of a worm dance for a good omen, the dance was sloppy and rushed. This is your punishment."),
             'dialogue79': Dialogue(date_part=2, date_id=date3.id, trait_id=trait9.id, description="You fret for 3 minutes but then decide to accept your fate. Maybe you can add Sriracha sauce and they won't notice? Sriracha fixes everything"),
             'dialogue80': Dialogue(date_part=2, date_id=date3.id, trait_id=trait10.id, description="You swipe the dish out from your date's hands before they can take a bite of your garbage food. Before they can even scowl, you have DoorDashed McGoblin's to your front door."),
-            'dialogue81': Dialogue(date_part=3, date_id=date3.id, trait_id=trait1.id, description="You feel a grin spread across your googly goblin face. You knew a warm bowl of Bungle Stew would get them wanting more (love & cuddless).",
+            'dialogue81': Dialogue(date_part=3, date_id=date3.id, trait_id=trait1.id, description="You feel a grin spread across your googly goblin face. You knew a warm bowl of Bungle Stew would get them wanting more (love & cuddless)."),
             'dialogue82': Dialogue(date_part=3, date_id=date3.id, trait_id=trait2.id, description="You love the idea of them staying over, but wonder if there's a better goblin for you still out there. Let's be real, you're a catch."),
             'dialogue83': Dialogue(date_part=3, date_id=date3.id, trait_id=trait3.id, description="You pretend to act suave like you don't care, but secretly, you'll die if they don't stay over."),
             'dialogue84': Dialogue(date_part=3, date_id=date3.id, trait_id=trait4.id, description="You still can't tell if they find you repulsing or not. You decid the awkwardness is unpleasant and leave your own home so they won't be bothered by your presence."),

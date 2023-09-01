@@ -36,7 +36,7 @@ function Game({ currentUser, goblins, handleChangeUser }) {
       if (response.status === 200) {
         const data = await response.json();
         const usertraits = currentUser.personality_traits.map(
-          (trait) => trait.id
+          (trait) => trait.trait_id
         );
         const dialogueOptions = data.filter((dialogue) =>
           usertraits.includes(dialogue.trait_id)
@@ -59,7 +59,32 @@ function Game({ currentUser, goblins, handleChangeUser }) {
       3: date.part_3,
     });
   }
+  async function updateUser(updatedUser) {
+    try {
+      const response = await fetch(
+        `http://127.0.0.1:5555/users/${updatedUser.id}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(updatedUser),
+        }
+      );
+      if (response.status === 200) {
+        const updatedUserData = await response.json();
+        handleChangeUser(updatedUserData);
+      } else {
+        console.log("Error updating user", response.status);
+      }
+    } catch (error) {
+      console.error("Error updating user", error);
+    }
+  }
   async function handleDialogueClick(dialogue) {
+    console.log(part);
+    console.log(score);
     if (responses.length === 0) {
       try {
         const resp = await fetch("http://127.0.0.1:5555/responses");
@@ -83,7 +108,16 @@ function Game({ currentUser, goblins, handleChangeUser }) {
       } catch (error) {
         console.log("Error fetching responses", error);
       }
-    } else if (part > 3) {
+    } else if (part === 3) {
+      const newResponse = responses.find(
+        (response) => response.dialogue_id === dialogue.id
+      );
+      console.log(newResponse);
+      setResponse(newResponse);
+      setPart(part + 1);
+      if (newResponse.outcome === true) {
+        setScore(score + 1);
+      }
       try {
         const resp = await fetch("http://127.0.0.1:5555/outcomes");
         if (resp.status === 200) {
@@ -92,17 +126,31 @@ function Game({ currentUser, goblins, handleChangeUser }) {
             (outcome) => outcome.goblin_id === goblin.id
           );
           console.log(dataOutcomes);
-          if (score === 3) {
+          if (score >= 2) {
             const dataOutcome = dataOutcomes.find(
               (outcome) =>
                 outcome.date_id === chosenDate.id && outcome.result === true
             );
+            const fieldName = `${goblin.name.toLowerCase()}_win`;
+            const updatedUser = {
+              id: currentUser.id,
+              [fieldName]: currentUser[fieldName] + 1,
+            };
+            updateUser(updatedUser);
+            console.log(updatedUser);
             setOutcomeResult(dataOutcome);
           } else {
             const dataOutcome = dataOutcomes.find(
               (outcome) =>
                 outcome.date_id === chosenDate.id && outcome.result === false
             );
+            const fieldName = `${goblin.name.toLowerCase()}_win`;
+            const updatedUser = {
+              id: currentUser.id,
+              [fieldName]: currentUser[fieldName] - 1,
+            };
+            updateUser(updatedUser);
+            console.log(updatedUser);
             setOutcomeResult(dataOutcome);
           }
         } else {
@@ -124,11 +172,7 @@ function Game({ currentUser, goblins, handleChangeUser }) {
     }
   }
   function endDate() {
-    if (score === 3) {
-      history.push(`/user/${currentUser.username}`);
-    } else {
-      history.push(`/user/${currentUser.username}`);
-    }
+    history.push(`/user/${currentUser.username}`);
   }
 
   return (
