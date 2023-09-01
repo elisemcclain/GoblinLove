@@ -35,7 +35,7 @@ function Game({ currentUser, goblins, handleChangeUser}) {
             const response = await fetch('http://127.0.0.1:5555/dialogues')
             if (response.status === 200) {
                 const data = await response.json()
-                const usertraits = currentUser.personality_traits.map(trait => trait.id)
+                const usertraits = currentUser.personality_traits.map(trait => trait.trait_id)
                 const dialogueOptions = data.filter(dialogue => usertraits.includes(dialogue.trait_id))
                 const filteredDialogues = dialogueOptions.filter(dialogue => dialogue.date_id === date.id)
                 setDialogues(filteredDialogues)
