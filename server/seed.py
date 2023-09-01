@@ -175,18 +175,17 @@ if __name__ == '__main__':
         }
 
 
-
         dialogues_2 = {
-            'dialogue31': Dialogue(date_part=1, date_id=date2.id, trait_id=trait1.id, description="You realize that after a couple mugs of Muk, you might convince them to join your plan to overthrow the goblin government."),
-            'dialogue32': Dialogue(date_part=1, date_id=date2.id, trait_id=trait2.id, description="You agree, but only on the condition that they pay for all your Muk. They must also present you with a goblin made tiara because you deserve it, but mostly to show everyone at the Rotten Elder Tree Saloon that you're better than them."),
-            'dialogue33': Dialogue(date_part=1, date_id=date2.id, trait_id=trait3.id, description="You debate if it's worth it, but decide if you go, you might could spark jealousy amongst the other goblin boys so they all fight over your love."),
-            'dialogue34': Dialogue(date_part=1, date_id=date2.id, trait_id=trait4.id, description="You waffle back and forth for 7 hours before agreeing, but you refuse to drink the provided Muk in case it has been poisoned. Instead, you bring your own Muk from home."),
-            'dialogue35': Dialogue(date_part=1, date_id=date2.id, trait_id=trait5.id, description="You can't say yes quick enough. You just know in your goblin heart that this goblin is the one. The Muk is just lubricant for your heart."),
-            'dialogue36': Dialogue(date_part=1, date_id=date2.id, trait_id=trait6.id, description="You let him wait for a response so he can squirm a bit, but you're already planning out what great jokes you'll tell your partner over a good mug of Muk."),
-            'dialogue37': Dialogue(date_part=1, date_id=date2.id, trait_id=trait7.id, description="You love Muk, but you DON'T like being told what to do. You begrudingly agree, but it'll be the last time that happens."),
-            'dialogue38': Dialogue(date_part=1, date_id=date2.id, trait_id=trait8.id, description="You are stoked for this date, but you can ONLY wear the color orange, no matching socks, and we must bring a worm to sacrifice to the Muk Lord."),
-            'dialogue39': Dialogue(date_part=1, date_id=date2.id, trait_id=trait9.id, description="You haven't been to this local saloon yet, so you're intrigued. It'll be your first time trying Muk!"),
-            'dialogue40': Dialogue(date_part=1, date_id=date2.id, trait_id=trait10.id, description="You say yes before you check your calendar. Shoot, you are supposesd to go on a date with Poorg. Oh well! (Poor Poorg)"),
+            'dialogue31': Dialogue(date_part=1, date_id=date2.id, trait_id=trait1.id, description="You realize that after a couple mugs of Muk, you might convince them to join your plan to overthrow the goblin government. You open with a question on their politics."),
+            'dialogue32': Dialogue(date_part=1, date_id=date2.id, trait_id=trait2.id, description="You ask if they would purchase you a goblin made tiara because you deserve it, but mostly to show everyone at the Rotten Elder Tree Saloon that you're better than them."),
+            'dialogue33': Dialogue(date_part=1, date_id=date2.id, trait_id=trait3.id, description="You debate if it's worth it, but decide to open with how much you like them, you might spark jealousy amongst the other goblin boys if they get wind of this!"),
+            'dialogue34': Dialogue(date_part=1, date_id=date2.id, trait_id=trait4.id, description="You waffle back and forth for 7 hours before sitting to join your date, but you refuse to drink the provided Muk in case it has been poisoned. Instead, you bring your own Muk from home and ask if they want some."),
+            'dialogue35': Dialogue(date_part=1, date_id=date2.id, trait_id=trait5.id, description="You just know in your goblin heart that this goblin is the one. The Muk is just lubricant for your heart. You flat out tell them you love them!"),
+            'dialogue36': Dialogue(date_part=1, date_id=date2.id, trait_id=trait6.id, description="You let him wait awkwardly so he can squirm a bit, but you're already planning out what great jokes once he breaks the silence."),
+            'dialogue37': Dialogue(date_part=1, date_id=date2.id, trait_id=trait7.id, description="You love Muk, but you DON'T like being forced to do something. You begrudingly begin talking about the weather, but it'll be the last time that happens."),
+            'dialogue38': Dialogue(date_part=1, date_id=date2.id, trait_id=trait8.id, description="You are stoked for this date, you ONLY wear the color orange, no matching socks, and ask your date if they brought a worm to sacrifice to the Muk Lord."),
+            'dialogue39': Dialogue(date_part=1, date_id=date2.id, trait_id=trait9.id, description="You haven't been to this local saloon yet, so you're intrigued. It'll be your first time trying Muk! You ask if they are a regular here."),
+            'dialogue40': Dialogue(date_part=1, date_id=date2.id, trait_id=trait10.id, description="You said yes before you checked your calendar. Shoot, you were supposesd to go on a date with Poorg. Oh well! You ask them if they are friends with Poorg. (Poor Poorg)"),
             'dialogue41': Dialogue(date_part=2, date_id=date2.id, trait_id=trait1.id, description="You are positively sure they're on to your scheme to slip out without paying for the Muk. Crikey!"),
             'dialogue42': Dialogue(date_part=2, date_id=date2.id, trait_id=trait2.id, description="You stop the server before they can leave and request an extra complimentary to-go bag of peanuts. You get midnight munchies bad!"),
             'dialogue43': Dialogue(date_part=2, date_id=date2.id, trait_id=trait3.id, description="You scan your date's face as they read the note to see if the note is bad or not. Whatever it is, you know you can talk your way out of it with your appalling charisma. "),
@@ -209,7 +208,6 @@ if __name__ == '__main__':
             'dialogue60': Dialogue(date_part=3, date_id=date2.id, trait_id=trait10.id, description="You grab the check before it hits the table and throw your card down. You then stand up, climb on top of the table, and shout out that you are picking up the tab for the entire bar."),
         }
         
-
 
         dialogues_3 = {
             'dialogue61': Dialogue(date_part=1, date_id=date3.id, trait_id=trait1.id, description="You love the idea of going to their grotto for a home cooked meal. You can raid their bedroom for secrets and red flags while they aren't looking."),
@@ -1824,253 +1822,374 @@ if __name__ == '__main__':
                 dialogue_id=dialogues_list[30].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "As you sit down at the table with the room-temperature pints of Muk, you can't help but crinkle your nose at the pungent aroma. Grubnub looks at the Muk with eager anticipation, completely unfazed by the smell. He waits for you to speak, expectantly."
+"\n\nYou decide to dive right into the conversation with a more pointed question. 'Grubnub,' you begin, leaning closer, 'have you ever thought about how goblin politics could be better? Chief Grumblebark might not be the best leader, don't you think?'"
+"\n\nGrubnub blinks in surprise, his brow furrowing. 'Well,' he hesitates, 'I dunno, Chief Grumblebark has been in charge for a long time. He gives us mushrooms, and the forest is safe.'"
+"\n\nYou press on, trying to instill a bit of rebellion in his simple heart. 'But what if there could be more, Grubnub? What if we could have even more mushrooms, and better Muk?'"
+"\n\nGrubnub's eyes dart around nervously as if someone might overhear your conversation. 'I... I never really thought about it like that,' he stammers."
+"\n\nYou lean in closer, your voice dropping to a conspiratorial whisper. 'Imagine a world where every goblin has all the mushrooms they could ever want. No more rationing, no more Chief Grumblebark telling us what to do.'"
+"\n\nGrubnub looks both intrigued and uncertain. 'But how would we do that? And what if we get in trouble?'"
+"\n\nYou smile slyly, planting the seed of rebellion. 'We'll figure it out together, Grubnub. One mushroom at a time.'",
                 outcome=False
             ),
             'response152': Response(
                 dialogue_id=dialogues_list[31].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "The pungent aroma of the Muk fills the air as you sit down, and Grubnub eagerly awaits the start of the conversation. You decide to lighten the mood and go for a more whimsical approach this time."
+"\n\n'Grubnub,' you say with a playful smile, 'have you ever considered buying me a goblin-made tiara? I mean, I really deserve it, don't you think? Plus, it would show everyone here at the Rotten Elder Tree Saloon that I'm clearly better than them.'"
+"\n\nGrubnub's eyes widen in mild confusion, and he tilts his head. 'A tiara? Well, I reckon they don't have tiaras at the Rotten Elder Tree Saloon. And ain't you already the best?'"
+"\n\nYou chuckle at his response, but internalize your annoyance. You don't want to leave just yet, so you play along. 'You're right, Grubnub. I am the best, and I don't need a tiara to prove it. Just having you as my friend is enough.'"
+"\n\nGrubnub's face lights up with a bright smile. 'Aw, shucks,' he mumbles, a hint of bashfulness in his voice. 'You're the best friend I've ever had too.'",
+                outcome=True
             ),
             'response153': Response(
                 dialogue_id=dialogues_list[32].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "As the server brings over the two pints of Muk, you ponder the best way to start the conversation. You want to express your feelings but also wonder if it's worth it. However, the thought of sparking a bit of jealousy among the other goblin boys if they hear about this intrigues you."
+"\n\nWith a sly grin, you turn to Grubnub and say, 'You know, Grubnub, I've been thinking... I really like you. A lot.'"
+"\n\nGrubnub's eyes widen in surprise, and a faint blush creeps up on his cheeks. He stammers a bit before responding, 'You... you do? Well, that's mighty nice to hear.'"
+"\n\nYou can't help but chuckle at his adorable reaction. 'Yeah, Grubnub, I do. You're different from the other goblins, and I mean that in the best way possible.'"
+"\n\nHis blush deepens, and he smiles bashfully. 'Well, you're different too, in a good way. It's nice to have someone like you around.'"
+"\n\nThe two of you share a genuine moment of connection. You only hope the other boys catch wind of this.",
+                outcome=True
             ),
             'response154': Response(
                 dialogue_id=dialogues_list[33].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "As you sit at the table, Grubnub appears to be in a contented Muk-induced haze, having already downed an impressive number of mugs. Despite the hours he's spent here and the amount of Muk he's consumed, he seems cheerful and not the slightest bit affected by the tavern's unique ambiance."
+"\n\nYou finally make up your mind and lean in, deciding to join in on the Muk-fueled atmosphere. With a playful grin, you say, 'You know, Grubnub, I've got some Muk from home. This Muk is pretty magic and will make you smarter!'"
+"\n\nGrubnub, who's already deep into his 7th hour of Muk consumption, bursts into laughter, spilling a bit of the frothy brew onto the table. 'Haha, maybe!' he replies between chuckles. 'But you know, I'm pretty smart already!' He winks drowsily, clearly not fully coherent right now."
+"\n\nThe two of you continue chatting, occasionally sipping your Muk and sharing light-hearted stories. Grubnub's relaxed and jovial demeanor makes the time fly by, and soon, the initial awkwardness you felt melts away, replaced by a warm camaraderie. It turns out that Muk, in moderation, can be quite the social lubricant.",
+                outcome=True
             ),
             'response155': Response(
                 dialogue_id=dialogues_list[34].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "As the two of you sit at the table, with Muk in hand, you feel a strange warmth in your goblin heart. Perhaps it's the fermented brew talking, but you can't deny the strong connection you're starting to feel with Grubnub. In this cozy, dimly lit tavern, surrounded by the sounds of goblin laughter and the earthy aroma of Muk, it feels like destiny that the two of you have met."
+"\n\nUnable to contain your emotions any longer, you turn to Grubnub with a smile and declare, 'Grubnub, I think you're amazing, and I love being with you!' The words tumble out, a little too loudly for the intimate setting of the tavern."
+"\n\nGrubnub blinks, the Muk momentarily dulling his response time. He looks at you with a mix of surprise and confusion. 'Oh,' he mumbles, 'That's... that's real nice of you to say.' His cheeks flush with a tinge of embarrassment as the surrounding goblins turn to see what the fuss is about."
+"\n\nYou both fall silent for a moment, the atmosphere growing a touch awkward. Grubnub clears his throat and changes the subject, discussing the finer points of the local Muk-making process. It seems he's not quite ready to reciprocate your declaration just yet.",
                 outcome=False
             ),
             'response156': Response(
                 dialogue_id=dialogues_list[35].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "You wait for Grubnub to make the first move, giving him a moment to gather his thoughts. After a few seconds of somewhat awkward silence, he clears his throat and looks at you with a friendly grin."
+"\n\n'I must admit, I'm not used to such fancy places,' he says, chuckling nervously. 'But this Muk is something else, isn't it?'"
+"\n\nYou give a knowing nod, appreciating his effort to start the conversation. 'Absolutely,' you reply with a playful twinkle in your eye. 'I've heard that after a few mugs of this stuff, goblins start speaking fluent elvish.'"
+"\n\nGrubnub bursts into laughter, the tension broken as he guffaws at your remark. 'Fluent elvish, you say? Well, I better have another mug then!'"
+"\n\nWith the ice officially broken, the two of you spend the evening sharing jokes, tales, and, of course, more Muk, making the Rotten Elder Tree Saloon feel like the coziest place in the world.",
+                outcome=True
             ),
             'response157': Response(
                 dialogue_id=dialogues_list[36].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "You huff inwardly, not pleased about being put in a position where you have to start the conversation. Nevertheless, you decide to be the bigger goblin in this situation and reluctantly bring up the weather."
+"\n\n'Nice weather we're having, huh?' you say with an exaggerated casualness, taking a sip of your lukewarm Muk."
+"\n\nGrubnub seems a bit caught off guard by your choice of topic, and there's an uncomfortable silence for a moment before he finally responds, nodding in agreement. 'Oh, yes, it's... um, quite pleasant.'"
+"\n\nYou can't help but feel a bit smug, knowing that you've made your point. From now on, they better be the one to initiate the conversation."
+"\n\nAs the evening goes on, you both find more engaging topics to discuss, but there's still a palpable awkwardness in the air, making the Rotten Elder Tree Saloon a somewhat uncomfortable place to be.",
                 outcome=False
             ),
             'response158': Response(
                 dialogue_id=dialogues_list[37].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "You arrive at the Rotten Elder Tree Saloon in your signature fashion, dressed head to toe in the brightest shades of orange you could find. Your outfit is a chaotic mix of mismatched patterns and fabrics, and you couldn't be more proud of it."
+"\n\nAs you settle down at the table with Grubnub, your enthusiasm is palpable. You flash him a mischievous grin and blurt out, 'Hey, did you bring a worm with you? You know, for the Muk Lord? Sacrificing a worm is the best way to ensure a night of good Muk!'"
+"\n\nGrubnub stares at you, his eyes wide with a mix of surprise and confusion. 'Uh, no, I didn't bring a worm,' he replies slowly, clearly unsure if you're joking or not."
+"\n\nYou start to panic, but you hide it as best you can and try to ease your wait out of it, 'I'm just messing with you, Grubnub!'"
+"\n\nRelief washes over Grubnub's face as he chuckles nervously. 'Oh, okay, you got me there.' You quietly squash your worm between your hand and let it fall to the floor away from his line of sight."
+"\n\nThe rest of the evening passes in a whirlwind of laughter, Muk, and more Muk. Grubnub may not have brought a worm, but he definitely brought a smile to your face.",
+                outcome=True
             ),
             'response159': Response(
                 dialogue_id=dialogues_list[38].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Curiosity fills your goblin heart as you take in the surroundings of the Rotten Elder Tree Saloon. This is your first time here, and the promise of trying Muk for the first time is an exciting prospect."
+"\n\nTurning your attention to Grubnub, you lean in and ask, 'Are you a regular here? It seems like the kind of place where everyone knows each other.'"
+"\n\nGrubnub takes a thoughtful sip of his Muk before answering, 'Yeah, I come here pretty often. It's a cozy place, and the Muk's not half bad.'"
+"\n\nYou nod in agreement, taking a sip of your own Muk. The earthy flavors and rustic charm of the saloon start to grow on you. As the evening unfolds, you and Grubnub chat about everything from the local gossip to your favorite Muk flavors, and you can't help but feel like you've found a new Muk-loving friend.",
+                outcome=True
             ),
             'response160': Response(
                 dialogue_id=dialogues_list[39].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "Your eyes widen in realization as you check your calendar, and you let out an exasperated sigh. 'Oh no, I completely forgot that I already had plans tonight!'"
+"\n\nGrubnub raises an eyebrow, his curiosity piqued. 'Really? With who?' he asks, taking a sip of his lukewarm Muk."
+"\n\nYou scratch your head, feeling somewhat awkward about the situation. 'Well, it was supposed to be a date with Poorg,' you confess, looking sheepish."
+"\n\nGrubnub's expression changes to one of surprise, and he seems to know Poorg. His voice lowers, and there's a hint of guilt in his tone. 'Oh, I know Poorg. We're friends, actually.'"
+"\n\nYou can't help but feel a bit uncomfortable as you continue the conversation. Grubnub, while polite, seems a bit self-conscious now that he knows he was the second choice for the evening."
+"\n\nThe date continues, but there's an underlying awkwardness that lingers in the air. You both try to make the best of the situation, sharing stories and sipping on your Muk, but there's an undeniable tension."
+"\n\nAs the night continues, you can't shake the feeling that things could have been different if you had remembered your plans with Poorg. While you enjoyed your time with Grubnub, there's a lingering sense of what could have been.",
                 outcome=False
             ),
             'response161': Response(
                 dialogue_id=dialogues_list[30].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",  
-                outcome=False
+                "You lean in slightly and, with a sly grin, you bring up the topic of politics. 'You know,' you begin, 'I've been thinking about the state of our goblin government lately. What are your thoughts on Chief Grumblebark's leadership?'"
+"\n\nSneezle's eyes twinkle mischievously as he leans in, lowering his voice conspiratorially. 'Funny you should ask,' he says, 'because I've got a plan to bring down Chief Grumblebark.'"
+"\n\nYou raise an eyebrow, intrigued. 'Really? Do tell.'"
+"\n\nWith a playful glint in his eye, Sneezle outlines his elaborate and comically absurd scheme to overthrow Chief Grumblebark. It involves whoopee cushions, rubber chickens, and a lot of whooping and hollering."
+"\n\nAs he explains, you can't help but laugh at the sheer audacity of his plan. Sneezle's eyes sparkle with mischief, clearly enjoying your reaction."
+"\n\nThe conversation continues, and you find yourself drawn into Sneezle's carefree outlook on life. While the topic of politics may not have been as serious as you initially thought, you can't deny that you're having a great time with this prankster goblin.",  
+                outcome=True
             ),
             'response162': Response(
                 dialogue_id=dialogues_list[31].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "You lean in with an exaggerated air of importance, grinning mischievously. 'You know what would really make a statement here at the Rotten Elder Tree Saloon?' you begin, your voice dripping with sarcasm. 'A goblin-made tiara, of course. It's time everyone knows just how fabulous I am.'"
+"\n\nSneezle's eyes widen in mock astonishment, and he lets out a burst of laughter. 'A tiara, you say?' he chortles. 'Well, aren't we the fancy goblin?'"
+"\n\nYour grin falters slightly as you realize he's making fun of you. 'I was just joking, you know,' you mutter."
+"\n\nSneezle playfully nudges you with his elbow. 'Relax,' he says, still chuckling. 'I've got a better idea. How about we make a bet? If I can make the bouncer laugh tonight, you owe me a favor. If I can't, I'll buy you a tiara.'"
+"\n\nYou can't help but be intrigued by Sneezle's proposal. It's clear that he's confident in himself, and this could be an interesting challenge. 'Deal,' you say, sticking out your hand to shake on it."
+"\n\nAs you shake hands, the atmosphere lightens, and you find yourself enjoying Sneezle's company. Perhaps this date won't be so awkward after all.",
+                outcome=True
             ),
             'response163': Response(
                 dialogue_id=dialogues_list[32].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "You decide to start off with a bit of flattery. Leaning closer to Sneezle, you say, 'You know, I've heard a lot about you, and I must admit, I really like what I see.' You flash a playful grin, fully aware that you're laying it on thick."
+"\n\nSneezle bursts into laughter, his eyes twinkling with amusement. 'Well, well,' he says, his voice dripping with sarcasm. 'Aren't you the charmer? Should I be flattered?'"
+"\n\nYou chuckle along with him, realizing that your exaggerated compliment might have been a bit too much. 'I guess I got carried away,' you admit."
+"\n\nSneezle nudges you playfully. 'Don't worry about it,' he says, still grinning. 'It's all in good fun. Besides, can you imagine the other goblin boys' faces if they heard about this?'"
+"\n\n'That's what I was thinking!' You shout. It seems the two of you are on similar wavelengths."
+"\n\nYou both share a laugh, and the awkwardness from your over-the-top compliment melts away as the date gets off to a lighthearted start.",
+                outcome=True
             ),
             'response164': Response(
                 dialogue_id=dialogues_list[33].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "After a great deal of waffling and hesitation, you finally decide to join Sneezle at the table. You're not willing to take any risks, so you pull out your own Muk from home and offer some to Sneezle."
+"\n\nSneezle raises an eyebrow, clearly irritated by your tardiness. 'Took you long enough,' he remarks, his tone dripping with sarcasm. 'I was beginning to think I'd been stood up.'"
+"\n\nYou let out an awkward chuckle, realizing that you might have taken a bit too long to make up your mind. 'Sorry about that,' you mumble."
+"\n\nSneezle eyes the Muk from home that you've brought. 'What's this?' he asks, feigning innocence. 'A secret recipe? Or just your way of telling me that you don't trust the Muk they serve here?'"
+"\n\nYou give him a sheepish grin, admitting, 'A bit of both, actually.'"
+"\n\nSneezle rolls his eyes but doesn't press the matter further. 'Well, pour me a glass, then. Let's see if your Muk is as good as you say it is.'"
+"\n\nAs you pour him a glass, you can't help but feel a hint of embarrassment for your overthinking. The date seems to be getting off to a rocky start, but at least Sneezle is willing to give your Muk a try.",
                 outcome=False
             ),
             'response165': Response(
                 dialogue_id=dialogues_list[34].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "With a gleam in your eye and a grin on your face, you decide to go for broke. The Muk has emboldened you, and you boldly declare, 'You know, Sneezle, I think I love you.'"
+"\n\nSneezle's eyes widen in surprise, and then he bursts into laughter. 'Oh, you really know how to lay it on thick, don't you?' he chuckles, clearly not taking your declaration seriously."
+"\n\nYou join in the laughter, realizing that perhaps you've been a bit too forward. 'Hey, it's just the Muk talking,' you say, trying to brush it off as a joke."
+"\n\n'Of course, of course,' Sneezle replies, still chuckling. 'But hey, who could possibly resist my charm? I love me too.'"
+"\n\nYou both share a good laugh, and the tension that had built up from your bold statement dissipates. It seems that Sneezle is more than willing to play along with your Muk-fueled antics.",
+                outcome=True
             ),
             'response166': Response(
                 dialogue_id=dialogues_list[35].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "You decide to let Sneezle squirm for a moment, wondering how he'll break the silence. But you don't have to wait long. Sneezle leans in closer, his eyes locking onto yours. It's as if he's challenging you to a staring contest."
+"\n\nYou can't resist the challenge and lock eyes with him. The seconds tick by, and the silence stretches. The atmosphere grows tense as neither of you wants to be the first to break."
+"\n\nThen, unexpectedly, Sneezle's face cracks into a grin, and he lets out a snort of laughter. 'Bah, I lose,' he says, shaking his head. 'It's hard not to laugh at that face of yours'"
+"\n\nYou can't help but laugh too, relieved that the awkward silence has been broken. 'What this old face? I left my good face at home."
+"\n\nThe two of you share a good laugh, and it seems that Sneezle has turned the tables on your attempt to make him squirm. The date continues with a more relaxed atmosphere.",
+                outcome=True
             ),
             'response167': Response(
                 dialogue_id=dialogues_list[36].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "You grumble inwardly, not appreciating being forced into conversation. You decide to play along and begrudgingly bring up the weather. 'So, uh, what do you think of this weather we're having?' you ask, trying to sound as unenthusiastic as possible."
+"\n\nSneezle arches an eyebrow, clearly unimpressed by your choice of conversation topic. 'The weather, huh?' he replies with a hint of sarcasm. 'Fascinating stuff.'"
+"\n\nYou roll your eyes, regretting your decision already. 'Yeah, well, I couldn't think of anything else to talk about.'"
+"\n\nSneezle smirks and leans in closer. 'You know,' he says, his tone conspiratorial, 'we could always talk about overthrowing Chief Grumblebark. That's more exciting than the weather, don't you think?'"
+"\n\nYou're taken aback by his suggestion but can't help but chuckle at his audacity. Maybe this date won't be as dull as you thought.",
+                outcome=True
             ),
             'response168': Response(
                 dialogue_id=dialogues_list[37].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "As you step into the Rotten Elder Tree Saloon wearing your vivid orange ensemble and non-matching socks, Sneezle can't help but burst into a fit of laughter."
+                "\n\nYou playfully nod and continue the humorous tone, 'Absolutely, and speaking of fashion statements, did you bring a worm to sacrifice to the Muk Lord today?'"
+                "\n\nSneezle's laughter continues as he responds, 'A worm sacrifice? Now that's an interesting choice. Sadly, I didn't bring a worm today. But I am sacrificing my Kidney.'"
+                "\n\nThe jovial atmosphere between you and Sneezle sets the tone for a date filled with laughter and fun, making the quirky start all the more enjoyable.",
+                outcome=True
             ),
             'response169': Response(
                 dialogue_id=dialogues_list[38].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "You flash a friendly grin and lean in a bit closer to Sneezle. 'You know, this is my first time here, and I've heard so much about Muk. Are you a regular around here?'"
+                "\n\nSneezle's eyes twinkle with mischief as he leans back, considering your question. 'Regular? Well, you could say that,' he replies, drawing out the words. 'I'm practically part of the furniture. But enough about me, you're in for a treat with this Muk.'"
+                "\n\nAs the conversation flows, you and Sneezle delve into the world of Muk and the notorious saloon regulars. Time flies, and you find yourself drawn into Sneezle's humor and lively spirit, making the evening an enjoyable experience.",
+                outcome=True
             ),
             'response170': Response(
                 dialogue_id=dialogues_list[39].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "You find yourself slightly flustered as you realize you said yes before checking your calendar. It dawns on you that you were supposed to go on a date with Poorg today. Well, no turning back now! With a light-hearted smile, you turn your attention back to Sneezle and ask, 'By the way, are you friends with Poorg? Poor Poorg got stood up today.'"
+        "\n\nSneezle grins mischievously, clearly amused by the situation. 'Ah, Poorg, he's a character, isn't he?' he replies. 'Well, I can't say we're close friends, but we've had our share of laughs together. I hope he finds another fun distraction for the day.'"
+        "\n\nThe mention of Poorg's name fades into the background as you and Sneezle continue to chat and enjoy each other's company.",
+                outcome=True
             ),
             'response171': Response(
                 dialogue_id=dialogues_list[30].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
+                "You lean in slightly, your eyes gleaming with determination. 'Blort, have you ever thought about the state of our goblin government? I mean, don't you think it's time for some...violent changes?'"
+                "\n\nBlort's eyes widen in surprise as he nervously adjusts his glasses. 'Oh, well, I'm not sure about that,' he stammers, clearly uncomfortable with the topic. 'I've always believed in kindness and harmony.'"
+                "\n\nThe atmosphere grows tense as you realize Blort's reluctance to entertain the idea. The conversation becomes strained, and you both struggle to find common ground, making for an awkward evening at the saloon.",
                 outcome=False
             ),
             'response172': Response(
                 dialogue_id=dialogues_list[31].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
-                outcome=False
+                "You lean in with a mischievous glint in your eye and ask Blort, 'You know, Blort, I've been thinking. Do you think you could get me a goblin-made tiara? I mean, I genuinely believe I deserve it, and it would be a symbol of my unique style and charm.'"
+                "\n\nBlort lets out a hearty chuckle, clearly understanding your playful request. 'A tiara, huh?' he responds with a friendly grin. 'Well, I'd say you already shine like one without it. Your personality and charm light up the room.'"
+                "\n\nYou can't help but smile at Blort's response. His compliment warms your heart, and the playful request sets a lighthearted tone for the conversation.",
+                outcome=True
             ),
             'response173': Response(
                 dialogue_id=dialogues_list[32].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
-                outcome=False
+                "You and Blort sit at a rustic table with two pints of Muk in front of you. The earthy aromas fill the air, setting the mood for your date in the cozy, dimly lit saloon."
+        "You briefly debate whether to share your feelings. The idea of revealing your affection for Blort excites you, but you're aware it might stoke jealousy among the other goblin boys."
+        "Taking a deep breath, you decide to follow your heart. Leaning in, you meet Blort's eyes and say, 'You know, Blort, I've always admired your kindness and love for animals. It's a rare quality, and I genuinely like that about you.'"
+        "Blort's eyes widen in surprise, a blush creeping up his cheeks. He seems taken aback by your openness. 'Oh, well, I... um, thank you,' he stammers, 'Not many people notice that about me.'"
+        "You sense a mix of shyness and gratitude in his response. The potential spark of something more makes the moment even more thrilling.",
+                outcome=True
             ),
             'response174': Response(
                 dialogue_id=dialogues_list[33].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
+                "Your internal debate stretches on for what seems like an eternity, and you can't help but notice Blort's growing discomfort as the hours pass. With each moment of hesitation, his once-eager expression gradually fades into one of uncertainty and restlessness."
+        "Seven long hours of waiting test Blort's patience. He fidgets in his chair, clears his throat awkwardly, and shoots nervous glances at the untouched lukewarm pints of Muk on the table. Your prolonged contemplation has clearly taken a toll on his composure."
+        "Finally, you make a decision and approach the table, taking your seat. The relief that washes over Blort is evident, but his awkwardness and shyness persist. Politely declining the room temperature pints of Muk that the server brought, you opt for caution. Retrieving a small, meticulously sealed container of Muk from home, you offer it to Blort with a reassuring smile, saying, 'I brought my own Muk, just to be safe. It's homemade and completely secure.'"
+        "Blort, though visibly relieved that the wait is over, remains shy and uncomfortable. He accepts your offer with a hesitant nod, his words slightly stilted, 'Th-thank you for being considerate.' His voice wavers, and he avoids direct eye contact, clearly overwhelmed by the situation.",
                 outcome=False
             ),
             'response175': Response(
                 dialogue_id=dialogues_list[34].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
+                "You feel an undeniable connection with Blort deep in your goblin heart. As the Muk flows and warms your spirits, you find yourself overcome by the moment. The dimly lit saloon seems to fade into the background, leaving only you and Blort in a world of your own."
+                "\n\nYou take a deep breath, your goblin instincts guiding your words. Your heart pounding, you turn to Blort, who looks at you with curious eyes. The warmth of the Muk is like a gentle nudge, urging you to speak your truth. With unwavering determination, you finally let your feelings spill out, 'Blort, I... I love you.'"
+                "\n\nTime stands still as you hold your breath, waiting for Blort's response. His eyes widen in sheer surprise, and his cheeks flush with a rosy hue. The saloon's rustic charm seems to come alive with a newfound energy, as if celebrating this significant moment. Blort's lips part, but words elude him momentarily as emotions swirl between you."
+                "\n\nFinally, a nervous, shy smile graces Blort's face, and he manages to stammer, 'I... I didn't expect... I mean, I feel... um... I like you too. We uhh.. should get to know each other first though?' His admission is filled with bashfulness, and you are unsure if he is just saying that because he doesn't want to hurt your feelings.",
                 outcome=False
             ),
             'response176': Response(
                 dialogue_id=dialogues_list[35].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
+                "You decide to let Blort wait awkwardly for a bit, enjoying the tension as it builds between you. Blort's eyes widen, and he shifts uncomfortably in his seat, clearly feeling the weight of the silence you've allowed to hang in the air. The dimly lit saloon seems to magnify the awkwardness of the moment."
+            "\n\nHowever, as you watch Blort squirm, you can't help but notice the discomfort in his demeanor. It tugs at your goblin heart, and you decide to put him out of his misery. With a mischievous grin, you break the silence, 'Alright, alright, I can't keep you waiting any longer, Blort. It was fun watching you squirm, but lets just talk.'"
+            "\n\nBlort lets out a nervous laugh, relieved that the silence has been broken. 'Oh, thank goodness,' he replies, still blushing slightly. 'I appreciate it. I'm not great with silences.' You and Blort begin talking casually from here on.",
                 outcome=False
             ),
             'response177': Response(
                 dialogue_id=dialogues_list[36].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
+                "You love Muk, but you've never been fond of being forced into anything, especially a conversation. Annoyed by the awkward silence, you decide to break it with the most mundane topic you can think of—the weather. It's a quick jab at Blort's lack of confidence, and you're not subtle about it."
+            "\n\nBlort, noticing your irritation, tries to make the best of it. 'Well,' he responds with a soft smile, 'it has been rather cloudy lately, but the rain can be soothing, don't you think?'"
+            "\n\nYou nod, masking your annoyance, but deep down, you're frustrated that Blort didn't take the initiative.",
                 outcome=False
             ),
             'response178': Response(
                 dialogue_id=dialogues_list[37].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
+                "You're absolutely stoked for this date, and your enthusiasm shows as you proudly wear only the color orange, from your head to your toes. Matching socks? Not a chance. As you sit down with Blort, you pull out your worm and ask, 'Hey, Blort, did you remember to bring a worm to sacrifice to the Muk Lord?'"
+            "\n\nBlort's eyes widen in disbelief, and a look of shock crosses your face. 'Harm a worm? Oh, goodness, no!' he exclaims, clearly appalled at the idea of causing harm to even the tiniest creature. 'I could never do such a thing. We should respect all living beings.'"
+            "\n\nYou, however, asked the question sincerely, and Blort's reaction leaves you feeling insulted and misunderstood. It's clear that he doesn't share your goblin customs or beliefs, and this realization casts a shadow over the date.",
                 outcome=False
             ),
             'response179': Response(
                 dialogue_id=dialogues_list[38].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Intrigued by the rustic charm of this local saloon and excited about trying Muk for the first time, you turn to Blort, who appears to be a seasoned patron, and ask, 'Blort, are you a regular here?'"
+            "\n\nBlort's face lights up with a warm smile, as if reminiscing about a cherished memory. 'Oh, indeed,' he replies with a nostalgic tone. 'This place has been a part of my life for ages. It's a hidden gem, and Muk is a personal favorite of mine. You're in for a delightful experience.' His words carry a genuine enthusiasm that amplifies your anticipation of this new Muk adventure."
+            "\n\nAs you soak in Blort's words and the inviting atmosphere of the saloon, you realize that this date is turning into a promise of a heartwarming connection.",
+                outcome=True
             ),
             'response180': Response(
                 dialogue_id=dialogues_list[39].id, 
                 goblin_id=blort.id, 
                 response=
-                "Testing",
+                "You realize you said yes to this date before checking your calendar, and now you remember that you were supposed to go on a date with Poorg. Oh well, too late now! You decide to bring up the subject and casually ask Blort, 'By any chance, are you friends with Poorg?'"
+            "\n\nBlort tilts his head in thought for a moment before a warm smile graces his face. 'Ah, Poorg,' he replies, 'I know him. We've crossed paths a few times, but I wouldn't say we're close friends. Why do you ask?'"
+            "\n\nYou shrug and chuckle, 'Oh, it's just that I was supposed to go on a date with him, but things got mixed up, I guess.' Poor Poorg, you think to yourself, feeling a twinge of guilt. You notice that Blort seems to be saddened by the relization as well.",
                 outcome=False
             ),
             'response181': Response(
                 dialogue_id=dialogues_list[30].id, 
                 goblin_id=grimble.id, 
                 response=
-                "Testing",  
-                outcome=False
+                "As you and Grimble settle at your table, the server brings over two room temperature pints of Muk, filling the air with enticing aromatics. You notice Grimble's expectant gaze, hinting that he's eager for you to initiate the conversation. With a playful glint in your eye, you decide to open with a bold question, 'So, Grimble, what are your thoughts on goblin politics?'"
+            "\n\nGrimble's eyes widen, and a self-assured grin crosses his face. 'Ah, goblin politics,' he exclaims with enthusiasm, 'Now, you've hit upon a topic I'm quite passionate about!'"
+            "\n\nAs the conversation delves into the intricacies of goblin governance and power struggles, you find yourself intrigued by Grimble's perspectives. It turns out, beneath his dashing adventurer facade, he has a lot to say about the world of goblin politics. He may not be a full blown revolutionary, but at least he is well informed and has some good takes.",  
+                outcome=True
             ),
             'response182': Response(
                 dialogue_id=dialogues_list[31].id, 
                 goblin_id=grimble.id, 
                 response=
-                "Testing",
+                "With a determined glint in your eyes, you lean in towards Grimble and ask, 'You know, Grimble, I've been thinking. Do you think you could purchase me a goblin-made tiara? I believe I truly deserve one.' The sincerity in your voice leaves no room for doubt, and you're not joking. You genuinely desire that tiara, not only as a symbol of your self-worth but also to assert your superiority over others at the Rotten Elder Tree Saloon."
+            "\n\nGrimble's initial surprise quickly turns into a furrowed brow as he contemplates your request. He leans back in his chair, crossing his arms, and replies with a touch of disapproval, 'A goblin-made tiara, huh? That's quite the extravagant request, my friend. Don't you think it's a tad arrogant to believe you deserve such a thing?'"
+            "\n\nYou feel a hint of embarrassment as Grimble's words pierce through your desire for the tiara. Perhaps you've pushed the boundaries of your request too far. Nevertheless, the atmosphere between you and Grimble has shifted, and the date takes on a more serious tone, leaving you to reflect on your actions.",
                 outcome=False
             ),
             'response183': Response(
                 dialogue_id=dialogues_list[32].id, 
                 goblin_id=grimble.id, 
                 response=
-                "Testing",
+                "You contemplate your words carefully, knowing that openly expressing your feelings could have consequences. Despite the potential risks, you decide to take the plunge and begin, 'Grimble, I have to admit that I really like you.'"
+            "\n\nGrimble's initial surprise turns into an awkward silence, and his cheeks flush with a mixture of embarrassment and uncertainty. The atmosphere in the saloon suddenly feels heavy, and you can sense that your confession has thrown a wrench into the date."
+            "\n\nAfter a prolonged silence, Grimble finally stammers, 'Uh, well, that's quite the confession.' His voice lacks the usual enthusiasm, and he seems visibly uncomfortable. 'I...uh...I appreciate your honesty.'"
+            "\n\nThe air between you grows increasingly tense as the date becomes fraught with awkwardness. Grimble appears to be at a loss for words, and it's clear that your confession has disrupted the previously cheerful atmosphere. You both struggle to find common ground, and the rest of the date proceeds on a sour note, with an uncomfortable tension lingering in the air.",
                 outcome=False
             ),
             'response184': Response(
                 dialogue_id=dialogues_list[33].id, 
                 goblin_id=grimble.id, 
                 response=
-                "Testing",
+                "After an agonizing seven-hour delay, you finally decide to join Grimble, who has been patiently waiting. However, you refuse to drink the provided Muk, fearing it might be poisoned. Instead, you bring out your own Muk from home and offer some to Grimble, asking, 'Would you like some of this Muk?'"
+            "\n\nGrimble's eyes narrow with fury as he stares at you, clearly infuriated by the lengthy wait. 'Seven hours!' he exclaims with frustration. 'Do you know how long I've been waiting here? And now you bring your own Muk? Insolence, pure insolence!'"
+            "\n\nGrimble rejects your offer of Muk and crosses his arms, his irritation palpable. The atmosphere between you sours further, and it's evident that your actions have deeply offended him, casting a shadow over the date.",
                 outcome=False
             ),
             'response185': Response(
                 dialogue_id=dialogues_list[34].id, 
                 goblin_id=grimble.id, 
                 response=
-                "Testing",
-                outcome=False
+                "You feel it in your goblin heart - a sense that Grimble might be the one. The Muk acts as a lubricant for your emotions, and you decide to throw caution to the wind. You boldly declare, 'Grimble, I love you!'"
+            "\n\nGrimble's eyes widen in surprise, and he lets out a hearty laugh, thinking it's a jest. 'Well,' he chuckles, 'You certainly are a funny creature aren't you?'"
+            "\n\nDespite your internalized awkwardness, Grimble's laughter diffuses the tension, and the date continues on a positive note. Your advances are met with amusement rather than rejection.",
+                outcome=True
             ),
             'response186': Response(
                 dialogue_id=dialogues_list[35].id, 
                 goblin_id=grimble.id, 
                 response=
-                "Testing",
-                outcome=False
+                "You're absolutely thrilled for this date, and it shows in your choice of attire – you're decked out entirely in the color orange, right down to your mismatched socks. With a mischievous grin, you turn to Grimble and ask, 'Hey, Grimble, did you happen to bring a worm to sacrifice to the Muk Lord?'"
+            "\n\nGrimble raises an eyebrow, clearly taken aback by your question. 'A worm sacrifice?' he replies with a mixture of confusion and amusement. 'Now that's an unusual date request! No, I didn't bring a worm, but I will not question your practices. Proceed as you see fit!'"
+            "\n\nYour unconventional approach to the date brings a touch of eccentricity to the atmosphere, and Grimble's amusement ensures that your quirky request doesn't derail the evening.",
+                outcome=True
             ),
             'response187': Response(
                 dialogue_id=dialogues_list[36].id, 
@@ -2176,140 +2295,140 @@ if __name__ == '__main__':
                 dialogue_id=dialogues_list[40].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Despite the potential fight brewing, your date continues to be heartwarming and memorable as you both relish the unique Muk and each other's company. The note's significance fades against the backdrop of your delightful evening, reinforcing the genuine connection you share with Grubnub, whose kind-hearted nature shines through, making this a date to cherish.",
+                outcome=True
             ),
             'response202': Response(
                 dialogue_id=dialogues_list[41].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "As you stop the server to request an extra to-go bag of peanuts, Grubnub watches with a puzzled expression, his brow furrowing slightly. It seems he's a bit put off by your statement. The server, still holding the note, looks at you, then back at Grubnub, and finally hands him an extra bag of peanuts.",
                 outcome=False
             ),
             'response203': Response(
                 dialogue_id=dialogues_list[42].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "As you discreetly observe Grubnub's reaction to the note, you can see his brow furrow slightly, and his expression shifts from its usual cheerful demeanor to one of mild confusion. He tilts his head, reading the note carefully, but it's clear that his slow-witted nature is causing him to struggle with its content. You snatch the note, put it in your mouth, and swallow. You then flash a warm smile and whisper, 'Don't worry, Grubnub. It's probably just a mistake or a silly joke. Let's not let it ruin our evening'.",
+                outcome=True
             ),
             'response204': Response(
                 dialogue_id=dialogues_list[43].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "Grubnub, looks at you with a puzzled expression. He doesn't seem to understand why you're reacting this way. The server, who had slipped the note to Grubnub, notices the tension in the air. As Grubnub unfolds the note and reads it, you soon realize that your instincts were RIGHT. Elder Tree is under attack. You must run for your life.",
                 outcome=False
             ),
             'response205': Response(
                 dialogue_id=dialogues_list[44].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Grubnub, oblivious to the server's intentions, watches as you chuckle and wink at the server in response to the note. With the boost of confidence, your converstion becomes extra lighthearted and charming. This has been the best date ever.",
+                outcome=True
             ),
             'response206': Response(
                 dialogue_id=dialogues_list[45].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "You begin a rather ruthless game of tic-tac-toe between each other. Winning the game has become crucial to your survival. Grubnub does not grasp the intricacies of the game situation, but is very merry to be included.",
                 outcome=False
             ),
             'response207': Response(
                 dialogue_id=dialogues_list[46].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "The server looks slightly puzzled by your action, but you're determined to unravel this mysterious note. As the paper disintegrates in the Muk, a faint message becomes visible. It reads, 'Meet me by the moonlit pond, behind the brewery, at midnight'. Grubnub, oblivious to your investigative efforts, smiles and pretends he doesn't notice you're crazy. You know an adventure awaits y'all later tonight.",
+                outcome=True
             ),
             'response208': Response(
                 dialogue_id=dialogues_list[47].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "Grubnub looks utterly baffled by your sudden patriotic outburst. He tilts his head, trying to understand, and then joins in, attempting to sing along despite his slow-witted nature. The server and other patrons exchange wary glances, but then jump up and begin slow dancing together. Grubnub may not have understood why, but he appreciates your effort to make the evening enjoyable, and your date takes an unexpected turn toward quirky charm. The note is forgotten",
                 outcome=False
             ),
             'response209': Response(
                 dialogue_id=dialogues_list[48].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Grubnub, utterly baffled, pats your unconscious form gently, wondering if this is just one of your quirks. He continues on happily eating peanuts and drinking Muk, patiently waiting for you to regain consciousness. Several hours later, you awaken with peanuts and drool stuck to your face.",
+                outcome=True
             ),
             'response210': Response(
                 dialogue_id=dialogues_list[49].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "Grubnub blinks in surprise, clearly taken aback by your sudden enthusiasm. As you finally clutch the note, panting aggressively and damp with Muk, you can't help but wonder if this impulsive act will reveal the secret you've been running from all your life.",
                 outcome=False
             ),
             'response211': Response(
                 dialogue_id=dialogues_list[40].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",  
-                outcome=False
+                "Sneezle jumps up, grabs your hand, and screams, 'we have to go'! Y'all sprint out of the saloon without stopping to pay first. You are alarmed and don't know what is wrong. Once outside, Sneezle turns to you and winks playfully. You realize he knew about your scheme all along and wanted to play too. Together, you share a conspiratorial laugh, enjoying the shared thrill of this impromptu escapade. Your date with Sneezle takes an exciting turn as you both embrace the unexpected twists and turns of the evening.",  
+                outcome=True
             ),
             'response212': Response(
                 dialogue_id=dialogues_list[41].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Sneezle, with his love for humor and spontaneity, bursts into laughter at your cheeky request. He joins in on the joke, exaggerating his desire for the peanuts, saying, 'Oh, absolutely! We can't have those midnight munchies go unsatisfied, can we?' The server, amused by your banter, obliges, and you both share a playful moment, solidifying the lighthearted, carefree atmosphere of your date with Sneezle.",
+                outcome=True
             ),
             'response213': Response(
                 dialogue_id=dialogues_list[42].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "Sneezle's eyebrows arch in surprise, and then a mischievous grin slowly spreads across his face. It appears that the note holds a playful or intriguing message rather than anything serious but he refuses to tell you unless you guess correctly. You do not enjoy being on the other sside of these games. You refuse to guess, not wanting to give him the satisfaction.",
                 outcome=False
             ),
             'response214': Response(
                 dialogue_id=dialogues_list[43].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "Sneezle, takes your sudden movement in stride, and is intrigued by your stark response. He leans closer and whispers, 'Easy there, partner. No need to make a run for it just yet'. You panic. What does he know??",
                 outcome=False
             ),
             'response215': Response(
                 dialogue_id=dialogues_list[44].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Sneezle chuckles at the contents of the note. He leans in and says, 'We'll I may have some playful competition here', and winks. You share an intense and magical moment or eye contact then continue on with the wildest and most exhilerating night of your life.",
+                outcome=True
             ),
             'response216': Response(
                 dialogue_id=dialogues_list[45].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "Sneezle's eye sparkle with interest at what you write. You slide your note slowly across the table. Laughter fills the air as he sees the game tic-tac-toe drawn out. Your date night is a memorable one.",
                 outcome=False
             ),
             'response217': Response(
                 dialogue_id=dialogues_list[46].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "Sneezle, known for his quick wit, raises an eyebrow and leans in, his curiosity piqued. 'Well, someone's a party pooper,' he remarks, his tone laced with playful sarcasm. Sneezle grabs the note out of the Muk mug before it's completely destroyed. He's not here to play love games.",
                 outcome=False
             ),
             'response218': Response(
                 dialogue_id=dialogues_list[47].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "Sneezle slowly pushes his chair back from the table, stands up, and moonwalks out of the saloon. Sneezle immediately got the Star-Spangled ICK.",
                 outcome=False
             ),
             'response219': Response(
                 dialogue_id=dialogues_list[48].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Sneezle, always up for a bit of mischief, glances at you with a dark grin. 'What's the magic word?' he teases. You hold your breath, 'Please?'. With a playful chuckle, Sneezle hands over the note. You unfold it carefully, and as you read the cryptic message, a smile spreads across your face. The server had noticed Sneezle had toilet paper on his boot and discreetly letting him know. You both break out into loud, giddy laughter and feel the connection deepen between you.",
+                outcome=True
             ),
             'response220': Response(
                 dialogue_id=dialogues_list[49].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "After a small struggle, you manage to snatch the note, your fingers smearing the words with Muk and your face a picture of triumph. Sneezle, obviously startled, takes a moment to process what just happened, then bursts into laughter at the absurdity of the situation. His infectious mirth fills the brewery. As you unfold the note, the message reveals itself to be a flyer for a local band playing tonight. Sneezle can't control his laughter and you are red with embarrasment. You crawl under the table to hide from all the other goblins laughing at you.",
                 outcome=False
             ),
             'response221': Response(
@@ -2528,141 +2647,191 @@ if __name__ == '__main__':
                 dialogue_id=dialogues_list[50].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "With a playful smile, you turn to Grubnub and suggest, 'How about we add a little excitement to the evening? Let's play a dine and dash trick.'"
+            "\n\nGrubnub's eyes light up with enthusiasm, clearly taking your words literally. 'Dine and dash? Sounds like an adventure!' he exclaims, misunderstanding your playful intent. 'Lead the way!' Grubnub leaves the money on the table and stands up, waiting for you to lead him."
+            "\n\nAmused by his genuine excitement, you decide to make it a second date. 'Absolutely,' you respond, taking Grubnub's hand intimately. Hand in hand, you leave the Rotten Elder Tree Saloon and stroll under the starlit sky."
+            "\n\nAs you walk together, the romantic ambiance of the night envelops you both. Under the gentle glow of the stars, you share an intimate moment, and your lips meet in a tender kiss, sealing the enchantment of the evening. It's a perfect ending to a truly magical date.",
                 outcome=False
             ),
             'response252': Response(
                 dialogue_id=dialogues_list[51].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "The server places the check on your table as the night's enchanting journey comes to a close. With a confident yet playful glint in your eye, you slide the bill gracefully toward Grubnub. 'Mind taking care of this?' you inquire, a teasing smile dancing on your lips."
+            "\n\nGrubnub meets your gaze, his eyes twinkling with warmth as he accepts the unspoken offer. 'Certainly,' he responds with a gentle nod."
+            "\n\nAs Grubnub takes charge of the bill, the evening concludes gracefully. You both leave the Rotten Elder Tree Saloon with contented smiles.",
+                outcome=True
             ),
             'response253': Response(
                 dialogue_id=dialogues_list[52].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "As the night's enchantment nears its end, you decide to have a bit of fun. With a sly grin, you pretend to have forgotten your wallet, even though it's safely tucked in your pocket. You turn to Grubnub, your eyes dancing with mischief, and ask him if he would kindly cover the bill as you have forgotten your wallet."
+            "\n\nGrubnub blinks in surprise, momentarily taken aback by your request. He scans the table as if looking for your wallet, then his face brightens with a warm smile. 'Oh, not a problem at all!' he replies cheerfully, happy to help."
+            "\n\nThe night concludes with a hint of mischievous glee as Grubnub happily pays for the bill, completely unaware of your playful deception. You both leave the Rotten Elder Tree Saloon with smiles. Him because he thinks the date went well, and you because you got away with it--again.",
                 outcome=False
             ),
             'response254': Response(
                 dialogue_id=dialogues_list[53].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "As the night's enchantment nears its end, the server places the check on your table, signifying the conclusion of your delightful date. Suddenly, you eagerly reach for the bill, wanting to make a good impression in front of Grubnub, though thriftiness is a part of your nature."
+            "\n\nGrubnub's eyes widen in surprise at your enthusiasm, but he reaches for the check as well. 'Oh, you don't have to do that all on your own,' he says, his tone warm and sincere. 'Let me help cover the cost.'"
+            "\n\nAfter the bill is settled, you both rise from your seats and walk out of the Rotten Elder Tree Saloon arm in arm, bathed in the soft glow of starlight. The night's romance is undeniable, and beneath the shimmering stars, you share a lingering, tender kiss.",
+                outcome=True
             ),
             'response255': Response(
                 dialogue_id=dialogues_list[54].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "As the night's enchantment draws to a close, the server discreetly places the check on your table, a mere formality in your eyes. Lost in the enchanting world of your date's beautiful, sparkling, swamp-green eyes, you barely register the presence of the bill. Honeymoon phase bliss envelops you, transcending the mundane world around you."
+            "\n\nGrubnub, his cheeks flushed with a deep crimson, swiftly takes care of the bill, his gaze filled with bashful adoration for you. The moment is electric, and an unspoken understanding hangs in the air."
+            "\n\nWith a bold and graceful movement, you lean in, closing the distance between you and Grubnub. The world seems to fade away as your lips meet in a passionate, intimate kiss. It's a kiss filled with longing, desire, and a connection that defies words. The night's enchantment reaches its pinnacle, and as you part from the kiss, a shared, knowing look passes between you."
+            "\n\nUnder the starlit sky, you both walk away from the Rotten Elder Tree Saloon, hand in hand, your hearts entwined in a bond that's stronger than ever. The memory of the kiss lingers in the air.",
+                outcome=True
             ),
             'response256': Response(
                 dialogue_id=dialogues_list[55].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "As the night's enchantment nears its end, the server places the check on your table, signaling the conclusion of your delightful date. Without missing a beat, you playfully snatch the bill and start a game of keep away. It's a classic move you've used to break the ice on many dates, and it often brings a smile to your companion's face."
+            "\n\nGrubnub, however, doesn't react with the usual amusement. Instead, a flush of embarrassment tints his cheeks as he watches you. He's a goblin with a heart of gold, and he genuinely wanted to contribute."
+            "\n\nSeeing his discomfort, you decide to end the playful game and reluctantly take responsibility for the bill. 'Alright, alright,' you concede with a smile, though you can't help but feel a pang of guilt. The air between you becomes noticeably awkward as you pay the bill, and the night concludes on an uneasy note."
+            "\n\nYou both leave the Rotten Elder Tree Saloon with a sense of tension, the night's adventure ending with an undercurrent of awkwardness.",
                 outcome=False
             ),
             'response257': Response(
                 dialogue_id=dialogues_list[56].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "As the night's enchantment nears its end, the server places the check on your table, signaling the conclusion of your date. You brace yourself for the standoff to come, but Grubnub seems blissfully unaware of your stubbornness."
+            "\n\nWith a warm and gentle smile, Grubnub reaches for the bill, his actions motivated by a genuine desire to take care of the expenses. 'Don't worry about it,' he says kindly as he settles the payment. 'It was my pleasure.'"
+            "\n\nThe night concludes with Grubnub happily paying for the bill, leaving you with a sense of gratitude. You both leave the Rotten Elder Tree Saloon with a feeling of contentment, the evening's adventure ending on a friendly and carefree note.",
                 outcome=False
             ),
             'response258': Response(
                 dialogue_id=dialogues_list[57].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "As the night's enchantment nears its end, the server places the check on your table, signaling the conclusion of your delightful date. You can't help but feel a twinge of uncertainty about having to pay on your first date, so you decide to push the check across the table."
+            "\n\nGrubnub, with his characteristic kindness, swiftly reaches for the bill, his friendly smile unaffected by the matter of payment. 'No worries,' he says warmly as he takes care of it. 'It was great spending time with you.'"
+            "\n\nThe night concludes with a simple and friendly goodnight from Grubnub. You both leave the Rotten Elder Tree Saloon with a sense of camaraderie, the evening's adventure ending on a cordial note, without any romantic undertones.",
                 outcome=False
             ),
             'response259': Response(
                 dialogue_id=dialogues_list[58].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "As the night's enchantment draws to a close, the server discreetly places the check on your table, marking the conclusion of your delightful date. The question of who should take care of the bill hangs in the air, creating a sweet tension that mirrors the evening's romance."
+            "\n\nGrubnub, his gaze locked with yours, senses your inner turmoil and gently reaches for the bill. His touch is tender, his smile filled with understanding. 'Allow me,' he says softly, as if sealing the moment with an unspoken promise."
+            "\n\nWith a flutter of your heart, you let Grubnub handle the payment. The atmosphere is charged with the energy of a budding romance as you both exit the Rotten Elder Tree Saloon, arm in arm, leaving behind a night to remember, wrapped in the warmth of his embrace.",
+                outcome=True
             ),
             'response260': Response(
                 dialogue_id=dialogues_list[59].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "In a daring move, you seize the check before it even touches the table and proudly throw your card down, determined to make a grand gesture. With uncontainable enthusiasm, you stand up, clamber onto the table, and declare in a booming voice that you'll cover the tab for the entire bar."
+            "\n\nYour proclamation catches the attention of the other goblin patrons, and soon enough, you find yourself surrounded by admiring onlookers, with several goblin men trying their luck to impress you."
+            "\n\nAmid the growing crowd, Grubnub stands off to the side, visibly awkward and bashful. He seems uncertain in the midst of the attention and the newfound suitors vying for your favor. Eventually, Grubnub quietly slips away into the night, leaving you in the company of your admirers."
+            "\n\nAs you revel in the attention of the other goblin men, you finally notice Grubnub has dissappeared. You hope he is doing okay, but it seems you won't find out.",
                 outcome=False
             ),
             'response261': Response(
                 dialogue_id=dialogues_list[50].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",  
-                outcome=False
+                "Your playful spirit takes charge as you suggest a dine and dash trick to Sneezle, a challenge to see if he shares your sense of fun. With a playful glint in your eye, you propose, 'Hey, how about a dine and dash?'"
+            "\n\nSneezle's face lights up with excitement, and he nods enthusiastically. 'I love it! Let's make this unforgettable!'"
+            "\n\nAs you both execute the daring dine and dash with a flair for the dramatic, the adrenaline rushes through your veins, and laughter bubbles forth. Sneezle, not one to hold back, sweeps you into an exuberant embrace. The moment is electric, and Sneezle plants a spontaneous yet surprisingly intimate kiss on your lips."
+            "\n\nThe night concludes with shared laughter and a lingering sense of thrill, leaving you both eager for more daring escapades and unforgettable moments together.",  
+                outcome=True
             ),
             'response262': Response(
                 dialogue_id=dialogues_list[51].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "Without hesitation, you swiftly grab the check and slide it over to Sneezle, 'A Princess does not pay!"
+            "\n\nSneezle, however, arches an eyebrow and smirks in mock exaggeration. 'Your Highness,' he quips with a hint of sarcasm, 'how could I forget? Please, allow me to take care of your royal dining expenses.'"
+            "\n\nThe playful banter takes a slightly uncomfortable turn as Sneezle, though jesting, appears somewhat annoyed. He pays the bill and, with a sigh that's a mix of amusement and exasperation, he prepares to depart, leaving behind a sense of tension and a lingering feeling that your jest may have struck a nerve.",
                 outcome=False
             ),
             'response263': Response(
                 dialogue_id=dialogues_list[52].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "In a mischievous move, you feign forgetfulness and act as though you've left your wallet behind, even though it's safely tucked away. You cheekily ask Sneezle to cover the bill."
+            "\n\nSneezle's eyes gleam with an unexpected twist as he stands up abruptly. Swift and deftly he pickpockets you, revealing your hidden wallet. He smirks, 'Did you think you had me fooled?', before returning your wallet and placing his half of the payment on the table."
+            "\n\nWithout a word, Sneezle stands up, leaving you in an awkward and tense silence. The date ends on an uneasy note, leaving you with a feeling that your attempt at deception may have cost you a friend or lover.",
                 outcome=False
             ),
             'response264': Response(
                 dialogue_id=dialogues_list[53].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "In a swift and somewhat comical move, you lunge for the check, scattering Muk and peanuts all across the table. You are flush with embarrassment, but do succeed in grabbing the bill."
+            "\n\nSneezle bursts into hearty laughter, finding your haste to be utterly hilarious. He clutches his sides, struggling to contain his mirth. 'Oh, you're something else!' he exclaims between fits of laughter."
+            "\n\nAmid Sneezle's infectious laughter, you can't help but chuckle yourself, realizing the humor in the situation. With a warm sense of camaraderie and shared laughter, you exit the bar and into the night. As you do, Sneezle takes you by the hand.",
+                outcome=True
             ),
             'response265': Response(
                 dialogue_id=dialogues_list[54].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "As the check discreetly arrives at your table, you find yourself utterly entranced by the beauty of Sneezle's sparkling swamp-green eyes. Lost in the depths of that captivating gaze, you're transported into a world  where time seems to stand still, and nothing else matters."
+            "\n\nIgnoring the bill, Sneezle's affectionate eyes lock onto yours, filled with a deep, romantic intensity. His heart races with the same fervor as yours, and he leans in closer, his lips tenderly meeting yours in a passionate kiss. The world around you fades into obscurity, leaving only the two of you entwined in this amorous moment."
+            "\n\nThe kiss is an affirmation of the love and connection you've built throughout the evening. As you part, Sneezle's gaze remains locked onto yours, brimming with adoration and affection."
+            "\n\nWith a warm smile, Sneezle takes your hand gently, his fingers intertwining with yours. He leads you away from the table, guiding you toward his hut, a place where the night can continue, and your love can deepen under the starry goblin sky.",
+                outcome=True
             ),
             'response266': Response(
                 dialogue_id=dialogues_list[55].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "With a mischievous grin, you grab the check and playfully hold it out of Sneezle's reach, knowing that this little game has often been a hit on your dates."
+            "\n\nSneezle's eyes light up with amusement, and he joins in the playful banter. You both engage in a brief but delightful game of 'keep away' with the check, the tension gradually building."
+            "\n\nAs the laughter subsides, Sneezle reaches out and gently takes the check from your hand. With a warm smile, he places it on the table, and then, in a surprising yet tender moment, he leans in, his lips meeting yours in a sweet and affectionate kiss."
+            "\n\nWith the bill now settled, Sneezle takes your hand in his, fingers interlocking intimately. You both leave the restaurant, continuing your date in private, promising more memorable moments to come.",
+                outcome=True
             ),
             'response267': Response(
                 dialogue_id=dialogues_list[56].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "A tense standoff ensues as both you and Sneezle lock eyes in a playful contest of wills, each refusing to be the first to give in and grab the check."
+            "\n\nMoments pass as the standoff continues, the atmosphere charged with anticipation. Sneezle's mischievous smirk gradually transforms into a warm smile, and he finally reaches for the check. With a chuckle, he holds it up and sets it on the table."
+            "\n\nBreaking the tension with humor, Sneezle leans in closer and whispers, 'I guess this time, you win, but don't think I won't remember this.' His playful tone is accompanied by a twinkle in his eyes as he plants a tender kiss on your cheek."
+            "\n\nAs the evening comes to a close, you share a laugh and leave the restaurant together, your connection deepening with every passing moment, promising more fun and adventures ahead.",
+                outcome=True
             ),
             'response268': Response(
                 dialogue_id=dialogues_list[57].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "Uncertainty looms over you as the check arrives at your table. A feeling of unease washes over you as you contemplate the implications of having to pay on your first date. In an attempt to navigate this unfamiliar territory, you decide to push the check discreetly across the table towards Sneezle, silently conveying your hope that he'll take care of the bill."
+            "\n\nSneezle's expressive eyebrows furrow in mild annoyance as he notices your subtle gesture. Without uttering a word, he reluctantly reaches for the check, a cloud of disappointment lingering in the air. With a resigned sigh, he takes care of the bill and stands up, his demeanor slightly distant."
+            "\n\nIn the midst of this uncomfortable moment, Sneezle offers only a curt nod of farewell before leaving the restaurant. The evening ends on a somewhat awkward and chilly note, leaving you with a lingering sense of regret for not handling the situation differently.",
                 outcome=False
             ),
             'response269': Response(
                 dialogue_id=dialogues_list[58].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "As the check lands on your table, a wave of indecision and panic washes over you. You're caught in a whirlwind of uncertainty, wondering if reaching for the check might offend Sneezle or if not doing so might be equally awkward. Your heart races, and your body tenses under the pressure of the moment."
+            "\n\nSneezle, ever quick to pick up on your emotional state, can't help but let out a hearty laugh. He reaches for the check, his laughter punctuating the air like a playful melody. 'Oh, my dear friend,' he chortles, 'I hope you know I'd happily cover this for you!' With a mischievous wink, he takes care of the bill."
+            "\n\nYour nervousness begins to fade as Sneezle's laughter and light-hearted teasing alleviate the tension. The two of you part ways, sharing a friendly farewell, knowing that even though the date had its moments of uncertainty, it was an experience worth remembering.",
                 outcome=False
             ),
             'response270': Response(
                 dialogue_id=dialogues_list[59].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "As the check makes its way to your table, you decide to make a dramatic statement. Without hesitation, you snatch the check before it even touches the table's surface, throwing your card down with a flourish. Your actions take an unexpected turn as you stand up, climbing onto the table itself, and shout at the top of your lungs, 'I'm picking up the tab for the entire bar, my treat!'"
+            "\n\nThe goblins in the bar turn their heads in your direction, a mix of surprise and amusement on their faces. Your boldness seems to have won over some of the crowd, and a few goblins cheer in response."
+            "\n\nSneezle, however, seems caught off guard by your extravagant gesture. He watches you with a raised eyebrow and a bemused grin, clearly not expecting such a display. After a moment, he chuckles and mutters, 'I didn't know you were hot AND loaded!'"
+            "\n\nWith your proclamation echoing in the background, Sneezle decides to join in on the fun. He waves to the bartender and orders a new round for the entire house, adding to the revelry. The two of you spend the evening drinking, laughing, and sharing stories with the other goblins."
+            "\n\nAs the night progresses, you find yourselves tenderly holding hands under the table, the connection between you growing stronger with each passing moment. It's a memorable evening, filled with laughter, shared moments, and the warmth of newfound romance.",
+                outcome=True
             ),
             'response271': Response(
                 dialogue_id=dialogues_list[50].id, 
@@ -3931,7 +4100,7 @@ if __name__ == '__main__':
                 outcome=False
             ),
         }
-        all_responses = list(responses_1.values()) + list(responses_2.values()) + list(responses_3.values()) 
+        all_responses = list(responses_1.values()) + list(responses_2.values()) + list(responses_3.values()) + list(responses_4.values()) + list(responses_5.values()) + list(responses_6.values()) + list(responses_7.values()) + list(responses_8.values()) + list(responses_9.values())
         db.session.add_all(all_responses)
         db.session.commit()
 
@@ -3950,10 +4119,10 @@ if __name__ == '__main__':
             "outcome10": Outcome(date_id = date1.id, goblin_id=zongo.id, outcome_description="It seems your time spent playing Baseball with Zongo was well received. His affection for you has grown intensly", result = True),
         }
         outcomes_2 = {
-            "outcome11": Outcome(date_id = date2.id, goblin_id=grubnub.id, outcome_description="Test_Outcome_Grubnub_Good", result = False),
-            "outcome12": Outcome(date_id = date2.id, goblin_id=grubnub.id, outcome_description="Test_Outcome_Grubnub_Bad", result = True),
-            "outcome13": Outcome(date_id = date2.id, goblin_id=sneezle.id, outcome_description="Test_Outcome_Sneezle_Good", result = False),
-            "outcome14": Outcome(date_id = date2.id, goblin_id=sneezle.id, outcome_description="Test_Outcome_Sneezle_Bad", result = True),
+            "outcome11": Outcome(date_id = date2.id, goblin_id=grubnub.id, outcome_description="Though your date with Grubnub at the bar was eventfull, it seems you didnt leave a long lasting impression on him.", result = False),
+            "outcome12": Outcome(date_id = date2.id, goblin_id=grubnub.id, outcome_description="Your time spent with Grubnub has had a big impact on him, his love seems to be blooming for you", result = True),
+            "outcome13": Outcome(date_id = date2.id, goblin_id=sneezle.id, outcome_description="Though your date with Sneezle at the bar was eventfull, it seems you didnt leave a long lasting impression on him.", result = False),
+            "outcome14": Outcome(date_id = date2.id, goblin_id=sneezle.id, outcome_description="Your time spent with Sneezle has had a big impact on him, his love seems to be blooming for you", result = True),
             "outcome15": Outcome(date_id = date2.id, goblin_id=blort.id, outcome_description="Test_Outcome_Blort_Good", result = False),
             "outcome16": Outcome(date_id = date2.id, goblin_id=blort.id, outcome_description="Test_Outcome_Blort_Bad", result = True),
             "outcome17": Outcome(date_id = date2.id, goblin_id=grimble.id, outcome_description="Test_Outcome_Grimble_Good", result =False),
@@ -3973,8 +4142,8 @@ if __name__ == '__main__':
             "outcome9": Outcome(date_id = date3.id, goblin_id=zongo.id, outcome_description="Test_Outcome_Zongo_Good", result = False),
             "outcome10": Outcome(date_id = date3.id, goblin_id=zongo.id, outcome_description="Test_Outcome_Zongo_Bad", result = True),
         }
-
-        db.session.add_all(outcomes_1.values())
+        all_outcomes = list(outcomes_1.values()) + list(outcomes_2.values) + list(outcomes_3.values()) 
+        db.session.add_all(all_outcomes)
         db.session.commit()
         
         
