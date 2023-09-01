@@ -83,7 +83,16 @@ function Game({ currentUser, goblins, handleChangeUser }) {
             } catch (error) {
                 console.log("Error fetching responses", error);
             }
-        } else if (part > 3) {
+        } else if (part === 3) {
+            const newResponse = responses.find(
+                (response) => response.dialogue_id === dialogue.id
+            );
+            console.log(newResponse);
+            setResponse(newResponse);
+            setPart(part + 1);
+            if (newResponse.outcome === true) {
+                setScore(score + 1);
+            }
             try {
                 const resp = await fetch("http://127.0.0.1:5555/outcomes");
                 if (resp.status === 200) {
@@ -92,7 +101,7 @@ function Game({ currentUser, goblins, handleChangeUser }) {
                         (outcome) => outcome.goblin_id === goblin.id
                     );
                     console.log(dataOutcomes);
-                    if (score === 3) {
+                    if (score >= 2) {
                         const dataOutcome = dataOutcomes.find(
                             (outcome) =>
                                 outcome.date_id === chosenDate.id && outcome.result === true
@@ -163,7 +172,7 @@ function Game({ currentUser, goblins, handleChangeUser }) {
                             <br />
                             {part > 3 ? (
                                 <>
-                                    {score === 3 ? (
+                                    {score > 2 ? (
                                         <>
                                             <br />
                                             <h2>
