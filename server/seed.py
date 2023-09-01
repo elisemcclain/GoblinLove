@@ -1904,140 +1904,140 @@ if __name__ == '__main__':
                 dialogue_id=dialogues_list[40].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Despite the potential fight brewing, your date continues to be heartwarming and memorable as you both relish the unique Muk and each other's company. The note's significance fades against the backdrop of your delightful evening, reinforcing the genuine connection you share with Grubnub, whose kind-hearted nature shines through, making this a date to cherish.",
+                outcome=True
             ),
             'response202': Response(
                 dialogue_id=dialogues_list[41].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "As you stop the server to request an extra to-go bag of peanuts, Grubnub watches with a puzzled expression, his brow furrowing slightly. It seems he's a bit put off by your statement. The server, still holding the note, looks at you, then back at Grubnub, and finally hands him an extra bag of peanuts.",
                 outcome=False
             ),
             'response203': Response(
                 dialogue_id=dialogues_list[42].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "As you discreetly observe Grubnub's reaction to the note, you can see his brow furrow slightly, and his expression shifts from its usual cheerful demeanor to one of mild confusion. He tilts his head, reading the note carefully, but it's clear that his slow-witted nature is causing him to struggle with its content. You snatch the note, put it in your mouth, and swallow. You then flash a warm smile and whisper, 'Don't worry, Grubnub. It's probably just a mistake or a silly joke. Let's not let it ruin our evening'.",
+                outcome=True
             ),
             'response204': Response(
                 dialogue_id=dialogues_list[43].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "Grubnub, looks at you with a puzzled expression. He doesn't seem to understand why you're reacting this way. The server, who had slipped the note to Grubnub, notices the tension in the air. As Grubnub unfolds the note and reads it, you soon realize that your instincts were RIGHT. Elder Tree is under attack. You must run for your life.",
                 outcome=False
             ),
             'response205': Response(
                 dialogue_id=dialogues_list[44].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Grubnub, oblivious to the server's intentions, watches as you chuckle and wink at the server in response to the note. With the boost of confidence, your converstion becomes extra lighthearted and charming. This has been the best date ever.",
+                outcome=True
             ),
             'response206': Response(
                 dialogue_id=dialogues_list[45].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "You begin a rather ruthless game of tic-tac-toe between each other. Winning the game has become crucial to your survival. Grubnub does not grasp the intricacies of the game situation, but is very merry to be included.",
                 outcome=False
             ),
             'response207': Response(
                 dialogue_id=dialogues_list[46].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "The server looks slightly puzzled by your action, but you're determined to unravel this mysterious note. As the paper disintegrates in the Muk, a faint message becomes visible. It reads, 'Meet me by the moonlit pond, behind the brewery, at midnight'. Grubnub, oblivious to your investigative efforts, smiles and pretends he doesn't notice you're crazy. You know an adventure awaits y'all later tonight.",
+                outcome=True
             ),
             'response208': Response(
                 dialogue_id=dialogues_list[47].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "Grubnub looks utterly baffled by your sudden patriotic outburst. He tilts his head, trying to understand, and then joins in, attempting to sing along despite his slow-witted nature. The server and other patrons exchange wary glances, but then jump up and begin slow dancing together. Grubnub may not have understood why, but he appreciates your effort to make the evening enjoyable, and your date takes an unexpected turn toward quirky charm. The note is forgotten",
                 outcome=False
             ),
             'response209': Response(
                 dialogue_id=dialogues_list[48].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Grubnub, utterly baffled, pats your unconscious form gently, wondering if this is just one of your quirks. He continues on happily eating peanuts and drinking Muk, patiently waiting for you to regain consciousness. Several hours later, you awaken with peanuts and drool stuck to your face.",
+                outcome=True
             ),
             'response210': Response(
                 dialogue_id=dialogues_list[49].id, 
                 goblin_id=grubnub.id, 
                 response=
-                "Testing",
+                "Grubnub blinks in surprise, clearly taken aback by your sudden enthusiasm. As you finally clutch the note, panting aggressively and damp with Muk, you can't help but wonder if this impulsive act will reveal the secret you've been running from all your life.",
                 outcome=False
             ),
             'response211': Response(
                 dialogue_id=dialogues_list[40].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",  
-                outcome=False
+                "Sneezle jumps up, grabs your hand, and screams, 'we have to go'! Y'all sprint out of the saloon without stopping to pay first. You are alarmed and don't know what is wrong. Once outside, Sneezle turns to you and winks playfully. You realize he knew about your scheme all along and wanted to play too. Together, you share a conspiratorial laugh, enjoying the shared thrill of this impromptu escapade. Your date with Sneezle takes an exciting turn as you both embrace the unexpected twists and turns of the evening.",  
+                outcome=True
             ),
             'response212': Response(
                 dialogue_id=dialogues_list[41].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Sneezle, with his love for humor and spontaneity, bursts into laughter at your cheeky request. He joins in on the joke, exaggerating his desire for the peanuts, saying, 'Oh, absolutely! We can't have those midnight munchies go unsatisfied, can we?' The server, amused by your banter, obliges, and you both share a playful moment, solidifying the lighthearted, carefree atmosphere of your date with Sneezle.",
+                outcome=True
             ),
             'response213': Response(
                 dialogue_id=dialogues_list[42].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "Sneezle's eyebrows arch in surprise, and then a mischievous grin slowly spreads across his face. It appears that the note holds a playful or intriguing message rather than anything serious but he refuses to tell you unless you guess correctly. You do not enjoy being on the other sside of these games. You refuse to guess, not wanting to give him the satisfaction.",
                 outcome=False
             ),
             'response214': Response(
                 dialogue_id=dialogues_list[43].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "Sneezle, takes your sudden movement in stride, and is intrigued by your stark response. He leans closer and whispers, 'Easy there, partner. No need to make a run for it just yet'. You panic. What does he know??",
                 outcome=False
             ),
             'response215': Response(
                 dialogue_id=dialogues_list[44].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Sneezle chuckles at the contents of the note. He leans in and says, 'We'll I may have some playful competition here', and winks. You share an intense and magical moment or eye contact then continue on with the wildest and most exhilerating night of your life.",
+                outcome=True
             ),
             'response216': Response(
                 dialogue_id=dialogues_list[45].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "Sneezle's eye sparkle with interest at what you write. You slide your note slowly across the table. Laughter fills the air as he sees the game tic-tac-toe drawn out. Your date night is a memorable one.",
                 outcome=False
             ),
             'response217': Response(
                 dialogue_id=dialogues_list[46].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "Sneezle, known for his quick wit, raises an eyebrow and leans in, his curiosity piqued. 'Well, someone's a party pooper,' he remarks, his tone laced with playful sarcasm. Sneezle grabs the note out of the Muk mug before it's completely destroyed. He's not here to play love games.",
                 outcome=False
             ),
             'response218': Response(
                 dialogue_id=dialogues_list[47].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "Sneezle slowly pushes his chair back from the table, stands up, and moonwalks out of the saloon. Sneezle immediately got the Star-Spangled ICK.",
                 outcome=False
             ),
             'response219': Response(
                 dialogue_id=dialogues_list[48].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
-                outcome=False
+                "Sneezle, always up for a bit of mischief, glances at you with a dark grin. 'What's the magic word?' he teases. You hold your breath, 'Please?'. With a playful chuckle, Sneezle hands over the note. You unfold it carefully, and as you read the cryptic message, a smile spreads across your face. The server had noticed Sneezle had toilet paper on his boot and discreetly letting him know. You both break out into loud, giddy laughter and feel the connection deepen between you.",
+                outcome=True
             ),
             'response220': Response(
                 dialogue_id=dialogues_list[49].id, 
                 goblin_id=sneezle.id, 
                 response=
-                "Testing",
+                "After a small struggle, you manage to snatch the note, your fingers smearing the words with Muk and your face a picture of triumph. Sneezle, obviously startled, takes a moment to process what just happened, then bursts into laughter at the absurdity of the situation. His infectious mirth fills the brewery. As you unfold the note, the message reveals itself to be a flyer for a local band playing tonight. Sneezle can't control his laughter and you are red with embarrasment. You crawl under the table to hide from all the other goblins laughing at you.",
                 outcome=False
             ),
             'response221': Response(
