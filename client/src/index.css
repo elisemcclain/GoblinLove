@@ -415,6 +415,16 @@ body {
   margin-bottom: 40px;
 }
 
+.results {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+  display: flex;
+  margin-top: -30px;
+  margin-bottom: 40px;
+  text-decoration: underline;
+}
+
 .signup {
   color: purple;
   background-color: rgb(247, 3, 117);
