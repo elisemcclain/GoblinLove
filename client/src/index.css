@@ -406,6 +406,25 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.outcome {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+  display: flex;
+  margin-top: -30px;
+  margin-bottom: 40px;
+}
+
+.results {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+  display: flex;
+  margin-top: -30px;
+  margin-bottom: 40px;
+  text-decoration: underline;
+}
+
 .signup {
   color: purple;
   background-color: rgb(247, 3, 117);
@@ -518,6 +537,7 @@ body {
   padding-top: 0px;
   padding-bottom: 30px;
   justify-content: center;
+  display: flex;
   margin: 0 auto;
   text-decoration-line: underline;
   text-decoration-style: double;

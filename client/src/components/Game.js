@@ -189,9 +189,10 @@ function Game({ currentUser, goblins, handleChangeUser}) {
                                     {score > 2 ? (
                                         <>
                                             <br />
-                                            <h2>
+                                            <h2 className="results">Results:</h2>
+                                            <h3 className="outcome">
                                                 {outcomeResult ? outcomeResult.outcome_description : ""}
-                                            </h2>
+                                            </h3>
                                             <button className="end-date" onClick={endDate}>
                                                 End Date 😘
                                             </button>

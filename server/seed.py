@@ -4142,8 +4142,8 @@ if __name__ == '__main__':
             "outcome9": Outcome(date_id = date3.id, goblin_id=zongo.id, outcome_description="Test_Outcome_Zongo_Good", result = False),
             "outcome10": Outcome(date_id = date3.id, goblin_id=zongo.id, outcome_description="Test_Outcome_Zongo_Bad", result = True),
         }
-        all_outcomes = list(outcomes_1.values()) + list(outcomes_2.values) + list(outcomes_3.values()) 
-        db.session.add_all(all_outcomes)
+        db.session.add_all(outcomes_1.values())
+        db.session.add_all(outcomes_2.values())
         db.session.commit()
         
         
