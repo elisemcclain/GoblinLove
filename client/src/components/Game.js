@@ -220,7 +220,7 @@ function Game({ currentUser, goblins, handleChangeUser }) {
                     </>
                   ) : (
                     <>
-                      <h2>
+                      <h2 className="outcome">
                         {outcomeResult ? outcomeResult.outcome_description : ""}
                       </h2>
                       <button className="end-date" onClick={endDate}>
