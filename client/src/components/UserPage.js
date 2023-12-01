@@ -1,12 +1,12 @@
 import { useParams, useHistory } from "react-router-dom";
-import { Formik, useFormik } from "formik";
+import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useState, useEffect, useInsertionEffect } from "react";
+import { useState, useEffect } from "react";
 
-function UserPage({ users, currentUser, handleChangeUser, handleDeleteUser }) {
+function UserPage({ currentUser, handleChangeUser }) {
   const [edit, setEdit] = useState(false);
   const { username } = useParams();
-  const [userMatch, setUserMatch] = useState(false);
+  const [setUserMatch] = useState(false);
   const [traitAssociations, setTraitAssociations] = useState([]);
   const [traits, setTraits] = useState([]);
   const history = useHistory();
@@ -88,7 +88,7 @@ function UserPage({ users, currentUser, handleChangeUser, handleDeleteUser }) {
 
   const EditProfile = async () => {
     if (edit) {
-      await formik.handleSubmit();
+      formik.handleSubmit();
       const existingTraitIds = traitAssociations.map(
         (association) => association.trait_id
       );
@@ -127,8 +127,7 @@ function UserPage({ users, currentUser, handleChangeUser, handleDeleteUser }) {
               if (response.status === 200) {
                 const updatedUserData = await response.json();
                 handleChangeUser(updatedUserData);
-              }
-              else {
+              } else {
                 console.error("Error updating user:", response.status);
               }
             } catch (error) {
@@ -148,6 +147,10 @@ function UserPage({ users, currentUser, handleChangeUser, handleDeleteUser }) {
     } else {
       setEdit(!edit);
     }
+  };
+
+  const handleLogout = () => {
+    history.push("/");
   };
 
   return (
@@ -172,6 +175,15 @@ function UserPage({ users, currentUser, handleChangeUser, handleDeleteUser }) {
               className="edit-prof-button custom-edit-button"
             >
               {edit ? "Save Profile" : "Edit Profile"}
+            </button>
+          </div>
+          <div className="edit-prof-button custom-edit-button-move">
+            <button
+              type="button"
+              onClick={handleLogout}
+              className="edit-prof-button custom-log-button"
+            >
+              Log Out
             </button>
           </div>
           <div className="bar-background">

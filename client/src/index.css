@@ -636,6 +636,23 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.custom-log-button {
+  background-color: #0e200f;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  margin-top: 40px;
+  margin: 0 auto;
+  padding: 10px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .custom-edit-button-move {
   display: flex;
   /* margin-right: -500px; */

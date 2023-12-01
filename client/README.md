@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Goblin Dating Simulator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+Welcome to the Goblin Dating Simulator, Gobsmacked. This is a unique dating simulation app where you can create an account, choose your character's characteristics, and embark on exciting dates with goblin boys in hopes to find true love.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **User Registration**: Create a personal account or login to get started.
+- **Character Customization**: Choose your best characteristics or edit your profile information.
+- **Interactive Dates**: You will be provided a prompt where you can choose what date you would like to go on. You'll answer questions on how you would respond, based on the characteristics you selected in your profile. Aas you're taking through the date, you'll find out if you're compatible or not!
+- **Success Tracker**: Keep track of successful and unsuccessful dates in your profile.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Instructions
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Follow these steps to get started with Goblin Love:
 
-### `npm test`
+1. **Fork and Clone**: Fork this repository and clone it to your local machine.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install Dependencies**:
 
-### `npm run build`
+   - In your terminal, run the following command to set up the Python environment:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+     ```console
+     pipenv install && pipenv shell
+     ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   - Navigate to the server directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+     ```console
+     cd server
+     ```
 
-### `npm run eject`
+   - Run the backend server:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+     ```console
+     python app.py
+     ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   - In a separate terminal, install dependencies for the client:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+     ```console
+     npm install --prefix client
+     ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   - Start the frontend client:
+     ```console
+     npm start --prefix client
+     ```
 
-## Learn More
+3. **Account Creation**: Once the app is loaded, create your account to begin exploring and reporting crime incidents.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Make sure to seed your data and the backend server is running on port 5555.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We hope you find true love with our game!

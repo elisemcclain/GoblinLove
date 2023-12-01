@@ -72,7 +72,8 @@ class Traits(Resource):
     def get(self):
         traits = [trait.to_dict(rules=('-users', '-dialogues', '-trait_associations')) for trait in Trait.query.all()]
         return make_response(jsonify(traits), 200)
-api.add_resource(Traits, '/traits')    
+api.add_resource(Traits, '/traits')  
+
     
 class TraitAssociations(Resource):
     def get(self):

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import { Formik, FormikConsumer, useFormik } from "formik";
+import { useFormik } from "formik";
 import { useHistory } from "react-router-dom";
 import * as yup from "yup";
 
@@ -10,7 +10,12 @@ const Login = ({ users, handleAddUser, handleLogin }) => {
   const formShema = yup.object().shape({
     email: yup.string(),
     username: yup.string().required("Username is required").max(20),
-    password: yup.string().required("Password is required").max(100),
+    password: yup
+      .string()
+      .required(
+        "Password is required. Must contain 1 uppercase, 1 lowercase, 1 special character, 1 number, and be more than 8 characters long."
+      )
+      .max(100),
   });
 
   const formik = useFormik({
@@ -111,6 +116,7 @@ const Login = ({ users, handleAddUser, handleLogin }) => {
           Password:{" "}
         </label>
         <input
+          type="password"
           className="password-color"
           id="password"
           name="password"
